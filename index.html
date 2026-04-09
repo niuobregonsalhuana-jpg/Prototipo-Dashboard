@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding Caja Los Andes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-caja">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/logo_web.png" height="40" class="me-2" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#ruta">Tu ruta</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#capacitaciones">Capacitaciones</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#videos">Videos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#herramientas">Herramientas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback">Feedback</a>
+            </li>
+          </ul>
+
+          <div class="d-flex">
+            <a class="btn btn-credito me-2"> Pide tu crédito </a>
+
+            <a class="btn btn-cuota"> Paga tu cuota </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero-andes">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="hero-title">Tu recorrido semana a semana</h1>
+            <p class="hero-subtitle">
+              Encuentra tus metas, capacitaciones y contactos de apoyo para cada
+              etapa. Todo en un solo lugar.
+            </p>
+            <a href="#ruta" class="btn-hero-cta">Comenzar recorrido</a>
+            <p class="hero-helper">
+              ¿Prefieres ver tus metas diarias?
+              <a href="#herramientas">Reporte Diario</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECORRIDO SEMANA A SEMANA -->
+    <section id="ruta" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold" style="color: var(--andes-navy)">
+          Tu progreso actual
+        </h2>
+
+        <div class="stepper-wrapper">
+          <div class="stepper-item completed">
+            <div class="step-counter"><i class="fas fa-check"></i></div>
+            <div class="step-name">Semana 1</div>
+            <div class="step-desc">Inducción y Cultura</div>
+          </div>
+
+          <div class="stepper-item active">
+            <div class="step-counter">2</div>
+            <div class="step-name">Semana 2</div>
+            <div class="step-desc">Herramientas Digitales</div>
+          </div>
+
+          <div id="step-3" class="stepper-item">
+            <div class="step-counter">3</div>
+            <div class="step-name">Semana 3</div>
+            <div class="step-desc">Atención al Cliente</div>
+          </div>
+
+          <div class="stepper-item">
+            <div class="step-counter">4</div>
+            <div class="step-name">Semana 4</div>
+            <div class="step-desc">Cierre de Metas</div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="task-card">
+                <div class="task-header">
+                  <h4 id="task-title" class="mb-0">Cargando tareas...</h4>
+                  <span id="task-status" class="badge bg-fuchsia"
+                    >En curso</span
+                  >
+                </div>
+                <div class="task-body">
+                  <ul id="task-list" class="list-group list-group-flush"></ul>
+                </div>
+                <div class="task-footer text-end mt-3">
+                  <button id="btn-guardar" type="button" class="btn btn-navy">
+                    Guardar Progreso
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POP UP -->
+    <div
+      class="modal fade"
+      id="modalFinal"
+      tabindex="-1"
+      aria-labelledby="modalFinalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-body text-center p-5">
+            <div class="mb-4">
+              <div class="display-1 text-fuchsia">
+                <i class="fas fa-rocket"></i>
+              </div>
+            </div>
+
+            <h2 class="fw-bold mb-3" style="color: var(--andes-navy)">
+              ¡Felicitaciones, lo lograste!
+            </h2>
+
+            <p class="text-muted mb-4">
+              Has completado con éxito tu recorrido de inducción de 4 semanas.
+              Ahora tienes todos los conocimientos necesarios para brillar en tu
+              rol.
+            </p>
+
+            <button
+              type="button"
+              class="btn btn-navy w-100 py-3 fw-bold"
+              onclick="irAlKit()"
+            >
+              Explorar mi Kit de Éxito
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KIT DE RECURSOS -->
+    <section id="herramientas" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" style="color: var(--andes-navy)">
+            Tu Kit de Recursos
+          </h2>
+          <p class="text-muted">
+            Accede directamente a los materiales de cada etapa.
+          </p>
+        </div>
+        <div class="carousel-window">
+          <div class="cards-track" id="cardsTrack">
+            <div class="card-page">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-cyan-light">
+                      <i class="fas fa-play-circle text-cyan"></i>
+                    </div>
+                    <span class="badge-week week-1">Semana 1</span>
+                    <h5>Bienvenida CEO</h5>
+                    <p>Video introductorio a la cultura corporativa.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-cyan-light">
+                      <i class="fas fa-book-open text-cyan"></i>
+                    </div>
+                    <span class="badge-week week-1">Semana 1</span>
+                    <h5>Manual de Valores</h5>
+                    <p>Documento oficial de ética y principios.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-cyan-light">
+                      <i class="fas fa-id-card text-cyan"></i>
+                    </div>
+                    <span class="badge-week week-1">Semana 1</span>
+                    <h5>Registro de Usuario</h5>
+                    <p>Acceso a tu perfil de colaborador.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-navy-light">
+                      <i class="fas fa-database text-navy"></i>
+                    </div>
+                    <span class="badge-week week-2">Semana 2</span>
+                    <h5>Acceso al CRM</h5>
+                    <p>Guía para configurar tus credenciales.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-page">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-navy-light">
+                      <i class="fas fa-hand-holding-usd text-navy"></i>
+                    </div>
+                    <span class="badge-week week-2">Semana 2</span>
+                    <h5>Tutorial Créditos</h5>
+                    <p>Aprende el flujo de créditos rápidos.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-navy-light">
+                      <i class="fas fa-vial text-navy"></i>
+                    </div>
+                    <span class="badge-week week-2">Semana 2</span>
+                    <h5>Registro de Prueba</h5>
+                    <p>Practica en el entorno de simulación.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-fuchsia-light">
+                      <i class="fas fa-headset text-fuchsia"></i>
+                    </div>
+                    <span class="badge-week week-3">Semana 3</span>
+                    <h5>Simulación Llamada</h5>
+                    <p>Escucha ejemplos de atención ideal.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-fuchsia-light">
+                      <i class="fas fa-question-circle text-fuchsia"></i>
+                    </div>
+                    <span class="badge-week week-3">Semana 3</span>
+                    <h5>Guía de Dudas</h5>
+                    <p>Respuestas a preguntas frecuentes.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-page">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-fuchsia-light">
+                      <i class="fas fa-clipboard-check text-fuchsia"></i>
+                    </div>
+                    <span class="badge-week week-3">Semana 3</span>
+                    <h5>Test de Protocolo</h5>
+                    <p>Valida tus conocimientos de servicio.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-yellow-light">
+                      <i class="fas fa-chart-bar text-yellow"></i>
+                    </div>
+                    <span class="badge-week week-4">Semana 4</span>
+                    <h5>Revisión de KPI</h5>
+                    <p>Formato para medir tus resultados.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-yellow-light">
+                      <i class="fas fa-comments text-yellow"></i>
+                    </div>
+                    <span class="badge-week week-4">Semana 4</span>
+                    <h5>Guía de Mentoring</h5>
+                    <p>Preparación para tu entrevista final.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="link-card">
+                    <div class="link-icon bg-yellow-light">
+                      <i class="fas fa-calendar-check text-yellow"></i>
+                    </div>
+                    <span class="badge-week week-4">Semana 4</span>
+                    <h5>Plan de Trabajo</h5>
+                    <p>Plantilla para tus metas del próximo mes.</p>
+                    <a href="#" class="link-arrow"
+                      ><i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="d-flex justify-content-center align-items-center gap-3 mt-5"
+        >
+          <button class="btn-nav" id="prevCard">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="pagination-numbers">
+            <span class="page-num active" data-page="0">1</span>
+            <span class="page-num" data-page="1">2</span>
+            <span class="page-num" data-page="2">3</span>
+          </div>
+          <button class="btn-nav" id="nextCard">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPSULAS DE VIDEO -->
+    <section id="capsulas" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" style="color: var(--andes-navy)">
+            Cápsulas de Aprendizaje
+          </h2>
+          <p class="text-muted">
+            Domina situaciones reales con estos videos prácticos.
+          </p>
+        </div>
+
+        <div class="video-carousel-window">
+          <div class="cards-track" id="videoTrack">
+            <div class="video-page">
+              <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2019/02/01174411/como-abordar-um-cliente-2.jpg"
+                        alt="Abordar cliente"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">3:45</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Ventas</span>
+                      <h5>¿Cómo abordar a un cliente?</h5>
+                      <p>
+                        Técnicas de apertura para generar confianza desde el
+                        segundo uno.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=500"
+                        alt="Registrar visita"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">2:20</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Procesos</span>
+                      <h5>Registrar una visita</h5>
+                      <p>
+                        Paso a paso para usar el CRM de forma eficiente tras
+                        cada reunión.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=500"
+                        alt="Objeciones"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">5:10</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Estrategia</span>
+                      <h5>Manejo de Objeciones</h5>
+                      <p>
+                        Qué responder ante el "está muy caro" o "lo voy a
+                        pensar".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=500"
+                        alt="Cierre ventas"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">4:15</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Ventas</span>
+                      <h5>Técnicas de Cierre</h5>
+                      <p>
+                        Cómo concretar la venta de forma natural y efectiva.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=500"
+                        alt="Fidelización"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">3:10</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Ventas</span>
+                      <h5>Fidelización Post-Venta</h5>
+                      <p>
+                        Convierte a un comprador ocasional en un cliente leal.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500"
+                        alt="Analítica"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">6:25</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Estrategia</span>
+                      <h5>Analítica de Resultados</h5>
+                      <p>
+                        Mide el impacto de tus gestiones comerciales con datos
+                        reales.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-page">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=500"
+                        alt="Trabajo en equipo"
+                      />
+                      <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                      </div>
+                      <span class="video-time">3:50</span>
+                    </div>
+                    <div class="video-info">
+                      <span class="badge-topic">Cultura</span>
+                      <h5>Trabajo en Equipo</h5>
+                      <p>
+                        Próximamente: Cómo colaborar mejor en proyectos remotos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-center align-items-center gap-3 mt-5"
+        >
+          <button class="btn-nav" id="prevVideo">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="pagination-numbers" style="display: contents">
+            <span class="page-num-video active" data-page="0">1</span>
+            <span class="page-num-video" data-page="1">2</span>
+          </div>
+          <button class="btn-nav" id="nextVideo">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGO DE HERRAMIENTAS -->
+    <section id="herramientas-andes" class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" style="color: var(--andes-navy)">
+            Excelencia en la Gestión
+          </h2>
+          <p class="text-muted">
+            Herramientas estratégicas para optimizar tu desempeño diario.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="tool-card-new">
+              <div class="tool-content">
+                <div class="icon-box-new bg-blue">
+                  <i class="fas fa-users-cog"></i>
+                </div>
+                <h6>Gestión de Cartera</h6>
+                <p>
+                  Centraliza el historial de tus clientes y vincula notas clave.
+                </p>
+              </div>
+              <div class="tool-hover-info hover-blue">
+                <strong>¿Por qué usarla?</strong>
+                <p>
+                  Permite una atención personalizada y evita la pérdida de datos
+                  críticos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="tool-card-new">
+              <div class="tool-content">
+                <div class="icon-box-new bg-purple">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h6>Seguimiento de Créditos</h6>
+                <p>
+                  Monitorea el estado de solicitudes y recibe alertas de
+                  vencimiento.
+                </p>
+              </div>
+              <div class="tool-hover-info hover-purple">
+                <strong>¿Por qué usarla?</strong>
+                <p>
+                  Garantiza respuesta rápida al cliente y mejora los índices de
+                  colocación.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="tool-card-new">
+              <div class="tool-content">
+                <div class="icon-box-new bg-green">
+                  <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h6>Planificador de Campo</h6>
+                <p>
+                  Organiza tus visitas geográficamente para optimizar tiempos.
+                </p>
+              </div>
+              <div class="tool-hover-info hover-green">
+                <strong>¿Por qué usarla?</strong>
+                <p>
+                  Aumenta la productividad diaria y reduce costos en
+                  desplazamientos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="tool-card-new">
+              <div class="tool-content">
+                <div class="icon-box-new bg-yellow">
+                  <i class="fas fa-chart-pie"></i>
+                </div>
+                <h6>Tablero de Metas</h6>
+                <p>
+                  Visualiza tu avance respecto a tus objetivos e indicadores.
+                </p>
+              </div>
+              <div class="tool-hover-info hover-yellow">
+                <strong>¿Por qué usarla?</strong>
+                <p>
+                  Facilita la toma de decisiones basada en datos para alcanzar
+                  resultados.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION DE INVITACION AL FORMULARIO ANONIMO -->
+    <section class="py-5 bg-white">
+      <div class="container text-center">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold" style="color: var(--andes-navy)">
+            Tu opinión nos importa
+          </h2>
+          <p class="text-muted">
+            Cuéntanos cómo ha sido tu experiencia en estas primeras semanas.
+            <br />
+            ¿Qué retos has encontrado y de qué manera podemos apoyarte mejor?
+            <br />
+            Tu opinión es clave para brindarte una mejor compañía en este
+            proceso.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          class="btn-feedback-main"
+          data-bs-toggle="modal"
+          data-bs-target="#feedbackModal"
+        >
+          Compartir mi feedback <i class="fas fa-arrow-right ms-2"></i>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- FEEDBACK ANONIMO -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content rounded-5 border-0 shadow-lg p-modal-container"
+        >
+          <div class="modal-body">
+            <div class="modal-body">
+              <h3 class="fw-bold mb-2" style="color: var(--andes-navy)">
+                Tu voz nos ayuda a mejorar
+              </h3>
+              <p class="text-muted small">
+                Cada semana, este es tu espacio de confianza.
+              </p>
+            </div>
+
+            <form id="firebaseForm">
+              <div class="mb-4 text-center px-2">
+                <label class="equal-title mb-3"
+                  >¿Cómo te sientes esta semana?</label
+                >
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="mood-icon">😢</button>
+                  <button type="button" class="mood-icon">😟</button>
+                  <button type="button" class="mood-icon">😐</button>
+                  <button type="button" class="mood-icon">😊</button>
+                  <button type="button" class="mood-icon">🤩</button>
+                </div>
+              </div>
+
+              <div class="mb-3 px-1">
+                <label class="equal-title mb-2"
+                  >¿Qué es lo que más te ha costado hasta ahora?</label
+                >
+                <textarea
+                  class="form-control bg-light border-0 py-2"
+                  rows="2"
+                  placeholder="Escribe aquí..."
+                ></textarea>
+              </div>
+
+              <div class="mb-4 px-1">
+                <label class="equal-title mb-2"
+                  >¿Qué apoyo o herramienta sientes que te hace falta?</label
+                >
+                <textarea
+                  class="form-control bg-light border-0 py-2"
+                  rows="2"
+                  placeholder="Nos encantaría escucharte..."
+                ></textarea>
+              </div>
+
+              <div
+                class="anonimato-box d-flex align-items-start p-3 mb-4 rounded-4 mx-1"
+              >
+                <div class="me-3 mt-1">
+                  <i class="fas fa-shield-alt fs-4" style="color: #007bff"></i>
+                </div>
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #4c1d95; font-size: 0.95rem"
+                  >
+                    Espacio 100% Anónimo
+                  </h6>
+                  <p
+                    class="small mb-0 text-muted"
+                    style="font-size: 0.8rem; line-height: 1.4"
+                  >
+                    La información será utilizada únicamente para mejorar tu
+                    experiencia y brindarte un mejor acompañamiento.
+                  </p>
+                </div>
+              </div>
+
+              <div class="text-center px-1 pb-2">
+                <button
+                  type="submit"
+                  class="btn-enviar-feedback w-100 py-3 mb-3 rounded-3 shadow-sm"
+                >
+                  Enviar mi feedback anónimo
+                </button>
+
+                <div
+                  class="d-flex align-items-center justify-content-center text-muted"
+                  style="font-size: 0.85rem"
+                >
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <span>Tu identidad está protegida</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer-custom">
+      <div class="container footer-container">
+        <div class="footer-section">
+          <span class="footer-label">Síguenos en:</span>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-links">
+          <a href="#" class="footer-link-item">
+            <i class="fas fa-book-open"></i>
+            <span
+              >Libro de <br />
+              reclamaciones</span
+            >
+          </a>
+          <a href="#" class="footer-link-item">
+            <i class="fas fa-file-alt"></i>
+            <span
+              >Requerimientos, <br />
+              consultas y solicitudes</span
+            >
+          </a>
+          <a href="#" class="footer-link-item">
+            <i class="fas fa-envelope-open-text"></i>
+            <span class="badge-notif"
+              >Buzón de prácticas <br />
+              cuestionables</span
+            >
+          </a>
+        </div>
+
+        <div class="footer-logo-end">
+          <i class="fas fa-shapes"></i>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
