@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+:root {
+  --andes-cyan: #00c1ff;
+  --andes-navy: #002d57;
+  --andes-fuchsia: #ff007c;
+  --andes-yellow: #fed001;
+  --andes-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.root-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR STYLE --- */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: var(--andes-cyan);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar-logo-img {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-left: -5px;
+  padding-left: 15px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.menu-item {
+  width: 100%;
+}
+
+.menu-item a {
+  display: block;
+  padding: 18px 35px;
+  color: var(--andes-white);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  background: transparent;
+  border-left: 6px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 6px solid var(--andes-white);
+  padding-left: 29px;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.main-content {
+    margin-left: 280px; /* Mantiene el espacio para el sidebar */
+    flex-grow: 1;
+    padding: 40px 80px; /* CAMBIO: 80px a la izquierda para alinear con el Nav */
+    min-height: 100vh;
+    background-color: #fff; /* CAMBIO: Blanco puro para que sea igual a herramientas */
+    width: calc(100% - 280px); /* Asegura que el ancho sea el correcto */
+}
+
+/* CORRECCIÓN CLAVE: 
+   Alineamos las tarjetas en fila y evitamos que se estiren verticalmente 
+*/
+.dashboard-content {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px; /* Reducimos un poco el espacio para que quepan mejor */
+  align-items: stretch; 
+  width: 100%;
+  flex-wrap: nowrap; /* ¡OBLIGATORIO! Evita que el tercer cuadro se baje */
+}
+
+.header-container {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.welcome-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--andes-navy);
+  line-height: 1.2;
+}
+
+.user-name {
+  color: var(--andes-cyan);
+}
+
+.progress-subtext {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.progress-percent {
+  color: var(--andes-fuchsia);
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0; /* ¡Cero! Esto quita el espacio extra que lo desalinea */
+    background: transparent; /* Quita cualquier fondo para que no se vea una caja blanca */
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0; /* Importante para que no se mueva */
+    padding: 0; /* Importante para que no se mueva */
+    gap: 40px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #afafaf;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+  color: var(--andes-cyan);
+}
+
+/* CORRECCIÓN CLAVE: 
+   Cambiamos flex: 1 por un ancho fijo (width) para que no ocupen toda la pantalla 
+*/
+.progress-card {
+  background-color: var(--andes-white);
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 25px;
+  width: 450px; /* Ajustado para que ambos tengan el mismo ancho */
+  box-shadow: 0 4px 0 #e5e5e5;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  color: #4b4b4b;
+  font-weight: 800;
+}
+
+.go-course {
+  font-size: 13px;
+  font-weight: 800;
+  color: #afafaf;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+}
+
+/* Lista de semanas */
+.weeks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.week-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.week-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  font-size: 20px;
+}
+
+.week-item.active .week-icon.s1 { background-color: var(--andes-cyan); }
+.week-item.locked .week-icon { background-color: #e5e5e5; color: #afafaf; }
+
+.week-info {
+  flex-grow: 1;
+}
+
+.week-info h3 {
+  font-size: 16px;
+  color: #4b4b4b;
+  margin-bottom: 8px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--andes-cyan);
+  border-radius: 10px;
+}
+
+.week-stats {
+  font-weight: 800;
+  color: #afafaf;
+  min-width: 30px;
+  text-align: right;
+}
+
+.daily-goal-card {
+  /* Tamaño y Forma */
+  width: 450px !important;
+  min-height: 100%; 
+  background-color: var(--andes-white);
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 0 #e5e5e5;
+
+  /* Alineación */
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+/* Esto asegura que el contenido interno (iconos y texto) 
+   tenga el mismo espacio que el de la izquierda */
+.goal-main-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Selecciona específicamente los títulos de la tarjeta de bienestar */
+.daily-goal-card .goal-info h3 {
+    font-size: 18px !important; /* Aumenta el tamaño */
+    color: #333;               /* Un color un poco más fuerte para que resalten */
+    margin-bottom: 2px;        /* Reduce el espacio con el texto de abajo */
+}
+
+.goal-icon {
+  background-color: #e5f9ff;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.goal-stats {
+  flex-grow: 1;
+}
+
+.goal-stats h3 {
+  font-size: 16px;
+  color: #4b4b4b;
+  margin-bottom: 8px;
+}
+
+
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* <--- ESTO ES LO QUE DA EL ESPACIO */
+  margin-top: 15px;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el icono y la barra */
+}
+
+.goal-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el icono se aplaste */
+}
+
+.goal-info {
+    flex-grow: 1; /* Hace que la barra de progreso ocupe el espacio sobrante */
+}
+
+.goal-info h3 {
+    font-size: 16px;
+    color: #4b4b4b;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.dashboard-main-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px; /* Espacio uniforme entre los 3 cuadros */
+    overflow-x: auto; /* Por si la pantalla es pequeña, que se pueda scrollear */
+    padding-bottom: 20px;
+}
+
+
+
+/* Ajuste opcional para que los textos largos de la frase no rompan el diseño */
+.goal-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto separa los links del perfil */
+    background: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+/* Estilos del perfil (estilo Duolingo/Referencia) */
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-img-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.profile-handle {
+    font-size: 10px;
+    color: #888;
+    text-transform: lowercase;
+}
+
+.profile-name {
+    font-size: 13px;
+    font-weight: 800;
+    color: #333;
+}
+
+.arrow-down {
+    font-size: 9px;
+    color: #bbb;
+    margin-left: 4px;
+}
+
+/* Contenedor relativo para que el menú flote correctamente */
+.header-profile {
+    position: relative; 
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    min-width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
+    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+}
+
+.dropdown-header {
+    padding: 15px;
+}
+
+.logout-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ff007c; 
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0; 
+    transition: background 0.3s;
+}
+
+.logout-link:hover {
+    background: #ff007c;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.emoji-selector {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.emoji-btn {
+    font-size: 35px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto elástico */
+    filter: grayscale(100%); /* Empiezan en blanco y negro o color apagado */
+    opacity: 0.6;
+    display: inline-block;
+}
+
+.emoji-btn:hover {
+    transform: scale(1.5); /* El zoom que pediste */
+    filter: grayscale(0%); /* Recupera todo su color original */
+    opacity: 1;
+    /* Opcional: un ligero brillo */
+    text-shadow: 0 0 10px rgba(0, 193, 255, 0.3); 
+}

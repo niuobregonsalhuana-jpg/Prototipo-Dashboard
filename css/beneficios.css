@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+:root {
+  --andes-cyan: #00c1ff;
+  --andes-navy: #002d57;
+  --andes-fuchsia: #ff007c;
+  --andes-yellow: #fed001;
+  --andes-white: #ffffff;
+}
+
+/* --- SIDEBAR STYLE --- */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: var(--andes-cyan);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar-logo-img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-left: -5px;
+    padding-left: 15px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.menu-item a {
+    display: block;
+    padding: 18px 35px;
+    color: var(--andes-white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    background: transparent;
+    border-left: 6px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-left: 6px solid var(--andes-white);
+    padding-left: 29px;
+}
+
+/* --- NAVBAR STYLE --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background: transparent;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #afafaf;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+    color: var(--andes-cyan);
+}
+
+/* --- ESTILOS DE BENEFICIOS --- */
+
+/* Ajusta el contenedor principal del texto */
+.header-container {
+    margin-bottom: 15px !important; /* Reduce el espacio debajo del bloque de texto */
+    padding-bottom: 0px !important;
+    border-bottom: none !important;
+}
+
+/* Quita el espacio excesivo del título */
+.header-container h1 {
+    margin-bottom: 5px; 
+}
+
+/* Quita el espacio excesivo del subtítulo */
+.header-container p {
+    /* Esta es la clave: 1.6 o 1.8 da esa sensación de amplitud */
+    line-height: 1.8 !important; 
+    
+    /* Mantenemos los márgenes para la separación con el título y los cuadros */
+    margin-top: 15px !important;
+    margin-bottom: 25px !important;
+    
+    /* Opcional: un color gris suave ayuda a que se vea como en tu ejemplo */
+    color: #777; 
+}
+
+.main-title {
+    color: var(--andes-navy);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* --- ESTILOS DE BENEFICIOS INDIVIDUALES --- */
+
+.main-content {
+    background-color: #f9f9f9;
+}
+
+.benefits-grid {
+    display: grid;
+    /* Usamos auto-fill para que la cuadrícula se ajuste sola */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px; /* Espacio uniforme entre tarjetas */
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Estilo de la Tarjeta Individual (Igual a tus herramientas) */
+.benefit-card {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 0 #e5e5e5; /* La sombra estilo Duolingo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Etiqueta de Categoría (SALUD, EDUCACIÓN) */
+.card-category {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.benefit-card h3 {
+    font-size: 18px;
+    color: var(--andes-navy);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Lista de detalles (Titulares, Red, Máximo) */
+.benefit-details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.benefit-details li {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Botón de acción unificado */
+.btn-action {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 12px;
+    background-color: #f0f7ff;
+    color: #00c1ff;
+    transition: all 0.2s;
+}
+
+/* === COLORES CORPORATIVOS POR CATEGORÍA === */
+/* Salud (Rosa) */
+.cat-salud .card-category { color: #ff1a75; }
+.cat-salud .btn-action { background-color: #fff0f5; color: #ff1a75; }
+.cat-salud .btn-action:hover { background-color: #ff1a75; color: #ffffff; }
+
+/* Educación (Cian) */
+.cat-educacion .card-category { color: #00ccff; }
+.cat-educacion .btn-action:hover { background-color: #00ccff; color: #ffffff; }
+
+/* Finanzas (Navy) */
+.cat-finanzas .card-category { color: #002d5d; }
+.cat-finanzas .btn-action { background-color: #e1eaf3; color: #002d5d; }
+.cat-finanzas .btn-action:hover { background-color: #002d5d; color: #ffffff; }
+
+/* Calidad de Vida (Verde) */
+.cat-vida .card-category { color: #00a800; }
+.cat-vida .btn-action { background-color: #e6f9e6; color: #00a800; }
+.cat-vida .btn-action:hover { background-color: #00a800; color: #ffffff; }
+
+/* Comunidad (Amarillo) */
+.cat-comunidad .card-category { 
+    color: #fed001; 
+}
+
+.cat-comunidad .btn-action { 
+    background-color: #fff9e6; /* Un amarillo muy claro para el fondo del botón */
+    color: #b89600; /* Un tono dorado/oscuro para asegurar la legibilidad del texto */
+}
+
+.cat-comunidad .btn-action:hover { 
+    background-color: #fed001; 
+    color: #ffffff; 
+}

@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+:root {
+  --andes-cyan: #00c1ff;
+  --andes-navy: #002d57;
+  --andes-fuchsia: #ff007c;
+  --andes-yellow: #fed001;
+  --andes-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.root-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- SIDEBAR STYLE --- */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: var(--andes-cyan);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar-logo-img {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-left: -5px;
+  padding-left: 15px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.menu-item {
+  width: 100%;
+}
+
+.menu-item a {
+  display: block;
+  padding: 18px 35px;
+  color: var(--andes-white);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  background: transparent;
+  border-left: 6px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 6px solid var(--andes-white);
+  padding-left: 29px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #afafaf;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+  color: var(--andes-cyan);
+}
+
+
+/* --- ESTILOS HERRAMIENTAS --- */
+.category-label {
+    color: var(--andes-navy);
+    font-size: 18px;
+    font-weight: 800;
+    margin: 30px 0 20px 0;
+    text-transform: uppercase;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.tool-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tool-header h3 {
+    color: var(--andes-navy);
+    font-size: 16px;
+}
+
+.tool-info p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.why-box {
+    background: #f8fdff;
+    border-left: 4px solid var(--andes-cyan);
+    padding: 10px;
+    font-style: italic;
+    color: #444 !important;
+}
+
+.btn-action {
+    background: var(--andes-navy);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--andes-cyan);
+    color: var(--andes-cyan);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between; /* Empuja el perfil a la derecha */
+    align-items: center;
+    width: 100%;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-img-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.profile-handle {
+    font-size: 10px;
+    color: #888;
+    text-transform: lowercase;
+}
+
+.profile-name {
+    font-size: 13px;
+    font-weight: 800;
+    color: #333;
+}
+
+.arrow-down {
+    font-size: 9px;
+    color: #bbb;
+    margin-left: 4px;
+}
+
+/* Contenedor relativo para que el menú flote correctamente */
+.header-profile {
+    position: relative; 
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 220px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
+    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+}
+
+.dropdown-header {
+    padding: 15px;
+}
+
+.logout-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ff007c; 
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0; 
+    transition: background 0.3s;
+}
+
+.logout-link:hover {
+    background: #ff007c;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+/* --- CONTENEDOR DE HERRAMIENTAS --- */
+.tools-section {
+    padding: 20px 0;
+}
+
+.category-label {
+    color: var(--andes-navy);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+/* --- LA GRILLA (Aquí es donde se alinean) --- */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* --- LA TARJETA (El cuadro blanco) --- */
+.tool-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tool-icon {
+    font-size: 30px;
+}
+
+.tool-header h3 {
+    color: var(--andes-navy);
+    font-size: 18px;
+    margin: 0;
+}
+
+.tool-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* --- EL CUADRO DE IMPORTANCIA --- */
+.why-box {
+    background: #f0faff;
+    border-left: 4px solid var(--andes-cyan);
+    padding: 12px;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 13px !important;
+}
+
+/* --- BOTONES --- */
+.btn-action, .btn-outline {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-action {
+    background: var(--andes-navy);
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--andes-cyan);
+    color: var(--andes-cyan);
+}
+
+.main-content {
+    margin-left: 280px; /* Esto empuja el contenido a la derecha del sidebar */
+    padding: 40px 80px; /* Espacio interno para que no pegue a los bordes */
+    min-height: 100vh;
+    width: calc(100% - 280px); /* Asegura que el ancho sea el correcto */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Agrega esto también para que el título y subtítulo coincidan */
+.main-title {
+    color: var(--andes-navy);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Ajuste extra para la grilla de tarjetas */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+

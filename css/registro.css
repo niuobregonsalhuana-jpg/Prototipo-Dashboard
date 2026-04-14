@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f7f7f7; /* Gris Duolingo */
+    font-family: "Montserrat", sans-serif; 
+}
+
+/* El Wrapper centra el cuadro en medio de la pantalla */
+.wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.checkout-card {
+    display: flex;
+    background: white;
+    width: 100%;
+    max-width: 1050px; /* Ancho idéntico a la referencia */
+    min-height: 680px; /* Altura alargada */
+    border: 2px solid #e5e5e5;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* Lado de información (Gris claro) */
+.info-side {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 60px 50px;
+    border-right: 2px solid #e5e5e5;
+}
+
+.title-duo {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: #4b4b4b;
+    margin-bottom: 40px;
+}
+
+.step-row {
+    display: flex;
+    margin-bottom: 35px;
+    align-items: flex-start;
+}
+
+.badge-duo {
+    width: 35px;
+    height: 35px;
+    background-color: #00c1ff; 
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.text-duo h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #4b4b4b;
+}
+
+.text-duo p {
+    font-size: 0.95rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Lado del formulario */
+.form-side {
+    flex: 1.3;
+    padding: 60px 80px;
+}
+
+.subtitle-duo {
+    color: #afafaf;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.input-group-duo {
+    margin-bottom: 20px;
+}
+
+.input-group-duo label {
+    display: block;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: #afafaf;
+    margin-bottom: 8px;
+}
+
+.input-group-duo input, 
+.input-group-duo select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fcfcfc;
+    font-weight: 600;
+    color: #4b4b4b;
+    outline: none;
+}
+
+.input-group-duo input:focus {
+    border-color: #1cb0f6; /* Azul Duolingo */
+}
+
+/* Botón Principal Estilo 3D */
+.btn-duo-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: #1cb0f6;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: all 0.1s;
+}
+
+.btn-duo-primary:active {
+    border-bottom: 0;
+    transform: translateY(5px);
+}
+
+.terms-duo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #afafaf;
+    font-weight: 600;
+}
+
+/* Contenedor principal que envuelve todo */
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Apila el logo sobre la tarjeta */
+    align-items: center;    /* Centra el bloque en la pantalla */
+    padding: 40px;
+}
+
+.header-logo-container {
+    /* 1. El ancho debe ser igual al de tu tarjeta (checkout-card) */
+    width: 95%; 
+    max-width: 1000px; /* Ajusta este número al ancho real de tu cuadro blanco */
+
+    /* 2. Centra el contenedor en la pantalla */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 3. Asegura que el logo dentro se pegue a la izquierda de este contenedor */
+    display: flex;
+    justify-content: flex-start;
+    
+    margin-bottom: 30px; /* Espacio con la tarjeta */
+}
+
+.top-brand-logo {
+    max-height: 80px; /* Mantén el tamaño que te gustó */
+    width: auto;
+}
+
+/* Ajuste de la tarjeta para que respire bien */
+.checkout-card {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;      /* Ancho total de la tarjeta */
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+

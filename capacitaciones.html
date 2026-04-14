@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitaciones - Caja Los Andes</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/capacitaciones.css">
+</head>
+<body>
+    <div class="root-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img">
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
+                <li class="menu-item"><a href="#">Tu ruta</a></li>
+                <li class="menu-item"><a href="capacitaciones.html" style="background-color: rgba(255, 255, 255, 0.15); border-left: 6px solid #ffffff; padding-left: 29px;">Capacitaciones</a></li>
+                <li class="menu-item"><a href="videos.html">Videos</a></li>
+                <li class="menu-item"><a href="herramientas.html">Herramientas</a></li>
+                <li class="menu-item"><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <nav class="top-nav">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
+                    <li class="nav-item active"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
+                    <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
+                </ul>
+
+                <div class="header-profile" id="user-profile-block">
+                    <div class="profile-img-container">
+                        <img id="user-photo" src="https://ui-avatars.com/api/?name=User" alt="User">
+                    </div>
+                    <div class="profile-text">
+                        <span class="profile-handle" id="user-handle">@usuario</span>
+                        <span class="profile-name" id="user-display-name">Cargando...</span>
+                    </div>
+                    <i class="arrow-down">▼</i>
+
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-header">
+                            <p id="dropdown-full-name">Cargando...</p>
+                            <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+                        </div>
+                        <hr>
+                        <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
+                    </div>
+                </div>
+            </nav>
+
+          
+         <div class="courses-section">
+    <h1 class="main-title">Mis Capacitaciones</h1>
+    <p class="section-subtitle">
+        Bienvenido a tu centro de formación. Aquí encontrarás los cursos normativos 
+        y de especialización necesarios para potenciar tu rol en Caja Los Andes. 
+        Completa los módulos activos para desbloquear nuevas rutas de aprendizaje.
+    </p> 
+          
+          
+            <div class="courses-grid">
+    <div class="course-card">
+        
+        <div class="course-type">SEMANA 1</div>
+        <h3>SPLAFT</h3>
+        <p>Prevención de lavado de activos y financiamiento del terrorismo.</p>
+        <div class="course-progress">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 80%;"></div>
+            </div>
+            <span>80% completado</span>
+        </div>
+        <button class="btn-enter">CONTINUAR</button>
+    </div>
+
+    <div class="course-card locked">
+        <div class="course-type">SEMANA 2</div>
+        <h3>Gestión de Riesgos</h3>
+        <p>Identificación, análisis y control de riesgos operativos y financieros.</p>
+        <div class="lock-overlay">🔒 BLOQUEADO</div>
+    </div>
+
+    <div class="course-card locked">
+        <div class="course-type">SEMANA 3</div>
+        <h3>Seguridad de la Información</h3>
+        <p>Protección de activos digitales y confidencialidad de datos de clientes.</p>
+        <div class="lock-overlay">🔒 BLOQUEADO</div>
+    </div>
+
+    <div class="course-card locked">
+        <div class="course-type">SEMANA 4</div>
+        <h3>Continuidad de Negocio</h3>
+        <p>Planes de respuesta y resiliencia ante eventos críticos o interrupciones.</p>
+        <div class="lock-overlay">🔒 BLOQUEADO</div>
+    </div>
+
+    <div class="course-card locked">
+        <div class="course-type">SEMANA 5</div>
+        <h3>Protección de Datos Personales</h3>
+        <p>Cumplimiento legal sobre el tratamiento y privacidad de la información.</p>
+        <div class="lock-overlay">🔒 BLOQUEADO</div>
+    </div>
+
+</div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/capacitaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header-logo-container">
+        <img src="assets/logo (2).png" alt="Logo Caja Los Andes" class="top-brand-logo">
+    </div>
+        <div class="checkout-card">
+            <div class="info-side">
+                <h2 class="title-duo">Cómo funciona</h2>
+                
+                <div class="step-list">
+                    <div class="step-row">
+                        <div class="badge-duo">1</div>
+                        <div class="text-duo">
+                            <h3>Crea tu perfil</h3>
+                            <p>Ingresa tus datos de colaborador para identificarte en el sistema.</p>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="badge-duo">2</div>
+                        <div class="text-duo">
+                            <h3>Explora tu ruta</h3>
+                            <p>Visualiza tus modulos de aprendizaje y herramientas claves para tu aprendizaje.</p>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="badge-duo">3</div>
+                        <div class="text-duo">
+                            <h3>Empieza a aprender</h3>
+                            <p>Accede a tus capacitaciones y mide tus metas desde el primer día.</p>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="badge-duo">4</div>
+                        <div class="text-duo">
+                            <h3>¡Logra tus metas!</h3>
+                            <p>Completa tus cursos y descubre tus beneficios exclusivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-side">
+                <h2 class="title-duo">¡Regístrate ahora!</h2>
+                <p class="subtitle-duo">Únete a la nueva generación de asesores.</p>
+
+                <form id="registrationForm" class="duo-form">
+    <div class="input-group-duo">
+        <label>NOMBRE COMPLETO</label>
+        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+    </div>
+
+    <div class="input-group-duo">
+        <label>CORREO INSTITUCIONAL</label>
+        <input type="email" id="correo" placeholder="usuario@cajalosandes.pe" required>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-7">
+            <div class="input-group-duo">
+                <label>AGENCIA / SEDE</label>
+                <select id="sede" required>
+                    <option value="">Selecciona...</option>
+                    <option>Sede Central</option>
+                    <option>Sede Norte</option>
+                    <option>Sede Sur</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="input-group-duo">
+                <label>DNI</label>
+                <input type="text" id="dni" placeholder="8 dígitos" maxlength="8" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-footer">
+        <button type="submit" class="btn-duo-primary">INGRESAR</button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/registro.js"></script>
+</body>
+</html>

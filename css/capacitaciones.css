@@ -1,0 +1,179 @@
+/* --- MAIN CONTENT AREA --- */
+
+/* --- TOP NAVIGATION --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto crea el espacio entre links y perfil */
+    padding: 0; 
+    background: transparent;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; 
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    color: #afafaf;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+    color: var(--andes-cyan);
+}
+
+.main-content {
+  margin-left: 280px;
+  flex-grow: 1;
+  padding: 40px 80px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.main-title {
+    color: var(--andes-navy);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-type {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--andes-cyan);
+    margin-bottom: 10px;
+}
+
+.course-card h3 {
+    color: var(--andes-navy);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Barras de progreso iguales a tus imágenes */
+.progress-bar-bg {
+    background: #f0f0f0;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+    background: var(--andes-cyan);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.course-progress span {
+    font-size: 11px;
+    color: #bbb;
+    font-weight: 700;
+}
+
+.btn-enter {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    background: var(--andes-navy);
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enter:hover {
+    background: var(--andes-cyan);
+}
+
+/* Estado bloqueado */
+.course-card.locked {
+    background: #fcfcfc;
+    border-style: dashed;
+}
+
+.lock-overlay {
+    background: rgba(240, 240, 240, 0.8);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #bbb;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    font-size: 15px;
+    color: #666; /* Un gris suave */
+    line-height: 1.6;
+    max-width: 800px; /* Para que no ocupe todo el ancho y sea fácil de leer */
+    margin-bottom: 40px; /* Espacio antes de las tarjetas */
+    font-weight: 400;
+}
+
+.main-title {
+    margin-bottom: 10px; /* Pegamos un poco más el título al subtítulo */
+}
+
+.header-profile {
+    position: relative; 
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    min-width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
+    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+}
+
+.dropdown-header {
+    padding: 15px;
+}

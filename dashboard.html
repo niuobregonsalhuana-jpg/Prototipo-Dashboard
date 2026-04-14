@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Caja Los Andes</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="root-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img">
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item"><a href="#">Inicio</a></li>
+                <li class="menu-item"><a href="#">Tu ruta</a></li>
+                <li class="menu-item"><a href="capacitaciones.html">Capacitaciones</a></li>
+                <li class="menu-item"><a href="videos.html">Videos</a></li>
+                <li class="menu-item"><a href="herramientas.html">Herramientas</a></li>
+                <li class="menu-item"><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+    <nav class="top-nav">
+    <ul class="nav-links">
+        <li class="nav-item active"><a href="dashboard.html">DASHBOARD</a></li>
+        <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
+        <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
+    </ul>
+
+    <div class="header-profile" id="user-profile-block">
+        <div class="profile-img-container">
+            <img id="user-photo" src="https://ui-avatars.com/api/?name=User" alt="User">
+        </div>
+        <div class="profile-text">
+            <span class="profile-handle" id="user-handle">@usuario</span>
+            <span class="profile-name" id="user-display-name">Cargando...</span>
+        </div>
+        <i class="arrow-down">▼</i>
+
+        <div class="profile-dropdown" id="profile-dropdown">
+    <div class="dropdown-header">
+        <p id="dropdown-full-name">Cargando...</p>
+        <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+    </div>
+    <hr>
+    <button id="logout-btn" class="logout-link">
+        CERRAR SESIÓN
+    </button>
+</div>
+    </div>
+</nav>
+
+<div class="header-container">
+    <div class="welcome-block">
+        <h1 class="welcome-text">
+    Bienvenido de vuelta, <span id="welcome-name">Usuario</span>!
+        </h1>
+        <div class="progress-subtext">
+            Tu progreso de hoy es el éxito de mañana. Revisa tus  <span class="progress-percent">metas</span> diarias abajo.
+        </div>
+    </div>
+</div>
+
+<div class="dashboard-content">
+    
+    <div class="progress-card">
+        <div class="card-header">
+            <h2>Progreso del Curso</h2>
+            <a href="capacitaciones.html" class="go-course">IR AL CURSO</a>
+        </div>
+        <div class="weeks-list">
+            <div class="week-item active">
+                <div class="week-icon s1">1</div>
+                <div class="week-info">
+                    <h3>Semana 1</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="week-stats">3/7</div>
+            </div>
+            <div class="week-item locked"><div class="week-icon">2</div><div class="week-info"><h3>Semana 2</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+            <div class="week-item locked"><div class="week-icon">3</div><div class="week-info"><h3>Semana 3</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+            <div class="week-item locked"><div class="week-icon">4</div><div class="week-info"><h3>Semana 4</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+            <div class="week-item locked"><div class="week-icon">5</div><div class="week-info"><h3>Semana 5</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+        </div>
+    </div>
+
+    <div class="daily-goal-card">
+        <div class="card-header">
+            <h2>Meta Diaria</h2>
+        </div>
+        <div class="goal-list">
+            <div class="goal-item">
+                <div class="goal-icon" style="background-color: #e5f9ff;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" width="35">
+                </div>
+                <div class="goal-info">
+                    <h3>Puntos de Aprendizaje</h3>
+                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 60%;"></div></div>
+                </div>
+                <div class="week-stats">15/25</div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-icon" style="background-color: #f3e5ff;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208719.png" width="30">
+                </div>
+                <div class="goal-info">
+                    <h3>Actividades Completadas</h3>
+                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 40%; background-color: var(--andes-fuchsia);"></div></div>
+                </div>
+                <div class="week-stats">2/5</div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-icon" style="background-color: #fffcd7;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208732.png" width="30">
+                </div>
+                <div class="goal-info">
+                    <h3>Tiempo de Estudio</h3>
+                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 50%; background-color: #fed001;"></div></div>
+                </div>
+                <div class="week-stats">15/30m</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="daily-goal-card">
+        <div class="card-header">
+            <h2>Tu Bienestar</h2>
+        </div>
+        <div class="goal-list">
+            <div class="goal-item">
+                <div class="goal-icon" style="background-color: #ffe5f0;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208679.png" width="30">
+                </div>
+                <div class="goal-info">
+                    <h3>Frase del día</h3>
+                    <p style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">"Convertirte en un gran asesor está más cerca de lo que crees."</p>
+                </div>
+            </div>
+
+            <div class="goal-item">
+                <div class="goal-icon" style="background-color: #fffcd7;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208732.png" width="30">
+                </div>
+                <div class="goal-info">
+                    <h3>Dato Curioso</h3>
+                    <p style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">¿Sabías que tomar un descanso de 5 min cada hora mejora tu retención?</p>
+                </div>
+            </div>
+
+            <div class="goal-item" style="flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 10px;">
+    <h3 style="font-size: 18px; color: #4b4b4b; font-weight: 700;">¿Cómo te sientes hoy?</h3>
+    <div class="emoji-selector">
+        <span class="emoji-btn">☹️</span>
+        <span class="emoji-btn">😟</span>
+        <span class="emoji-btn">😐</span>
+        <span class="emoji-btn">🙂</span>
+        <span class="emoji-btn">😊</span>
+    </div>
+</div>
+        </div>
+    </div>
+
+</div>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
