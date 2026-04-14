@@ -11,6 +11,21 @@
   --andes-white: #ffffff;
 }
 
+/* 1. Evita el desbordamiento global */
+html, body {
+    overflow-x: hidden; /* Oculta cualquier cosa que se salga horizontalmente */
+    width: 100%;       /* Asegura que el body no sea más ancho que la pantalla */
+    margin: 0;          /* Quita márgenes por defecto del navegador */
+    padding: 0;
+}
+
+/* 2. Corrige la sección azul principal */
+.main-section { /* O el nombre de la clase que tenga tu bloque azul (ej: .hero) */
+    width: 100vw;       /* Fuerza a que ocupe el 100% del ancho de la ventana */
+    margin: 0;          /* Asegura que no tenga márgenes que la muevan */
+    padding: 0;
+}
+
 /* --- NAVBAR (CAJA LOS ANDES) --- */
 .navbar-caja {
   /* Forzamos el color exacto y eliminamos sombras que oscurecen el tono */
