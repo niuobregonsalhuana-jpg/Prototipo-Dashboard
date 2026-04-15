@@ -90,7 +90,26 @@ html, body {
   padding-bottom: 120px;
 }
 
-/* --- BOTÓN HERO CTA (PLANOS Y SIN MOVIMIENTO) --- */
+.btn-caja-rect {
+    background-color: #ffffff !important; 
+    color: #00c1ff !important;            
+    padding: 10px 25px !important;       
+    font-weight: 800 !important;         
+    text-transform: uppercase !important; 
+    text-decoration: none !important;    
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px !important;        
+    display: inline-block !important;
+    border: none !important;              
+    font-size: 14px !important;
+    transition: 0.3s;
+}
+
+.btn-caja-rect:hover {
+    background-color: #f0f0f0 !important; 
+    color: #00c1ff !important;
+}
+
 .btn-hero-cta {
   background-color: var(--andes-white) !important;
   color: var(--andes-cyan) !important;
@@ -748,6 +767,140 @@ html, body {
 
 .footer-custom {
   margin-top: 50px;
+}
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 46, 64, 0.85); 
+    backdrop-filter: blur(4px); 
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 2% auto; 
+    padding: 30px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif; 
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.modal-title { 
+  font-size: 22px; 
+  font-weight: 800; 
+  color: #3c3c3c; 
+  margin-bottom: 5px; 
+  text-align: center;
+}
+
+.modal-subtitle { 
+  font-size: 15px; 
+  color: #777; 
+  margin-bottom: 25px; 
+  text-align: center;
+}
+
+.form-group { 
+    margin-bottom: 22px;
+}
+
+.form-group label { 
+    display: block; 
+    font-weight: 700; 
+    color: #4b4b4b; 
+    margin-bottom: 10px; 
+    font-size: 14px; 
+}
+
+.required-label::after { 
+  content: " *"; 
+  color: #ff4b4b; 
+}
+
+select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+}
+
+select:focus, textarea:focus {
+    outline: none;
+    border-color: #00c1ff;
+    background-color: #fff;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar-feedback {
+    width: 60%; 
+    padding: 12px; 
+    background-color: #00c1ff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 0; 
+    font-size: 1rem; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: 10px auto 0 auto; 
+}
+
+.btn-enviar-feedback:hover {
+    background-color: #0098c7;
+    transform: scale(1.05);
+}
+
+.identidad-protegida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #666; 
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.identidad-protegida i {
+    color: #00c1ff; 
+    font-size: 1.0rem;
+}
+
+.privacidad-nota {
+    font-size: 11px;
+    color: #afafaf;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
 }
 
 /* AJUSTES RESPONSIVOS */

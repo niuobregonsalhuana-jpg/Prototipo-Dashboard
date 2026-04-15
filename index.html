@@ -9,7 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link
       rel="stylesheet"
@@ -17,10 +20,7 @@
     />
   </head>
 
-
   <body>
-
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-caja">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -36,291 +36,465 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-           
-          </div>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarMenu"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="btn-caja-rect" id="btn-feedback">FEEDBACK</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <section id="hero-andes" class="hero-andes">
-    <div class="container">
+      <div class="container">
         <h1 class="hero-title">
-            ¡Tu ruta como Asesor <br> 
-            empieza aquí!
+          ¡Tu ruta como Asesor <br />
+          empieza aquí!
         </h1>
 
         <p class="hero-subtitle">
-            Te acompañamos y preparamos con las herramientas necesarias para <br class="d-none d-md-block"> 
-            liderar en microfinanzas desde tu primer día.
+          Te acompañamos y preparamos con las herramientas necesarias para
+          <br class="d-none d-md-block" />
+          liderar en microfinanzas desde tu primer día.
         </p>
 
         <div class="hero-actions">
-            <a href="registro.html" class="btn-hero-cta">EMPIEZA AQUI</a>
+          <a href="registro.html" class="btn-hero-cta">EMPIEZA AQUI</a>
         </div>
 
         <p class="hero-helper">
-            ¿Prefieres ver tus metas diarias? <a href="#">Reporte Diario</a>
+          ¿Prefieres ver tus metas diarias? <a href="#">Reporte Diario</a>
         </p>
         <div class="hero-divider-curve">
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,320L1440,320L1440,0C1440,0,1118,250,720,250C322,250,0,0,0,0L0,320Z" class="divider-fill"></path>
+          <svg
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0,320L1440,320L1440,0C1440,0,1118,250,720,250C322,250,0,0,0,0L0,320Z"
+              class="divider-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <a href="#onboarding-experiencia" class="duo-learn-more">
+        <div class="learn-more-label">NUESTRA METODOLOGIA</div>
+        <svg
+          class="learn-more-arrow-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
-    </div>
+      </a>
+    </section>
 
-    </div>
-
-    <a href="#onboarding-experiencia" class="duo-learn-more">
-    <div class="learn-more-label">NUESTRA METODOLOGIA</div>
-    <svg class="learn-more-arrow-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 9L12 15L18 9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-</a>
-</section>
-  
-
-
-<section id="onboarding-experiencia" class="onboarding-experiencia">
-  <div class="container-onboarding">
-    
-    <div class="header-texto">
-      <h2 class="titulo-principal">Una experiencia que te<br> prepara para el éxito</h2>
-      <p class="descripcion-principal">
-        Desde tu primer día, te acompañamos con un método diseñado para que te conviertas en un experto en microfinanzas de forma dinámica y efectiva.
-      </p>
-      <div class="cta-wrapper">
-        <a href="registro.html" class="btn-duo-primario">¡EMPIEZA MI RUTA!</a>
-      </div>
-    </div>
-
-    <div class="contenedor-flex-tarjetas">
-      <div class="tarjeta-individual">
-        <div class="valor-card border-resultados">
-          <div class="icon-header flat-icon-container">
-             <i class="fa-solid fa-chart-line"></i>
+    <section id="onboarding-experiencia" class="onboarding-experiencia">
+      <div class="container-onboarding">
+        <div class="header-texto">
+          <h2 class="titulo-principal">
+            Una experiencia que te<br />
+            prepara para el éxito
+          </h2>
+          <p class="descripcion-principal">
+            Desde tu primer día, te acompañamos con un método diseñado para que
+            te conviertas en un experto en microfinanzas de forma dinámica y
+            efectiva.
+          </p>
+          <div class="cta-wrapper">
+            <a href="registro.html" class="btn-duo-primario"
+              >¡EMPIEZA MI RUTA!</a
+            >
           </div>
-          <h3 class="valor-titulo color-resultados">Resultados</h3>
-          <ul class="valor-lista list-resultados">
-            <li><strong>Diseñado para el terreno:</strong> Tu ruta incluye todo lo que necesitas para liderar en microfinanzas.</li>
-            <li><strong>Impacto inmediato:</strong> Nuestra metodología reduce la incertidumbre inicial para alcanzar metas rápido.</li>
-          </ul>
         </div>
-      </div>
 
-      <div class="tarjeta-individual">
-        <div class="valor-card border-agilidad">
-          <div class="icon-header flat-icon-container">
-             <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h3 class="valor-titulo color-agilidad">Agilidad</h3>
-          <ul class="valor-lista list-agilidad">
-            <li><strong>Contenido "Bite-sized":</strong> Cápsulas de video y lecciones cortas para aprender entre visitas.</li>
-            <li><strong>Progreso constante:</strong> Celebramos cada nivel superado para construir confianza en el campo.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tarjeta-individual">
-        <div class="valor-card border-acompanamiento">
-          <div class="icon-header flat-icon-container">
-             <i class="fa-solid fa-hands-holding"></i>
-          </div>
-          <h3 class="valor-titulo color-acompanamiento">Acompañamiento</h3>
-          <ul class="valor-lista list-acompanamiento">
-            <li><strong>Soporte total:</strong> Conecta con materiales de formación y guías prácticas desde tu móvil.</li>
-            <li><strong>Tu voz es clave:</strong> Feedback anónimo para que tu adaptación sea nuestra prioridad.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-   
-  <section id="como-funciona" class="how-it-works">
-    <div class="container-how">
-        <div class="how-content-left">
-            <h2 class="how-title">¿Cómo funciona?</h2>
-            <p class="how-description">
-                Nuestra plataforma está diseñada para que tu aprendizaje sea constante y efectivo, dándote las herramientas para liderar en microfinanzas desde cualquier lugar.
-            </p>
-            <div class="how-cta-wrapper">
-                <a href="registro.html" class="btn-how-start">EMPIEZA AHORA</a>
-                <p class="how-footer-text">
-                    ¿Dudas sobre el proceso? <a href="#">Consulta nuestra guía</a>
-                </p>
+        <div class="contenedor-flex-tarjetas">
+          <div class="tarjeta-individual">
+            <div class="valor-card border-resultados">
+              <div class="icon-header flat-icon-container">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="valor-titulo color-resultados">Resultados</h3>
+              <ul class="valor-lista list-resultados">
+                <li>
+                  <strong>Diseñado para el terreno:</strong> Tu ruta incluye
+                  todo lo que necesitas para liderar en microfinanzas.
+                </li>
+                <li>
+                  <strong>Impacto inmediato:</strong> Nuestra metodología reduce
+                  la incertidumbre inicial para alcanzar metas rápido.
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="tarjeta-individual">
+            <div class="valor-card border-agilidad">
+              <div class="icon-header flat-icon-container">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3 class="valor-titulo color-agilidad">Agilidad</h3>
+              <ul class="valor-lista list-agilidad">
+                <li>
+                  <strong>Contenido "Bite-sized":</strong> Cápsulas de video y
+                  lecciones cortas para aprender entre visitas.
+                </li>
+                <li>
+                  <strong>Progreso constante:</strong> Celebramos cada nivel
+                  superado para construir confianza en el campo.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tarjeta-individual">
+            <div class="valor-card border-acompanamiento">
+              <div class="icon-header flat-icon-container">
+                <i class="fa-solid fa-hands-holding"></i>
+              </div>
+              <h3 class="valor-titulo color-acompanamiento">Acompañamiento</h3>
+              <ul class="valor-lista list-acompanamiento">
+                <li>
+                  <strong>Soporte total:</strong> Conecta con materiales de
+                  formación y guías prácticas desde tu móvil.
+                </li>
+                <li>
+                  <strong>Tu voz es clave:</strong> Feedback anónimo para que tu
+                  adaptación sea nuestra prioridad.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how-it-works">
+      <div class="container-how">
+        <div class="how-content-left">
+          <h2 class="how-title">¿Cómo funciona?</h2>
+          <p class="how-description">
+            Nuestra plataforma está diseñada para que tu aprendizaje sea
+            constante y efectivo, dándote las herramientas para liderar en
+            microfinanzas desde cualquier lugar.
+          </p>
+          <div class="how-cta-wrapper">
+            <a href="registro.html" class="btn-how-start">EMPIEZA AHORA</a>
+            <p class="how-footer-text">
+              ¿Dudas sobre el proceso? <a href="#">Consulta nuestra guía</a>
+            </p>
+          </div>
         </div>
 
         <div class="how-steps-right">
-            <div class="step-item">
-                <div class="step-number color-cian">1</div>
-                <div class="step-text">
-                    <h3>Regístrate</h3>
-                    <p>Completa tu perfil de asesor y accede a tu panel personalizado de metas.</p>
-                </div>
+          <div class="step-item">
+            <div class="step-number color-cian">1</div>
+            <div class="step-text">
+              <h3>Regístrate</h3>
+              <p>
+                Completa tu perfil de asesor y accede a tu panel personalizado
+                de metas.
+              </p>
             </div>
+          </div>
 
-            <div class="step-item">
-                <div class="step-number color-fuchsia">2</div>
-                <div class="step-text">
-                    <h3>Explora tu ruta</h3>
-                    <p>Visualiza tus módulos de aprendizaje y cápsulas "Bite-sized" para el terreno.</p>
-                </div>
+          <div class="step-item">
+            <div class="step-number color-fuchsia">2</div>
+            <div class="step-text">
+              <h3>Explora tu ruta</h3>
+              <p>
+                Visualiza tus módulos de aprendizaje y cápsulas "Bite-sized"
+                para el terreno.
+              </p>
             </div>
+          </div>
 
-            <div class="step-item">
-                <div class="step-number color-cian">3</div>
-                <div class="step-text">
-                    <h3>Mide tu progreso</h3>
-                    <p>Accede a tu reporte diario y recibe feedback constante sobre tu desempeño.</p>
-                </div>
+          <div class="step-item">
+            <div class="step-number color-cian">3</div>
+            <div class="step-text">
+              <h3>Mide tu progreso</h3>
+              <p>
+                Accede a tu reporte diario y recibe feedback constante sobre tu
+                desempeño.
+              </p>
             </div>
+          </div>
 
-            <div class="step-item">
-                <div class="step-number color-fuchsia">4</div>
-                <div class="step-text">
-                    <h3>¡Logra tus metas!</h3>
-                    <p>Celebra cada nivel superado y convierte tu esfuerzo en resultados reales.</p>
-                </div>
+          <div class="step-item">
+            <div class="step-number color-fuchsia">4</div>
+            <div class="step-text">
+              <h3>¡Logra tus metas!</h3>
+              <p>
+                Celebra cada nivel superado y convierte tu esfuerzo en
+                resultados reales.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-    
-<section class="methodology-container active-layout">
-    <div class="content-wrapper">
-        
+      </div>
+    </section>
+
+    <section class="methodology-container active-layout">
+      <div class="content-wrapper">
         <div class="visual-side">
-            <img src="assets/Personaje1.png" alt="Andi Asesor" class="character-img">
+          <img
+            src="assets/Personaje1.png"
+            alt="Andi Asesor"
+            class="character-img"
+          />
         </div>
 
         <div class="text-side">
-            <h2 class="main-title">Una preparación que te encantará completar</h2>
-            <p class="description-text">
-                Ya sea que vengas del mundo de las finanzas o estés iniciando tu carrera, aprenderás a liderar el mercado con lecciones personalizadas.
+          <h2 class="main-title">Una preparación que te encantará completar</h2>
+          <p class="description-text">
+            Ya sea que vengas del mundo de las finanzas o estés iniciando tu
+            carrera, aprenderás a liderar el mercado con lecciones
+            personalizadas.
+          </p>
+
+          <ul class="points-list">
+            <li>
+              <span class="icon">✓</span> <strong>Paso a paso:</strong> Diseñado
+              para la excelencia operativa.
+            </li>
+            <li>
+              <span class="icon">✓</span> <strong>A tu ritmo:</strong> Cápsulas
+              "bite-sized" para el terreno.
+            </li>
+            <li>
+              <span class="icon">✓</span>
+              <strong>Siempre Respaldado:</strong> Comunidad lista para celebrar
+              tus metas.
+            </li>
+          </ul>
+
+          <div class="button-area">
+            <a href="registro.html" class="btn-los-andes">EMPIEZA AHORA</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5 mb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-center mb-5 fw-bold faq-title">
+              <strong>Preguntas frecuentes</strong>
+            </h2>
+
+            <div class="accordion accordion-flush" id="accordionFAQ">
+              <div class="accordion-item border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    ¿Cómo puedo registrarme en la plataforma?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body text-muted">
+                    Es muy sencillo. Solo debes hacer clic en el botón "Empieza
+                    ahora" en la parte superior, completar tu perfil de asesor y
+                    recibirás acceso inmediato a tu panel personalizado de
+                    metas.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    ¿Las lecciones tienen algún costo?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body text-muted">
+                    Actualmente contamos con rutas de aprendizaje gratuitas para
+                    que los asesores puedan liderar el mercado desde cualquier
+                    lugar. Puedes consultar nuestra guía para ver detalles sobre
+                    certificaciones específicas.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    ¿Puedo acceder a las cápsulas desde mi celular?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body text-muted">
+                    ¡Sí! Nuestras cápsulas de contenido son "bite-sized" y están
+                    diseñadas para el terreno. Puedes revisarlas entre visitas a
+                    clientes o en tus tiempos libres desde cualquier dispositivo
+                    móvil.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    ¿Qué hago si tengo dudas durante mi aprendizaje?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body text-muted">
+                    Siempre estarás respaldado. Contamos con una comunidad lista
+                    para celebrar tus metas y acceso directo a mentores que te
+                    brindarán feedback constante sobre tu desempeño.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-bottom">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    ¿Cómo se mide mi progreso en las rutas?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFAQ"
+                >
+                  <div class="accordion-body text-muted">
+                    La plataforma genera un reporte diario donde puedes
+                    visualizar tus módulos completados y el nivel superado. Esto
+                    te permite transformar tu esfuerzo en resultados reales para
+                    tu carrera.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="methodology-container active-layout py-5"
+      style="background-color: #fcfcfc"
+    >
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-md-5 mb-4 mb-md-0">
+            <h2
+              class="main-title"
+              style="
+                font-size: 3.2rem;
+                line-height: 1.1;
+                font-weight: 800;
+                color: #4b4b4b;
+              "
+            >
+              Aprender lo que te apasiona, <br />
+              ahora es más fácil que nunca
+            </h2>
+
+            <p
+              class="description-text mt-4"
+              style="
+                font-size: 1.15rem;
+                color: #777;
+                max-width: 520px;
+                line-height: 1.5;
+              "
+            >
+              Lleva a tu día a día el método de aprendizaje más querido por los
+              expertos y construye, junto a tu equipo, un camino lleno de éxitos
+              y nuevas metas.
             </p>
 
-            <ul class="points-list">
-                <li><span class="icon">✓</span> <strong>Paso a paso:</strong> Diseñado para la excelencia operativa.</li>
-                <li><span class="icon">✓</span> <strong>A tu ritmo:</strong> Cápsulas "bite-sized" para el terreno.</li>
-                <li><span class="icon">✓</span> <strong>Siempre Respaldado:</strong> Comunidad lista para celebrar tus metas.</li>
-            </ul>
-
-            <div class="button-area">
-                <a href="registro.html" class="btn-los-andes">EMPIEZA AHORA</a>
+            <div class="button-area mt-5">
+              <a
+                href="registro.html"
+                class="btn-los-andes d-inline-block text-decoration-none"
+                style="
+                  padding: 18px 55px;
+                  font-size: 1.2rem;
+                  border-radius: 15px;
+                  box-shadow: 0 4px 0 #e6bb00;
+                  font-weight: bold;
+                  background-color: #ffcf00;
+                  color: white;
+                "
+              >
+                ¡SÍ, QUIERO EMPEZAR!
+              </a>
             </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <img
+              src="assets/Personaje2.png"
+              alt="Andi tu compañero"
+              class="img-fluid"
+              style="
+                max-width: 360px;
+                width: 100%;
+                height: auto;
+                filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.06));
+              "
+            />
+          </div>
         </div>
-
-    </div>
-</section>
-    
-<section class="faq-section py-5 mb-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h2 class="text-center mb-5 fw-bold faq-title"><strong>Preguntas frecuentes</strong></h2>
-                
-                <div class="accordion accordion-flush" id="accordionFAQ">
-                    
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                ¿Cómo puedo registrarme en la plataforma?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Es muy sencillo. Solo debes hacer clic en el botón "Empieza ahora" en la parte superior, completar tu perfil de asesor y recibirás acceso inmediato a tu panel personalizado de metas.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                ¿Las lecciones tienen algún costo?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Actualmente contamos con rutas de aprendizaje gratuitas para que los asesores puedan liderar el mercado desde cualquier lugar. Puedes consultar nuestra guía para ver detalles sobre certificaciones específicas.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                ¿Puedo acceder a las cápsulas desde mi celular?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                ¡Sí! Nuestras cápsulas de contenido son "bite-sized" y están diseñadas para el terreno. Puedes revisarlas entre visitas a clientes o en tus tiempos libres desde cualquier dispositivo móvil.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                ¿Qué hago si tengo dudas durante mi aprendizaje?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Siempre estarás respaldado. Contamos con una comunidad lista para celebrar tus metas y acceso directo a mentores que te brindarán feedback constante sobre tu desempeño.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                ¿Cómo se mide mi progreso en las rutas?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                La plataforma genera un reporte diario donde puedes visualizar tus módulos completados y el nivel superado. Esto te permite transformar tu esfuerzo en resultados reales para tu carrera.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="methodology-container active-layout py-5" style="background-color: #fcfcfc;">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            
-            <div class="col-12 col-md-5 mb-4 mb-md-0">
-                <h2 class="main-title" style="font-size: 3.2rem; line-height: 1.1; font-weight: 800; color: #4b4b4b;">
-                    Aprender lo que te apasiona, <br> ahora es más fácil que nunca
-                </h2>
-                
-                <p class="description-text mt-4" style="font-size: 1.15rem; color: #777; max-width: 520px; line-height: 1.5;">
-                    Lleva a tu día a día el método de aprendizaje más querido por los expertos y construye, junto a tu equipo, un camino lleno de éxitos y nuevas metas.
-                </p>
-
-                <div class="button-area mt-5">
-                    <a href="registro.html" class="btn-los-andes d-inline-block text-decoration-none" style="padding: 18px 55px; font-size: 1.2rem; border-radius: 15px; box-shadow: 0 4px 0 #e6bb00; font-weight: bold; background-color: #ffcf00; color: white;">
-                        ¡SÍ, QUIERO EMPEZAR!
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 text-center">
-                <img src="assets/Personaje2.png" alt="Andi tu compañero" class="img-fluid" 
-                     style="max-width: 360px; width: 100%; height: auto; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.06));">
-            </div>
-
-        </div>
-    </div>
-</section>
-
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer-custom">
@@ -366,8 +540,84 @@
         </div>
       </div>
     </footer>
-    
+
+    <div id="feedbackModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <h2 class="modal-title">Feedback anonimo</h2>
+        <p class="modal-subtitle">
+          Este espacio es 100% anónimo, siéntete en total libertad de compartir
+          lo que piensas y sientes.
+        </p>
+
+        <form id="formFeedback">
+          <div class="form-group">
+            <label class="required-label">Semana actual</label>
+            <select id="semana" name="semana" required>
+              <option value="" disabled selected>Selecciona la semana</option>
+              <option value="1">Semana 1</option>
+              <option value="2">Semana 2</option>
+              <option value="3">Semana 3</option>
+              <option value="4">Semana 4</option>
+              <option value="5">Semana 5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="required-label"
+              >¿Cómo te sientes con tu progreso?</label
+            >
+            <select id="estado" name="estado" required>
+              <option value="" disabled selected>Selecciona tu estado</option>
+              <option value="motivado">🚀 Muy motivado y aprendiendo</option>
+              <option value="abrumado">📚 Un poco abrumado</option>
+              <option value="apoyo">🤝 Necesito más apoyo</option>
+              <option value="perdido">🧭 Algo perdido</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>¿Qué ha sido más desafiante?</label>
+            <textarea
+              id="desafio"
+              name="desafio"
+              rows="3"
+              placeholder="Comparte los aspectos más difíciles..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>¿Qué te ayudaría más?</label>
+            <textarea
+              id="ayuda"
+              name="ayuda"
+              rows="3"
+              placeholder="Cuéntanos qué recursos necesitas..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Comentarios adicionales</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="2"
+              placeholder="Cualquier otra sugerencia..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar-feedback">Enviar</button>
+        </form>
+
+        <div class="identidad-protegida">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Tu identidad está protegida</span>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
