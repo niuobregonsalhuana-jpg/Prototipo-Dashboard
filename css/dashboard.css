@@ -83,26 +83,22 @@ body {
   padding-left: 29px;
 }
 
-/* --- MAIN CONTENT AREA --- */
 .main-content {
-    margin-left: 280px; /* Mantiene el espacio para el sidebar */
+    margin-left: 280px;
     flex-grow: 1;
-    padding: 40px 80px; /* CAMBIO: 80px a la izquierda para alinear con el Nav */
+    padding: 40px 80px; 
     min-height: 100vh;
-    background-color: #fff; /* CAMBIO: Blanco puro para que sea igual a herramientas */
-    width: calc(100% - 280px); /* Asegura que el ancho sea el correcto */
+    background-color: #fff;
+    width: calc(100% - 280px); 
 }
 
-/* CORRECCIÓN CLAVE: 
-   Alineamos las tarjetas en fila y evitamos que se estiren verticalmente 
-*/
 .dashboard-content {
   display: flex;
   flex-direction: row; 
-  gap: 20px; /* Reducimos un poco el espacio para que quepan mejor */
+  gap: 20px; 
   align-items: stretch; 
   width: 100%;
-  flex-wrap: nowrap; /* ¡OBLIGATORIO! Evita que el tercer cuadro se baje */
+  flex-wrap: nowrap; 
 }
 
 .header-container {
@@ -143,8 +139,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0; /* ¡Cero! Esto quita el espacio extra que lo desalinea */
-    background: transparent; /* Quita cualquier fondo para que no se vea una caja blanca */
+    padding: 0; 
+    background: transparent; 
     margin-bottom: 40px;
     width: 100%;
 }
@@ -152,8 +148,8 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    margin: 0; /* Importante para que no se mueva */
-    padding: 0; /* Importante para que no se mueva */
+    margin: 0; 
+    padding: 0; 
     gap: 40px;
 }
 
@@ -170,15 +166,12 @@ body {
   color: var(--andes-cyan);
 }
 
-/* CORRECCIÓN CLAVE: 
-   Cambiamos flex: 1 por un ancho fijo (width) para que no ocupen toda la pantalla 
-*/
 .progress-card {
   background-color: var(--andes-white);
   border: 2px solid #e5e5e5;
   border-radius: 15px;
   padding: 25px;
-  width: 450px; /* Ajustado para que ambos tengan el mismo ancho */
+  width: 450px; 
   box-shadow: 0 4px 0 #e5e5e5;
   flex-shrink: 0;
   display: flex;
@@ -206,7 +199,6 @@ body {
   letter-spacing: 0.8px;
 }
 
-/* Lista de semanas */
 .weeks-list {
   display: flex;
   flex-direction: column;
@@ -266,7 +258,6 @@ body {
 }
 
 .daily-goal-card {
-  /* Tamaño y Forma */
   width: 450px !important;
   min-height: 100%; 
   background-color: var(--andes-white);
@@ -274,16 +265,12 @@ body {
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 4px 0 #e5e5e5;
-
-  /* Alineación */
   display: flex;
   flex-direction: column;
   margin: 0 !important;
   flex-shrink: 0;
 }
 
-/* Esto asegura que el contenido interno (iconos y texto) 
-   tenga el mismo espacio que el de la izquierda */
 .goal-main-info {
   display: flex;
   align-items: center;
@@ -291,11 +278,10 @@ body {
   margin-top: 10px;
 }
 
-/* Selecciona específicamente los títulos de la tarjeta de bienestar */
 .daily-goal-card .goal-info h3 {
-    font-size: 18px !important; /* Aumenta el tamaño */
-    color: #333;               /* Un color un poco más fuerte para que resalten */
-    margin-bottom: 2px;        /* Reduce el espacio con el texto de abajo */
+    font-size: 18px !important; 
+    color: #333;              
+    margin-bottom: 2px;        
 }
 
 .goal-icon {
@@ -320,14 +306,14 @@ body {
 .goal-list {
   display: flex;
   flex-direction: column;
-  gap: 25px; /* <--- ESTO ES LO QUE DA EL ESPACIO */
+  gap: 25px; 
   margin-top: 15px;
 }
 
 .goal-item {
   display: flex;
   align-items: center;
-  gap: 15px; /* Espacio entre el icono y la barra */
+  gap: 15px; 
 }
 
 .goal-icon {
@@ -337,11 +323,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* Evita que el icono se aplaste */
+    flex-shrink: 0; 
 }
 
 .goal-info {
-    flex-grow: 1; /* Hace que la barra de progreso ocupe el espacio sobrante */
+    flex-grow: 1; 
 }
 
 .goal-info h3 {
@@ -354,14 +340,11 @@ body {
 .dashboard-main-container {
     display: flex;
     justify-content: flex-start;
-    gap: 25px; /* Espacio uniforme entre los 3 cuadros */
-    overflow-x: auto; /* Por si la pantalla es pequeña, que se pueda scrollear */
+    gap: 25px; 
+    overflow-x: auto; 
     padding-bottom: 20px;
 }
 
-
-
-/* Ajuste opcional para que los textos largos de la frase no rompan el diseño */
 .goal-info p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -370,7 +353,7 @@ body {
 .top-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Esto separa los links del perfil */
+    justify-content: space-between; 
     background: #fff;
 }
 
@@ -382,7 +365,6 @@ body {
     gap: 30px;
 }
 
-/* Estilos del perfil (estilo Duolingo/Referencia) */
 .header-profile {
     display: flex;
     align-items: center;
@@ -428,7 +410,6 @@ body {
     margin-left: 4px;
 }
 
-/* Contenedor relativo para que el menú flote correctamente */
 .header-profile {
     position: relative; 
     cursor: pointer;
@@ -444,8 +425,8 @@ body {
     border: 1px solid #ddd;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     z-index: 1000;
-    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
-    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+    padding: 0; 
+    border-radius: 4px; 
 }
 
 .dropdown-header {
@@ -485,16 +466,15 @@ body {
 .emoji-btn {
     font-size: 35px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto elástico */
-    filter: grayscale(100%); /* Empiezan en blanco y negro o color apagado */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(100%); 
     opacity: 0.6;
     display: inline-block;
 }
 
 .emoji-btn:hover {
-    transform: scale(1.5); /* El zoom que pediste */
-    filter: grayscale(0%); /* Recupera todo su color original */
+    transform: scale(1.5); 
+    filter: grayscale(0%); 
     opacity: 1;
-    /* Opcional: un ligero brillo */
     text-shadow: 0 0 10px rgba(0, 193, 255, 0.3); 
 }

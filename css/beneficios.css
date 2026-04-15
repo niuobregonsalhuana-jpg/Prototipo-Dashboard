@@ -8,7 +8,7 @@
   --andes-white: #ffffff;
 }
 
-/* --- SIDEBAR STYLE --- */
+/* --- SIDEBAR --- */
 .sidebar {
     width: 280px;
     height: 100vh;
@@ -62,7 +62,7 @@
     padding-left: 29px;
 }
 
-/* --- NAVBAR STYLE --- */
+/* --- NAVBAR --- */
 .top-nav {
     display: flex;
     align-items: center;
@@ -95,29 +95,20 @@
 }
 
 /* --- ESTILOS DE BENEFICIOS --- */
-
-/* Ajusta el contenedor principal del texto */
 .header-container {
-    margin-bottom: 15px !important; /* Reduce el espacio debajo del bloque de texto */
+    margin-bottom: 15px !important; 
     padding-bottom: 0px !important;
     border-bottom: none !important;
 }
 
-/* Quita el espacio excesivo del título */
 .header-container h1 {
     margin-bottom: 5px; 
 }
 
-/* Quita el espacio excesivo del subtítulo */
 .header-container p {
-    /* Esta es la clave: 1.6 o 1.8 da esa sensación de amplitud */
     line-height: 1.8 !important; 
-    
-    /* Mantenemos los márgenes para la separación con el título y los cuadros */
     margin-top: 15px !important;
     margin-bottom: 25px !important;
-    
-    /* Opcional: un color gris suave ayuda a que se vea como en tu ejemplo */
     color: #777; 
 }
 
@@ -138,27 +129,24 @@
 }
 
 /* --- ESTILOS DE BENEFICIOS INDIVIDUALES --- */
-
 .main-content {
     background-color: #f9f9f9;
 }
 
 .benefits-grid {
     display: grid;
-    /* Usamos auto-fill para que la cuadrícula se ajuste sola */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px; /* Espacio uniforme entre tarjetas */
+    gap: 25px;
     width: 100%;
     margin-top: 30px;
 }
 
-/* Estilo de la Tarjeta Individual (Igual a tus herramientas) */
 .benefit-card {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 4px 0 #e5e5e5; /* La sombra estilo Duolingo */
+    box-shadow: 0 4px 0 #e5e5e5; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,7 +159,6 @@
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* Etiqueta de Categoría (SALUD, EDUCACIÓN) */
 .card-category {
     font-size: 10px;
     font-weight: 800;
@@ -194,7 +181,6 @@
     margin-bottom: 15px;
 }
 
-/* Lista de detalles (Titulares, Red, Máximo) */
 .benefit-details {
     list-style: none;
     padding: 0;
@@ -210,7 +196,6 @@
     font-weight: 500;
 }
 
-/* Botón de acción unificado */
 .btn-action {
     display: block;
     text-align: center;
@@ -245,16 +230,7 @@
 .cat-vida .btn-action:hover { background-color: #00a800; color: #ffffff; }
 
 /* Comunidad (Amarillo) */
-.cat-comunidad .card-category { 
-    color: #fed001; 
-}
+.cat-comunidad .card-category { color: #fed001; }
+.cat-comunidad .btn-action { background-color: #fff9e6; color: #b89600; }
 
-.cat-comunidad .btn-action { 
-    background-color: #fff9e6; /* Un amarillo muy claro para el fondo del botón */
-    color: #b89600; /* Un tono dorado/oscuro para asegurar la legibilidad del texto */
-}
-
-.cat-comunidad .btn-action:hover { 
-    background-color: #fed001; 
-    color: #ffffff; 
-}
+.cat-comunidad .btn-action:hover { background-color: #fed001; color: #ffffff; }

@@ -1,10 +1,7 @@
-/* --- MAIN CONTENT AREA --- */
-
-/* --- TOP NAVIGATION --- */
 .top-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Esto crea el espacio entre links y perfil */
+    justify-content: space-between; 
     padding: 0; 
     background: transparent;
     margin-bottom: 40px;
@@ -86,7 +83,6 @@
     margin-bottom: 25px;
 }
 
-/* Barras de progreso iguales a tus imágenes */
 .progress-bar-bg {
     background: #f0f0f0;
     height: 8px;
@@ -124,7 +120,6 @@
     background: var(--andes-cyan);
 }
 
-/* Estado bloqueado */
 .course-card.locked {
     background: #fcfcfc;
     border-style: dashed;
@@ -144,15 +139,15 @@
 
 .section-subtitle {
     font-size: 15px;
-    color: #666; /* Un gris suave */
+    color: #666; 
     line-height: 1.6;
-    max-width: 800px; /* Para que no ocupe todo el ancho y sea fácil de leer */
-    margin-bottom: 40px; /* Espacio antes de las tarjetas */
+    max-width: 800px; 
+    margin-bottom: 40px;
     font-weight: 400;
 }
 
 .main-title {
-    margin-bottom: 10px; /* Pegamos un poco más el título al subtítulo */
+    margin-bottom: 10px; 
 }
 
 .header-profile {
@@ -170,8 +165,8 @@
     border: 1px solid #ddd;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     z-index: 1000;
-    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
-    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+    padding: 0; 
+    border-radius: 4px; 
 }
 
 .dropdown-header {

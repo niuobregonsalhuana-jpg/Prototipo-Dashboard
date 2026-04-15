@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-/* --- SIDEBAR STYLE --- */
+/* --- SIDEBAR --- */
 .sidebar {
   width: 280px;
   height: 100vh;
@@ -180,7 +180,7 @@ body {
 
 .top-nav {
     display: flex;
-    justify-content: space-between; /* Empuja el perfil a la derecha */
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     padding: 0 0 20px 0;
@@ -238,7 +238,6 @@ body {
     margin-left: 4px;
 }
 
-/* Contenedor relativo para que el menú flote correctamente */
 .header-profile {
     position: relative; 
     cursor: pointer;
@@ -254,8 +253,8 @@ body {
     border: 1px solid #ddd;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     z-index: 1000;
-    padding: 0; /* Quitamos padding para que el botón ocupe todo el ancho */
-    border-radius: 4px; /* Un poco de radio al cuadro general, pero no al botón */
+    padding: 0; 
+    border-radius: 4px; 
 }
 
 .dropdown-header {
@@ -298,14 +297,12 @@ body {
     text-transform: uppercase;
 }
 
-/* --- LA GRILLA (Aquí es donde se alinean) --- */
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 25px;
 }
 
-/* --- LA TARJETA (El cuadro blanco) --- */
 .tool-card {
     background: #fff;
     border-radius: 20px;
@@ -346,7 +343,6 @@ body {
     line-height: 1.5;
 }
 
-/* --- EL CUADRO DE IMPORTANCIA --- */
 .why-box {
     background: #f0faff;
     border-left: 4px solid var(--andes-cyan);
@@ -356,7 +352,6 @@ body {
     font-size: 13px !important;
 }
 
-/* --- BOTONES --- */
 .btn-action, .btn-outline {
     display: block;
     width: 100%;
@@ -383,17 +378,16 @@ body {
 }
 
 .main-content {
-    margin-left: 280px; /* Esto empuja el contenido a la derecha del sidebar */
-    padding: 40px 80px; /* Espacio interno para que no pegue a los bordes */
+    margin-left: 280px;
+    padding: 40px 80px; 
     min-height: 100vh;
-    width: calc(100% - 280px); /* Asegura que el ancho sea el correcto */
+    width: calc(100% - 280px); 
     background-color: #fff;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Agrega esto también para que el título y subtítulo coincidan */
 .main-title {
     color: var(--andes-navy);
     font-size: 28px;
@@ -410,7 +404,7 @@ body {
     font-weight: 400;
 }
 
-/* Ajuste extra para la grilla de tarjetas */
+
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

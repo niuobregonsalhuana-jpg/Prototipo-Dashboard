@@ -1,8 +1,6 @@
 /* CONFIGURACIÓN GLOBAL DE LA PAGINA */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
 
-
-
 :root {
   --andes-cyan: #00c1ff;
   --andes-navy: #002d57;
@@ -11,24 +9,21 @@
   --andes-white: #ffffff;
 }
 
-/* 1. Evita el desbordamiento global */
 html, body {
-    overflow-x: hidden; /* Oculta cualquier cosa que se salga horizontalmente */
-    width: 100%;       /* Asegura que el body no sea más ancho que la pantalla */
-    margin: 0;          /* Quita márgenes por defecto del navegador */
+    overflow-x: hidden; 
+    width: 100%;       
+    margin: 0;        
     padding: 0;
 }
 
-/* 2. Corrige la sección azul principal */
-.main-section { /* O el nombre de la clase que tenga tu bloque azul (ej: .hero) */
-    width: 100vw;       /* Fuerza a que ocupe el 100% del ancho de la ventana */
-    margin: 0;          /* Asegura que no tenga márgenes que la muevan */
+.main-section { 
+    width: 100vw;      
+    margin: 0;        
     padding: 0;
 }
 
 /* --- NAVBAR (CAJA LOS ANDES) --- */
 .navbar-caja {
-  /* Forzamos el color exacto y eliminamos sombras que oscurecen el tono */
   background-color: var(--andes-cyan) !important; 
   position: sticky;
   top: 0;
@@ -51,7 +46,6 @@ html, body {
   opacity: 0.7;
 }
 
-/* BOTONES DEL NAVBAR (TOTALMENTE PLANOS) */
 .btn-cuota,
 .btn-credito {
   border-radius: 0 !important; 
@@ -80,7 +74,6 @@ html, body {
 
 /* --- HERO SECTION --- */
 .hero-andes {
-  /* Asegura continuidad visual con el Navbar */
   background-color: var(--andes-cyan) !important; 
   margin-top: 0; 
   padding: 0; 
@@ -105,7 +98,7 @@ html, body {
   font-weight: 800;
   text-decoration: none;
   display: inline-block;
-  border-radius: 0 !important; /* Rectangular */
+  border-radius: 0 !important; 
   font-size: 1.1rem;
   border: none !important;
   box-shadow: none !important;
@@ -118,7 +111,6 @@ html, body {
   opacity: 0.9;
 }
 
-/* Eliminamos el efecto de hundimiento para mantenerlo plano */
 .btn-hero-cta:active {
   transform: none !important;
 }
@@ -164,7 +156,6 @@ html, body {
   z-index: 11;
 }
 
-/* --- LEARN MORE --- */
 .duo-learn-more {
     position: absolute;
     bottom: 210px; 
@@ -221,22 +212,13 @@ html, body {
   position: relative;
   z-index: 5;
   margin-top: -1px; 
-  padding-top: 60px; /* Espacio para que el contenido no quede bajo la curva */
-}
-/* --- CONFIGURACIÓN GENERAL --- */
-:root {
-  --andes-cyan: #00AEEF;
-  --andes-yellow: #FFC20E;
-  --andes-fuchsia: #E6007E;
-  --duo-gray: #afafaf;
-  --duo-border: #e5e5e5;
-  --text-dark: #4b4b4b;
+  padding-top: 60px; 
 }
 
 .onboarding-experiencia {
   padding: 60px 20px;
   background-color: #fff;
-  font-family: 'Montserrat', sans-serif; /* Usando tu fuente global */
+  font-family: 'Montserrat', sans-serif; 
   text-align: center;
 }
 
@@ -260,7 +242,6 @@ html, body {
   margin: 0 auto 30px;
 }
 
-/* --- BOTÓN RECTANGULAR Y PLANO --- */
 .cta-wrapper {
   margin-bottom: 50px;
 }
@@ -270,37 +251,27 @@ html, body {
   color: white !important;
   text-decoration: none;
   padding: 16px 45px;
-  
-  /* 1. Lo hacemos cuadrado/rectangular */
-  border-radius: 0px !important; 
-  
+  border-radius: 0px !important;  
   font-weight: 800;
   font-size: 1.1rem;
   display: inline-block;
-  
-  /* 2. Eliminamos la sombra/borde 3D */
   border: none !important; 
   box-shadow: none !important;
   
   transition: opacity 0.2s;
 }
 
-/* 3. Feedback visual simple con opacidad en lugar de movimiento */
 .btn-duo-primario:hover {
   opacity: 0.9;
 }
 
-/* 4. Eliminamos el efecto de hundimiento */
 .btn-duo-primario:active {
   border-bottom: none !important;
   transform: none !important;
 }
 
-/* --- ESTILOS DE LOS NUEVOS ICONOS --- */
-
-/* Contenedor cuadrado con fondo suave */
 .flat-icon-container {
-  background-color: #f0faff; /* Fondo claro por defecto */
+  background-color: #f0faff; 
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -308,20 +279,17 @@ html, body {
   transition: background-color 0.3s;
 }
 
-/* Tamaño y color del icono */
 .flat-icon-container i {
   font-size: 50px;
   color: var(--andes-cyan);
 }
 
-/* Personalización de color por categoría para los iconos */
 .border-agilidad .flat-icon-container { background-color: #fff9e6; }
 .border-agilidad .flat-icon-container i { color: var(--andes-yellow); }
 
 .border-acompanamiento .flat-icon-container { background-color: #fff0f5; }
 .border-acompanamiento .flat-icon-container i { color: var(--andes-fuchsia); }
 
-/* --- TU CSS ORIGINAL MANTENIDO --- */
 .contenedor-flex-tarjetas {
   display: flex;
   flex-direction: row;
@@ -387,7 +355,7 @@ html, body {
 
 .color-acompanamiento { color: var(--andes-fuchsia); }
 .list-acompanamiento li::before { color: var(--andes-fuchsia); }
-/* --- RESPONSIVE (MÓVIL) --- */
+
 @media (max-width: 991px) {
   .contenedor-flex-tarjetas {
     flex-direction: column;
@@ -400,14 +368,13 @@ html, body {
 }
 
 .onboarding-experiencia {
-    padding: 120px 20px 60px 20px !important; /* Usamos padding-top en lugar de margin */
+    padding: 120px 20px 60px 20px !important; 
     background-color: #ffffff;
     position: relative;
     z-index: 5;
     text-align: center;
 }
 
-/* --- SECCIÓN CÓMO FUNCIONA --- */
 .how-it-works {
     padding: 100px 20px;
     background-color: #ffffff;
@@ -421,13 +388,12 @@ html, body {
     justify-content: center; 
     align-items: center; 
     gap: 100px;
-    padding-left: 100px; /* Esto moverá todo el conjunto hacia la derecha */
+    padding-left: 100px;
     padding-right: 10px;
 }
 
-/* Columna Izquierda */
 .how-content-left {
-    flex: 0 1 490px; /* Reducimos el ancho máximo para dejar más aire al centro */
+    flex: 0 1 490px; 
 }
 
 .how-title {
@@ -468,38 +434,37 @@ html, body {
     text-decoration: none;
 }
 
-/* Columna Derecha (Pasos) */
 .how-steps-right {
-    flex: 0 1 550px; /* Ancho fijo para controlar la posición */
+    flex: 0 1 550px; 
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-left: 0; /* Fuerza el bloque totalmente a la derecha */
+    margin-left: 0; 
 }
 
 .step-item {
     display: flex;
-    align-items: center; /* Centra el círculo con el título del paso */
-    gap: 40px; /* <--- Distancia considerable entre círculo y texto */
+    align-items: center;
+    gap: 40px; 
 }
 
 .step-number {
-    min-width: 65px; /* <--- Círculos más grandes */
-    height: 65px;    /* <--- Círculos más grandes */
+    min-width: 65px; 
+    height: 65px;    
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 800;
-    font-size: 1.8rem; /* Número más grande y visible */
+    font-size: 1.8rem; 
 }
 
 .color-cian { background-color: var(--andes-cyan); }
 .color-fuchsia { background-color: var(--andes-fuchsia); }
 
 .step-text {
-    max-width: 400px; /* Evita que el texto de los pasos se estire demasiado */
+    max-width: 400px; 
 }
 
 .step-text h3 {
@@ -532,14 +497,10 @@ html, body {
         width: 100%;
     }
     .step-item {
-        justify-content: center; /* Centrado en móviles */
+        justify-content: center; 
         gap: 20px;
     }
 }
-
-/* ============================================================
-   SECCIÓN NUESTRA METODOLOGÍA (OPTIMIZADA)
-   ============================================================ */
 
 .methodology-container {
     width: 100%;
@@ -554,28 +515,25 @@ html, body {
 .content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; /* Asegura que los hijos se agrupen al centro */
-    max-width: 1100px; /* Reducir un poco el max-width ayuda a que se vea más centrado */
-    margin: 0 auto;    /* Esto es vital para centrar el contenedor en la página */
-    gap: 60px;         /* El espacio entre Andi y el texto */
-}
-/* Control de la Imagen (Lado Izquierdo) */
-/* --- Lado Izquierdo: Contenedor de la Imagen --- */
-.visual-side {
-    flex: 0 1 30%; /* Cambiado de flex: 1 a flex: 0 1 30% */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Asegura centrado vertical */
+    justify-content: center; 
+    max-width: 1100px; 
+    margin: 0 auto;    
+    gap: 60px;         
 }
 
-/* --- La Imagen de Andi --- */
+.visual-side {
+    flex: 0 1 30%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 .character-img {
-    max-width: 280px; /* Cambiado de 350px/400px a 280px */
+    max-width: 280px; 
     width: 100%;
     height: auto;
 }
 
-/* Control del Texto (Lado Derecho) */
 .text-side {
     flex: 1.2;
     text-align: left;
@@ -597,30 +555,26 @@ html, body {
     margin-bottom: 35px;
 }
 
-/* --- LISTA DE BENEFICIOS (CORREGIDA) --- */
 .points-list {
     list-style: none;
     padding: 0;
     margin-bottom: 45px;
 }
 
-/* 1. Color para el texto que NO está en negrita */
 .points-list li {
     font-size: 1.05rem;
-    color: #777 !important; /* Aquí cambias el color general de la lista */
+    color: #777 !important;
     margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
 }
 
-/* 2. Color para el texto que SÍ está en negrita (strong) */
 .points-list li strong {
-    color: #777 !important; /* Usando tu Navy de la marca para que resalte */
-    margin-right: 8px; /* ¡Aquí está el espacio que querías después de los dos puntos! */
+    color: #777 !important; 
+    margin-right: 8px; 
     display: inline-block;
 }
 
-/* 3. El Checkmark */
 .points-list .icon {
     color: var(--andes-yellow);
     font-weight: 900;
@@ -637,24 +591,23 @@ html, body {
 }
 
 .icon {
-    color: var(--andes-yellow); /* Usa tu variable #00c1ff */
+    color: var(--andes-yellow); 
     font-weight: 900;
     margin-right: 15px;
     font-size: 1.2rem;
 }
 
-/* BOTÓN TOTALMENTE PLANO Y CUADRADO (ESTILO ANDES) */
 .btn-los-andes {
     display: inline-block;
     background-color: var(--andes-yellow) !important;
     color: white !important;
     padding: 18px 50px;
-    border-radius: 0 !important; /* Totalmente cuadrado */
+    border-radius: 0 !important; 
     text-decoration: none;
     font-weight: 800;
     font-size: 1.1rem;
     border: none !important;
-    box-shadow: none !important; /* Sin sombras 3D para ser plano */
+    box-shadow: none !important; 
     transition: opacity 0.3s;
     text-transform: uppercase;
 }
@@ -682,7 +635,6 @@ html, body {
     }
 }
 
-/* Estilos para la sección FAQ */
 .faq-title {
     color: #4b4b4b;
     font-size: 2.5rem;
@@ -702,12 +654,10 @@ html, body {
     box-shadow: none !important;
 }
 
-/* Color cuando la pregunta está abierta o seleccionada */
 .accordion-button:not(.collapsed) {
-    color: var(--andes-cyan) !important; /* Celeste de la cabecera */
+    color: var(--andes-cyan) !important; 
 }
 
-/* Estilo del texto de la respuesta */
 .accordion-body {
     padding-left: 0;
     padding-bottom: 2rem;
@@ -715,12 +665,9 @@ html, body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* Color de la flecha del acordeón */
 .accordion-button::after {
     filter: brightness(0.5);
 }
-
-
 
 /* ESTILOS FOOTER */
 .footer-custom {
