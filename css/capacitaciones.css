@@ -45,8 +45,9 @@
 
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    align-items: start; 
 }
 
 .course-card {
@@ -123,6 +124,9 @@
 .course-card.locked {
     background: #fcfcfc;
     border-style: dashed;
+    min-height: 280px; 
+    display: flex;
+    flex-direction: column;
 }
 
 .lock-overlay {
@@ -136,6 +140,8 @@
     color: #bbb;
     font-weight: 800;
 }
+
+
 
 .section-subtitle {
     font-size: 15px;
@@ -171,4 +177,50 @@
 
 .dropdown-header {
     padding: 15px;
+}
+
+.tasks-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+    contain: content;
+}
+
+.course-card.expanded .tasks-container {
+    max-height: 400px;
+}
+
+.tasks-inner {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f9f9f9;
+    contain: content;
+}
+
+.task-info h4 {
+    font-size: 13px;
+    color: #333 !important; 
+    margin: 0 !important;
+}
+
+.task-info p {
+    font-size: 11px;
+    color: #aaa !important; 
+    margin: 2px 0 0 0 !important;
+}
+
+.task-link {
+    text-decoration: none;
+    color: var(--andes-cyan);
+    font-size: 16px;
+    font-weight: bold;
 }

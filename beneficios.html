@@ -1,248 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beneficios - Caja Los Andes</title>
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/beneficios.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/beneficios.css" />
+  </head>
+  <body>
     <div class="root-container">
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="assets/logo_web.png"
+            alt="Caja Los Andes"
+            class="sidebar-logo-img"
+          />
+        </div>
+        <ul class="sidebar-menu">
+          <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
+          <li class="menu-item">
+            <a href="capacitaciones.html">Capacitaciones</a>
+          </li>
+          <li class="menu-item"><a href="videos.html">Videos</a></li>
+          <li class="menu-item">
+            <a href="herramientas.html">Herramientas</a>
+          </li>
+          <li class="menu-item"><a href="#">Mesa de ayuda</a></li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <nav class="top-nav">
+          <ul class="nav-links">
+            <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
+            <li class="nav-item">
+              <a href="capacitaciones.html">MIS CAPACITACIONES</a>
+            </li>
+            <li class="nav-item active">
+              <a href="beneficios.html">BENEFICIOS</a>
+            </li>
+          </ul>
+
+          <div class="header-profile" id="user-profile-block">
+            <div class="profile-img-container" id="user-photo-container"></div>
+
+            <div class="profile-text">
+              <span class="profile-handle" id="user-handle">@usuario</span>
+              <span class="profile-name" id="user-display-name"
+                >Cargando...</span
+              >
             </div>
-            <ul class="sidebar-menu">
-                <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
-                <li class="menu-item"><a href="#">Tu ruta</a></li>
-                <li class="menu-item"><a href="capacitaciones.html">Capacitaciones</a></li>
-                <li class="menu-item"><a href="videos.html">Videos</a></li>
-                <li class="menu-item"><a href="herramientas.html">Herramientas</a></li>
-                <li class="menu-item"><a href="#">Feedback</a></li>
-            </ul>
+            <i class="arrow-down">▼</i>
+
+            <div class="profile-dropdown" id="profile-dropdown">
+              <div class="dropdown-header">
+                <p id="dropdown-full-name">Cargando...</p>
+                <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+              </div>
+              <hr />
+              <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
+            </div>
+          </div>
         </nav>
 
-        <main class="main-content">
-            <nav class="top-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
-                    <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
-                    <li class="nav-item active"><a href="beneficios.html">BENEFICIOS</a></li>
-                </ul>
+        <div class="header-container">
+          <h1 class="main-title">Bienestar Andesino</h1>
+          <p class="section-subtitle">
+            Descubre los beneficios exclusivos diseñados para potenciar tu
+            calidad de vida, salud y crecimiento profesional dentro de Caja Los
+            Andes.
+          </p>
+        </div>
 
-                <div class="header-profile" id="user-profile-block">
-                    <div class="profile-img-container">
-                        <img id="user-photo" src="https://ui-avatars.com/api/?name=Niurka+Obregon" alt="User">
-                    </div>
-                    <div class="profile-text">
-                        <span class="profile-handle" id="user-handle">@obregonsalhuananiurka</span>
-                        <span class="profile-name" id="user-display-name">Niurka Obregon</span>
-                    </div>
-                    <i class="arrow-down">▼</i>
+        <div class="benefits-grid">
+          <div class="benefit-card cat-salud">
+            <div class="card-category">Salud</div>
+            <h3>EPS Rímac (70%)</h3>
+            <p>
+              Caja Los Andes subvenciona el 70% del costo de tu seguro de salud
+              privado. Acceso a red de clínicas con copagos preferenciales.
+            </p>
 
-                    <div class="profile-dropdown" id="profile-dropdown">
-                        <div class="dropdown-header">
-                            <p id="dropdown-full-name">Niurka Obregon</p>
-                            <p id="dropdown-email" class="small-text">obregonsalhuananiurka@gmail.com</p>
-                        </div>
-                        <hr>
-                        <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
-                    </div>
-                </div>
-            </nav>
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Colaborador, cónyuge e hijos.
+              </li>
+              <li><strong>Sede:</strong> Nacional (Red de clínicas RIMAC).</li>
+              <li><strong>Gestión:</strong> Anyhela Guevara</li>
+              <li>
+                <strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332
+                969
+              </li>
+            </ul>
 
-            <div class="header-container">
-                <h1 class="main-title">Bienestar Andesino</h1>
-                <p class="section-subtitle">
-                    Descubre los beneficios exclusivos diseñados para potenciar tu calidad de vida, salud y crecimiento profesional dentro de Caja Los Andes.
-                </p>
-            </div>
+            <a href="#" class="btn-action">SOLICITAR AFILIACIÓN</a>
+          </div>
 
-            <div class="benefits-grid">
+          <div class="benefit-card cat-salud">
+            <div class="card-category">Salud</div>
+            <h3>Seguro Oncológico</h3>
+            <p>
+              Programa OncoPlus con cobertura al 100% en tratamientos
+              oncológicos en la red Auna e incluye chequeos preventivos anuales
+              sin costo.
+            </p>
 
-    <div class="benefit-card cat-salud">
-    <div class="card-category">Salud</div>
-    <h3>EPS Rímac (70%)</h3>
-    <p>Caja Los Andes subvenciona el 70% del costo de tu seguro de salud privado. Acceso a red de clínicas con copagos preferenciales.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador, cónyuge e hijos.</li>
-        <li><strong>Sede:</strong> Nacional (Red de clínicas RIMAC).</li>
-        <li><strong>Gestión:</strong> Anyhela Guevara</li>
-        <li><strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332 969</li>
-    </ul>
-    
-    <a href="#" class="btn-action">SOLICITAR AFILIACIÓN</a>
-</div>
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Colaborador y familiares directos.
+              </li>
+              <li><strong>Red:</strong> Clínicas Auna (Nacional).</li>
+              <li><strong>Contacto:</strong> Fabrizio Leon-Velarde</li>
+              <li><strong>Email:</strong> fabrizio.leonvelarde@auna.org</li>
+              <li><strong>Teléfono:</strong> 923 311 625</li>
+            </ul>
 
-    <div class="benefit-card cat-salud">
-    <div class="card-category">Salud</div>
-    <h3>Seguro Oncológico</h3>
-    <p>Programa OncoPlus con cobertura al 100% en tratamientos oncológicos en la red Auna e incluye chequeos preventivos anuales sin costo.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador y familiares directos.</li>
-        <li><strong>Red:</strong> Clínicas Auna (Nacional).</li>
-        <li><strong>Contacto:</strong> Fabrizio Leon-Velarde</li>
-        <li><strong>Email:</strong> fabrizio.leonvelarde@auna.org</li>
-        <li><strong>Teléfono:</strong> 923 311 625</li>
-    </ul>
-    
-    <a href="mailto:fabrizio.leonvelarde@auna.org" class="btn-action">CÓMO ACCEDER</a>
-</div>
+            <a href="mailto:fabrizio.leonvelarde@auna.org" class="btn-action"
+              >CÓMO ACCEDER</a
+            >
+          </div>
 
-    <div class="benefit-card cat-salud">
-    <div class="card-category">Salud</div>
-    <h3>SOAT Corporativo</h3>
-    <p>Activa o renueva el SOAT de tu motocicleta a precio corporativo de S/ 235, con descuento por planilla en hasta 6 cuotas cómodas.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Solo colaborador.</li>
-        <li><strong>Dónde aplica:</strong> Nacional.</li>
-        <li><strong>Responsable:</strong> Marcial Ccama</li>
-        <li><strong>Email:</strong> mccama@cajalosandes.pe</li>
-        <li><strong>Teléfono:</strong> 958 315 511</li>
-    </ul>
-    
-    <a href="mailto:mccama@cajalosandes.pe" class="btn-action">SOLICITAR AHORA</a>
-</div>
+          <div class="benefit-card cat-salud">
+            <div class="card-category">Salud</div>
+            <h3>SOAT Corporativo</h3>
+            <p>
+              Activa o renueva el SOAT de tu motocicleta a precio corporativo de
+              S/ 235, con descuento por planilla en hasta 6 cuotas cómodas.
+            </p>
 
-    <div class="benefit-card cat-educacion">
-    <div class="card-category">Educación</div>
-    <h3>Laureate Education</h3>
-    <p>Descuento del 32% en maestrías, cursos, diplomados y programas en UPC, UPN e Instituto Cibertec. Modalidad presencial y virtual disponible.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Solo colaborador.</li>
-        <li><strong>Sede:</strong> Lima y virtual (UPC, UPN, Cibertec).</li>
-        <li><strong>Gestión:</strong> Maya Vásquez</li>
-        <li><strong>Teléfono:</strong> 992 713 196</li>
-    </ul>
-    
-    <a href="https://wa.me/51992713196" target="_blank" class="btn-action">SOLICITAR BECA</a>
-</div>
+            <ul class="benefit-details">
+              <li><strong>Para quién:</strong> Solo colaborador.</li>
+              <li><strong>Dónde aplica:</strong> Nacional.</li>
+              <li><strong>Responsable:</strong> Marcial Ccama</li>
+              <li><strong>Email:</strong> mccama@cajalosandes.pe</li>
+              <li><strong>Teléfono:</strong> 958 315 511</li>
+            </ul>
 
-    <div class="benefit-card cat-educacion">
-    <div class="card-category">Educación</div>
-    <h3>Open English</h3>
-    <p>75% de descuento en Open English, Junior y Open Mundo. Clases en vivo 24/7 con profesores nativos y licencia de 12 meses con acceso ilimitado.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador y núcleo familiar.</li>
-        <li><strong>Modalidad:</strong> 100% virtual (Acceso global).</li>
-        <li><strong>Contacto:</strong> William Castañeda</li>
-        <li><strong>Email:</strong> william.castaneda@openenglish.com</li>
-        <li><strong>WhatsApp:</strong> +57 321 344 1940</li>
-    </ul>
-    
-    <a href="https://wa.me/573213441940" target="_blank" class="btn-action">OBTENER CÓDIGO</a>
-</div>
+            <a href="mailto:mccama@cajalosandes.pe" class="btn-action"
+              >SOLICITAR AHORA</a
+            >
+          </div>
 
-   <div class="benefit-card cat-educacion">
-    <div class="card-category">Educación</div>
-    <h3>Universidad ESAN</h3>
-    <p>10% de descuento en MBA, Maestrías Especializadas, PADE, PAE, Diplomas Internacionales y Ejecutivos, PEE y Cursos CIE y QuickLearning.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador y familiares directos.</li>
-        <li><strong>Sede:</strong> Lima y modalidad virtual.</li>
-        <li><strong>Contacto 1:</strong> mlozano@esan.edu.pe / 942 886 618</li>
-        <li><strong>Contacto 2:</strong> eponces@esan.edu.pe / 942 889 955</li>
-    </ul>
-    
-    <a href="mailto:mlozano@esan.edu.pe;eponces@esan.edu.pe" class="btn-action">VER PROGRAMAS</a>
-</div>
+          <div class="benefit-card cat-educacion">
+            <div class="card-category">Educación</div>
+            <h3>Laureate Education</h3>
+            <p>
+              Descuento del 32% en maestrías, cursos, diplomados y programas en
+              UPC, UPN e Instituto Cibertec. Modalidad presencial y virtual
+              disponible.
+            </p>
 
-    <div class="benefit-card cat-educacion">
-    <div class="card-category">Educación</div>
-    <h3>ISIL</h3>
-    <p>Hasta 80% de descuento en diversas modalidades: 60% en cursos y diplomados, beneficios en carreras técnicas y 80% en MBA Harson University.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador, cónyuge, hijos y hermanos.</li>
-        <li><strong>Sede:</strong> Lima (presencial) y Virtual.</li>
-        <li><strong>Carreras Técnicas:</strong> 100% inscripción + 50% 1ra matrícula.</li>
-        <li><strong>MBA Harson:</strong> 80% de descuento (Miami - Virtual).</li>
-    </ul>
-    
-    <a href="mailto:admision@isil.pe;ee@isil.pe;admision@harsonuniversity.com" class="btn-action">SOLICITAR INFORMACIÓN</a>
-</div>
+            <ul class="benefit-details">
+              <li><strong>Para quién:</strong> Solo colaborador.</li>
+              <li>
+                <strong>Sede:</strong> Lima y virtual (UPC, UPN, Cibertec).
+              </li>
+              <li><strong>Gestión:</strong> Maya Vásquez</li>
+              <li><strong>Teléfono:</strong> 992 713 196</li>
+            </ul>
 
-    <div class="benefit-card cat-finanzas">
-    <div class="card-category">Finanzas</div>
-    <h3>Crédito Colaborador</h3>
-    <p>Crédito exclusivo con tasa preferencial para tus proyectos personales. Sujeto a aprobación de jefatura y validación de requisitos.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Solo colaborador (Mínimo 12 meses de antigüedad).</li>
-        <li><strong>Monto máximo:</strong> Hasta 7 remuneraciones netas.</li>
-        <li><strong>Plazo máximo:</strong> 36 meses.</li>
-        <li><strong>Contacto:</strong> mzegarras@cajalosandes.pe / mgamboam@cajalosandes.pe</li>
-    </ul>
-    
-    <a href="mailto:mzegarras@cajalosandes.pe;mgamboam@cajalosandes.pe" class="btn-action">SIMULAR</a>
-</div>
+            <a
+              href="https://wa.me/51992713196"
+              target="_blank"
+              class="btn-action"
+              >SOLICITAR BECA</a
+            >
+          </div>
 
-    
-    <div class="benefit-card cat-finanzas">
-    <div class="card-category">Finanzas</div>
-    <h3>Adelanto de Remuneración</h3>
-    <p>Liquidez inmediata cuando más lo necesitas. Solicita hasta el 50% de tu sueldo neto antes de la fecha habitual de pago.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Solo colaborador (Mínimo 6 meses de antigüedad).</li>
-        <li><strong>Dónde aplica:</strong> Todas las agencias nacional.</li>
-        <li><strong>Gestión:</strong> Ingresa al Portal Andesino y adjunta sustento del motivo.</li>
-        <li><strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332 969</li>
-    </ul>
-    
-    <a href="#" class="btn-action">SOLICITAR</a>
-</div>
-    
-    <div class="benefit-card cat-vida">
-    <div class="card-category">Calidad de Vida</div>
-    <h3>Celebra tu Cumpleaños</h3>
-    <p>Tu onomástico es especial. Disfruta de ½ día libre para festejarte, coordinando el turno con tu jefe directo.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Solo colaborador.</li>
-        <li><strong>Dónde aplica:</strong> Todas las oficinas a nivel nacional.</li>
-        <li><strong>Flexibilidad:</strong> Turno mañana o tarde (con anticipación).</li>
-        <li><strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332 969</li>
-    </ul>
-    
-    <a href="mailto:aguevara@cajalosandes.pe" class="btn-action">NOTIFICAR</a>
-</div>
-    
-    <div class="benefit-card cat-vida">
-    <div class="card-category">Calidad de Vida</div>
-    <h3>Kit de Recién Nacido</h3>
-    <p>Celebramos la llegada de tu bebé con un kit lleno de cariño para acompañarte en esta nueva etapa.</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Para quién:</strong> Colaborador con nuevo bebé.</li>
-        <li><strong>Dónde aplica:</strong> Entrega en tu oficina o EOB.</li>
-        <li><strong>Requisito:</strong> Acta de nacimiento o documento de sustento.</li>
-        <li><strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332 969.</li>
-    </ul>
-    
-    <a href="mailto:aguevara@cajalosandes.pe?subject=Solicitud%20Kit%20Recién%20Nacido" class="btn-action">SOLICITAR</a>
-</div>
+          <div class="benefit-card cat-educacion">
+            <div class="card-category">Educación</div>
+            <h3>Open English</h3>
+            <p>
+              75% de descuento en Open English, Junior y Open Mundo. Clases en
+              vivo 24/7 con profesores nativos y licencia de 12 meses con acceso
+              ilimitado.
+            </p>
 
-  <div class="benefit-card cat-comunidad">
-    <div class="card-category">Comunidad</div>
-    <h3>¿Tienes un emprendimiento?</h3>
-    <p>¡Impulsa tu proyecto con nosotros! Creemos en el poder de crecer juntos. Si tienes un producto o servicio, ¡queremos conocerte!</p>
-    
-    <ul class="benefit-details">
-        <li><strong>Objetivo:</strong> Promover y difundir tus proyectos personales.</li>
-        <li><strong>Gestión:</strong> Completa el formulario para dar el siguiente paso.</li>
-        <li><strong>Contacto:</strong> Anyhela Guevara</li>
-        <li><strong>Email:</strong> aguevara@cajalosandes.pe / 958 332 969</li>
-    </ul>
-    
-    <a href="#" class="btn-action">LLENAR FORMULARIO</a>
-</div>
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Colaborador y núcleo familiar.
+              </li>
+              <li><strong>Modalidad:</strong> 100% virtual (Acceso global).</li>
+              <li><strong>Contacto:</strong> William Castañeda</li>
+              <li><strong>Email:</strong> william.castaneda@openenglish.com</li>
+              <li><strong>WhatsApp:</strong> +57 321 344 1940</li>
+            </ul>
 
-</div>
+            <a
+              href="https://wa.me/573213441940"
+              target="_blank"
+              class="btn-action"
+              >OBTENER CÓDIGO</a
+            >
+          </div>
+
+          <div class="benefit-card cat-educacion">
+            <div class="card-category">Educación</div>
+            <h3>Universidad ESAN</h3>
+            <p>
+              10% de descuento en MBA, Maestrías Especializadas, PADE, PAE,
+              Diplomas Internacionales y Ejecutivos, PEE y Cursos CIE y
+              QuickLearning.
+            </p>
+
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Colaborador y familiares directos.
+              </li>
+              <li><strong>Sede:</strong> Lima y modalidad virtual.</li>
+              <li>
+                <strong>Contacto 1:</strong> mlozano@esan.edu.pe / 942 886 618
+              </li>
+              <li>
+                <strong>Contacto 2:</strong> eponces@esan.edu.pe / 942 889 955
+              </li>
+            </ul>
+
+            <a
+              href="mailto:mlozano@esan.edu.pe;eponces@esan.edu.pe"
+              class="btn-action"
+              >VER PROGRAMAS</a
+            >
+          </div>
+
+          <div class="benefit-card cat-educacion">
+            <div class="card-category">Educación</div>
+            <h3>ISIL</h3>
+            <p>
+              Hasta 80% de descuento en diversas modalidades: 60% en cursos y
+              diplomados, beneficios en carreras técnicas y 80% en MBA Harson
+              University.
+            </p>
+
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Colaborador, cónyuge, hijos y
+                hermanos.
+              </li>
+              <li><strong>Sede:</strong> Lima (presencial) y Virtual.</li>
+              <li>
+                <strong>Carreras Técnicas:</strong> 100% inscripción + 50% 1ra
+                matrícula.
+              </li>
+              <li>
+                <strong>MBA Harson:</strong> 80% de descuento (Miami - Virtual).
+              </li>
+            </ul>
+
+            <a
+              href="mailto:admision@isil.pe;ee@isil.pe;admision@harsonuniversity.com"
+              class="btn-action"
+              >SOLICITAR INFORMACIÓN</a
+            >
+          </div>
+
+          <div class="benefit-card cat-finanzas">
+            <div class="card-category">Finanzas</div>
+            <h3>Crédito Colaborador</h3>
+            <p>
+              Crédito exclusivo con tasa preferencial para tus proyectos
+              personales. Sujeto a aprobación de jefatura y validación de
+              requisitos.
+            </p>
+
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Solo colaborador (Mínimo 12 meses
+                de antigüedad).
+              </li>
+              <li>
+                <strong>Monto máximo:</strong> Hasta 7 remuneraciones netas.
+              </li>
+              <li><strong>Plazo máximo:</strong> 36 meses.</li>
+              <li>
+                <strong>Contacto:</strong> mzegarras@cajalosandes.pe /
+                mgamboam@cajalosandes.pe
+              </li>
+            </ul>
+
+            <a
+              href="mailto:mzegarras@cajalosandes.pe;mgamboam@cajalosandes.pe"
+              class="btn-action"
+              >SIMULAR</a
+            >
+          </div>
+
+          <div class="benefit-card cat-finanzas">
+            <div class="card-category">Finanzas</div>
+            <h3>Adelanto de Remuneración</h3>
+            <p>
+              Liquidez inmediata cuando más lo necesitas. Solicita hasta el 50%
+              de tu sueldo neto antes de la fecha habitual de pago.
+            </p>
+
+            <ul class="benefit-details">
+              <li>
+                <strong>Para quién:</strong> Solo colaborador (Mínimo 6 meses de
+                antigüedad).
+              </li>
+              <li>
+                <strong>Dónde aplica:</strong> Todas las agencias nacional.
+              </li>
+              <li>
+                <strong>Gestión:</strong> Ingresa al Portal Andesino y adjunta
+                sustento del motivo.
+              </li>
+              <li>
+                <strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332
+                969
+              </li>
+            </ul>
+
+            <a href="#" class="btn-action">SOLICITAR</a>
+          </div>
+
+          <div class="benefit-card cat-vida">
+            <div class="card-category">Calidad de Vida</div>
+            <h3>Celebra tu Cumpleaños</h3>
+            <p>
+              Tu onomástico es especial. Disfruta de ½ día libre para
+              festejarte, coordinando el turno con tu jefe directo.
+            </p>
+
+            <ul class="benefit-details">
+              <li><strong>Para quién:</strong> Solo colaborador.</li>
+              <li>
+                <strong>Dónde aplica:</strong> Todas las oficinas a nivel
+                nacional.
+              </li>
+              <li>
+                <strong>Flexibilidad:</strong> Turno mañana o tarde (con
+                anticipación).
+              </li>
+              <li>
+                <strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332
+                969
+              </li>
+            </ul>
+
+            <a href="mailto:aguevara@cajalosandes.pe" class="btn-action"
+              >NOTIFICAR</a
+            >
+          </div>
+
+          <div class="benefit-card cat-vida">
+            <div class="card-category">Calidad de Vida</div>
+            <h3>Kit de Recién Nacido</h3>
+            <p>
+              Celebramos la llegada de tu bebé con un kit lleno de cariño para
+              acompañarte en esta nueva etapa.
+            </p>
+
+            <ul class="benefit-details">
+              <li><strong>Para quién:</strong> Colaborador con nuevo bebé.</li>
+              <li>
+                <strong>Dónde aplica:</strong> Entrega en tu oficina o EOB.
+              </li>
+              <li>
+                <strong>Requisito:</strong> Acta de nacimiento o documento de
+                sustento.
+              </li>
+              <li>
+                <strong>Contacto:</strong> aguevara@cajalosandes.pe / 958 332
+                969.
+              </li>
+            </ul>
+
+            <a
+              href="mailto:aguevara@cajalosandes.pe?subject=Solicitud%20Kit%20Recién%20Nacido"
+              class="btn-action"
+              >SOLICITAR</a
+            >
+          </div>
+
+          <div class="benefit-card cat-comunidad">
+            <div class="card-category">Comunidad</div>
+            <h3>¿Tienes un emprendimiento?</h3>
+            <p>
+              ¡Impulsa tu proyecto con nosotros! Creemos en el poder de crecer
+              juntos. Si tienes un producto o servicio, ¡queremos conocerte!
+            </p>
+
+            <ul class="benefit-details">
+              <li>
+                <strong>Objetivo:</strong> Promover y difundir tus proyectos
+                personales.
+              </li>
+              <li>
+                <strong>Gestión:</strong> Completa el formulario para dar el
+                siguiente paso.
+              </li>
+              <li><strong>Contacto:</strong> Anyhela Guevara</li>
+              <li>
+                <strong>Email:</strong> aguevara@cajalosandes.pe / 958 332 969
+              </li>
+            </ul>
+
+            <a href="#" class="btn-action">LLENAR FORMULARIO</a>
+          </div>
+        </div>
+        <script src="js/dashboard.js"></script>
+      </main>
+    </div>
+  </body>
+</html>

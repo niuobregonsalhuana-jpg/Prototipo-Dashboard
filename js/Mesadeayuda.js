@@ -8,24 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const profileName = document.getElementById('user-display-name');
         const profileHandle = document.getElementById('user-handle');
-        
-        const profileImgContainer = document.getElementById('user-photo-container');
+        const profileImg = document.getElementById('user-photo');
 
         if (profileName) profileName.innerText = nombreGuardado;
         if (profileHandle && correoGuardado) {
             const handle = correoGuardado.split('@')[0];
             profileHandle.innerText = `@${handle}`;
         }
-
-        if (profileImgContainer) {
-            const iniciales = nombreGuardado
-                .split(' ')
-                .map(palabra => palabra[0])
-                .join('')
-                .toUpperCase()
-                .substring(0, 2);
-            
-            profileImgContainer.innerText = iniciales;
+        
+        if (profileImg) {
+            profileImg.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(nombreGuardado)}&background=00aae4&color=fff`;
         }
 
         const dropName = document.getElementById('dropdown-full-name');
@@ -61,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- BOTÓN DE CERRAR SESIÓN ---
     if (logoutBtn) {
         logoutBtn.addEventListener('click', () => {
             localStorage.clear(); 
