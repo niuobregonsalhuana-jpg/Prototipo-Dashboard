@@ -1,9 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC8YLxPnnCUI43fb5dW_Z2Xq-y98xTfA40",
@@ -16,24 +13,26 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app); 
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registrationForm");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    const nombre = document.querySelector(
-      'input[placeholder="Ej. Juan Pérez"]',
-    ).value;
-    const correo = document.querySelector(
-      'input[placeholder="usuario@cajalosandes.pe"]',
-    ).value;
-    const dni = document.querySelector('input[placeholder="8 dígitos"]').value;
-    const sede = document.querySelector("select").value;
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const dni = document.getElementById("dni").value;
+    const sede = document.getElementById("sede").value;
+    const password = dni; 
 
     try {
+      const userCredential = await createUserWithEmailAndPassword(auth, correo, password);
+      const user = userCredential.user;
+
       await addDoc(collection(db, "colaboradores"), {
+        uid: user.uid, 
         nombreCompleto: nombre,
         correo: correo,
         dni: dni,
@@ -41,15 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
         fecha: new Date(),
       });
 
-      // GUARDAR EL NOMBRE PARA EL DASHBOARD
-      localStorage.setItem("nombreUsuario", nombre);
-      localStorage.setItem("correoUsuario", correo);
+      finalizarIngreso(nombre, correo);
 
-      alert("¡Registro exitoso en Firebase! Bienvenido.");
-      window.location.href = "dashboard.html";
     } catch (error) {
-      console.error("Error al guardar:", error);
-      alert("Hubo un fallo al conectar con la base de datos.");
+      // 
+      if (error.code === 'auth/email-already-in-use') {
+        try {
+          await signInWithEmailAndPassword(auth, correo, password);
+          finalizarIngreso(nombre, correo);
+        } catch (loginError) {
+          console.error("Error de login:", loginError);
+          alert("Error al ingresar: Verifique que su DNI sea el correcto.");
+        }
+      } else {
+        console.error("Error de registro:", error);
+        alert("Error: " + error.message);
+      }
     }
   });
+
+  function finalizarIngreso(nombre, correo) {
+    localStorage.setItem("nombreUsuario", nombre);
+    localStorage.setItem("correoUsuario", correo);
+    window.location.href = "dashboard.html";
+  }
 });
