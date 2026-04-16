@@ -114,9 +114,10 @@
 
 .main-title {
     color: var(--andes-navy);
-    font-size: 28px;
+    font-size: 44px;           
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    line-height: 1.1;     
 }
 
 .section-subtitle {
@@ -235,3 +236,30 @@
 
 .cat-comunidad .btn-action:hover { background-color: #fed001; color: #ffffff; }
 
+/* ============================================= */
+/* COLORES REPRESENTATIVOS POR CATEGORÍA (TARJETA COMPLETA) */
+/* ============================================= */
+
+.cat-salud {
+    border-top: 8px solid #ff1a75;
+    background-color: #fff0f5;
+}
+
+.cat-educacion {
+    border-top: 8px solid #00ccff;
+    background-color: #e6f9ff;
+}
+
+.cat-finanzas {
+    border-top: 8px solid #002d5d;
+    background-color: #e6edf7;
+}
+
+.cat-vida {
+    border-top: 8px solid #00a800;
+    background-color: #e6f9e6;
+}
+
+.cat-comunidad {
+    border-top: 8px solid #fed001;
+    background-color: #fff9e6;
