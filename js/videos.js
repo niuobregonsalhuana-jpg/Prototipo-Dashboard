@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const profileName = document.getElementById('user-display-name');
         const profileHandle = document.getElementById('user-handle');
-        
         const profileImgContainer = document.getElementById('user-photo-container');
 
         if (profileName) profileName.innerText = nombreGuardado;
@@ -18,19 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (profileImgContainer) {
-            const iniciales = nombreGuardado
-                .split(' ')
-                .map(palabra => palabra[0])
-                .join('')
-                .toUpperCase()
-                .substring(0, 2);
-            
+            const iniciales = nombreGuardado.split(' ').map(p => p[0]).join('').toUpperCase().substring(0, 2);
             profileImgContainer.innerText = iniciales;
         }
 
         const dropName = document.getElementById('dropdown-full-name');
         const dropEmail = document.getElementById('dropdown-email');
-        
         if (dropName) dropName.innerText = nombreGuardado;
         if (dropEmail) dropEmail.innerText = correoGuardado;
 
@@ -55,12 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    if (dropdown) {
-        dropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-    }
-
     if (logoutBtn) {
         logoutBtn.addEventListener('click', () => {
             localStorage.clear(); 
@@ -68,3 +54,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function verVideo(semana, tarea) {
+    try {
+
+        let progreso = JSON.parse(localStorage.getItem('progresoSemanas')) || {
+            1: { tareas: [] }, 2: { tareas: [] }, 3: { tareas: [] }, 4: { tareas: [] }, 5: { tareas: [] }
+        };
+
+
+        if (!progreso[semana]) {
+            progreso[semana] = { tareas: [] };
+        }
+
+        
+        const tareasSemana = progreso[semana].tareas;
+        if (!tareasSemana.includes(tarea)) {
+            tareasSemana.push(tarea);
+            localStorage.setItem('progresoSemanas', JSON.stringify(progreso));
+            
+            alert(`✅ ¡Lección registrada! Semana ${semana} - Video ${tarea}`);
+        } else {
+            console.log("Lección ya completada.");
+        }
+
+    } catch (error) {
+        console.error("Error al registrar video:", error);
+        localStorage.removeItem('progresoSemanas');
+    }
+}

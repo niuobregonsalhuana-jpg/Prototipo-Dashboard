@@ -66,65 +66,66 @@
 <div class="dashboard-content">
     
     <div class="progress-card">
-        <div class="card-header">
-            <h2>Progreso del Curso</h2>
-            <a href="capacitaciones.html" class="go-course">IR AL CURSO</a>
-        </div>
-        <div class="weeks-list">
-            <div class="week-item active">
-                <div class="week-icon s1">1</div>
-                <div class="week-info">
-                    <h3>Semana 1</h3>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar-fill" style="width: 30%;"></div>
-                    </div>
-                </div>
-                <div class="week-stats">3/7</div>
-            </div>
-            <div class="week-item locked"><div class="week-icon">2</div><div class="week-info"><h3>Semana 2</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
-            <div class="week-item locked"><div class="week-icon">3</div><div class="week-info"><h3>Semana 3</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
-            <div class="week-item locked"><div class="week-icon">4</div><div class="week-info"><h3>Semana 4</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
-            <div class="week-item locked"><div class="week-icon">5</div><div class="week-info"><h3>Semana 5</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
-        </div>
+    <div class="card-header">
+        <h2>Progreso del Curso</h2>
+        <a href="capacitaciones.html" class="go-course">IR AL CURSO</a>
     </div>
-
+    <div class="weeks-list">
+        <div class="week-item active" data-week="1">
+            <div class="week-icon s1">1</div>
+            <div class="week-info">
+                <h3>Semana 1</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="week-stats">0/5</div>
+        </div>
+        <div class="week-item locked" data-week="2"><div class="week-icon">2</div><div class="week-info"><h3>Semana 2</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+        <div class="week-item locked" data-week="3"><div class="week-icon">3</div><div class="week-info"><h3>Semana 3</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+        <div class="week-item locked" data-week="4"><div class="week-icon">4</div><div class="week-info"><h3>Semana 4</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+        <div class="week-item locked" data-week="5"><div class="week-icon">5</div><div class="week-info"><h3>Semana 5</h3><div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div></div><div class="week-stats">🔒</div></div>
+    </div>
+</div>
     <div class="daily-goal-card">
-        <div class="card-header">
-            <h2>Meta Diaria</h2>
+    <div class="card-header">
+        <h2>Metas del curso</h2>
+    </div>
+    <div class="goal-list">
+        <div class="goal-item">
+            <div class="goal-icon" style="background-color: #e5f9ff;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" width="35">
+            </div>
+            <div class="goal-info">
+                <h3>Puntos de Aprendizaje</h3>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%;"></div></div>
+            </div>
+            <div class="week-stats">0/125</div>
         </div>
-        <div class="goal-list">
-            <div class="goal-item">
-                <div class="goal-icon" style="background-color: #e5f9ff;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" width="35">
-                </div>
-                <div class="goal-info">
-                    <h3>Puntos de Aprendizaje</h3>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 60%;"></div></div>
-                </div>
-                <div class="week-stats">15/25</div>
+        <div class="goal-item">
+            <div class="goal-icon" style="background-color: #f3e5ff;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208719.png" width="30">
             </div>
-            <div class="goal-item">
-                <div class="goal-icon" style="background-color: #f3e5ff;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208719.png" width="30">
-                </div>
-                <div class="goal-info">
-                    <h3>Actividades Completadas</h3>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 40%; background-color: var(--andes-fuchsia);"></div></div>
-                </div>
-                <div class="week-stats">2/5</div>
+            <div class="goal-info">
+                <h3>Actividades Completadas</h3>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 0%; background-color: var(--andes-fuchsia);"></div></div>
             </div>
-            <div class="goal-item">
-                <div class="goal-icon" style="background-color: #fffcd7;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208732.png" width="30">
-                </div>
-                <div class="goal-info">
-                    <h3>Tiempo de Estudio</h3>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 50%; background-color: #fed001;"></div></div>
-                </div>
-                <div class="week-stats">15/30m</div>
-            </div>
+            <div class="week-stats">0/25</div>
+        </div>
+        <div class="goal-item">
+    <div class="goal-icon" style="background-color: #fffcd7;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3208/3208732.png" width="30">
+    </div>
+    <div class="goal-info">
+        <h3>Tiempo de Estudio</h3>
+        <div class="progress-bar-container">
+            <div id="tiempo-bar" class="progress-bar-fill" style="width: 0%; background-color: #fed001;"></div>
         </div>
     </div>
+    <div class="week-stats" id="tiempo-stats">0/150m</div>
+</div>
+    </div>
+</div>
 
     <div class="daily-goal-card">
         <div class="card-header">
@@ -137,7 +138,7 @@
                 </div>
                 <div class="goal-info">
                     <h3>Frase del día</h3>
-                    <p style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">"Convertirte en un gran asesor está más cerca de lo que crees."</p>
+                    <p id="frase-texto" style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">"Convertirte en un gran asesor está más cerca de lo que crees."</p>
                 </div>
             </div>
 
@@ -147,24 +148,27 @@
                 </div>
                 <div class="goal-info">
                     <h3>Dato Curioso</h3>
-                    <p style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">¿Sabías que tomar un descanso de 5 min cada hora mejora tu retención?</p>
+                    <p id="dato-texto" style="font-size: 1.0rem; color: #666; margin: 0; line-height: 1.2;">¿Sabías que tomar un descanso de 5 min cada hora mejora tu retención?</p>
                 </div>
             </div>
 
             <div class="goal-item" style="flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 10px;">
     <h3 style="font-size: 18px; color: #4b4b4b; font-weight: 700;">¿Cómo te sientes hoy?</h3>
     <div class="emoji-selector">
-        <span class="emoji-btn">☹️</span>
-        <span class="emoji-btn">😟</span>
-        <span class="emoji-btn">😐</span>
-        <span class="emoji-btn">🙂</span>
-        <span class="emoji-btn">😊</span>
+        <span class="emoji-btn" onclick="registrarSentimiento('¡Sentimos que no sea un buen día! Estamos aquí para apoyarte.', 0)">☹️</span>
+        <span class="emoji-btn" onclick="registrarSentimiento('¡Ánimo! Mañana será un día mejor. No olvides tomar tus descansos.', 1)">😟</span>
+        <span class="emoji-btn" onclick="registrarSentimiento('¡Gracias por compartirlo! Esperamos que tu día mejore aún más.', 2)">😐</span>
+        <span class="emoji-btn" onclick="registrarSentimiento('¡Qué bueno! Nos alegra que tengas un día positivo.', 3)">🙂</span>
+        <span class="emoji-btn" onclick="registrarSentimiento('¡Excelente! Tu energía positiva es clave para el equipo.', 4)">😊</span>
     </div>
+
+    <p id="mensaje-bienestar" style="display: none; font-size: 0.9rem; color: #00aae4; background-color: #e6f7fc; padding: 10px; border-radius: 8px; margin-top: 5px; border-left: none; width: 100%; font-weight: 600;">
+    </p>
 </div>
         </div>
     </div>
 
 </div>
-    <script type="module" src="js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

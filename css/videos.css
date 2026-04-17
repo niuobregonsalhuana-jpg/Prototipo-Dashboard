@@ -231,6 +231,27 @@
     overflow: hidden;
 }
 
+.video-lesson-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    background: #fff;
+    border-radius: 12px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+.video-lesson-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+}
+
+.video-lesson-card:active {
+    transform: scale(0.98);
+}
+
 .level-badge.basic { background: #e8f5e9; color: #2e7d32; }
 .level-badge.intermediate { background: #fff3e0; color: #ef6c00; }
 .level-badge.advanced { background: #ffebee; color: #c62828; }
