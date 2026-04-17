@@ -323,3 +323,48 @@ body {
     align-items: center;
     gap: 12px;
 }
+/* BUSCADOR ESTILO PREMIUM */
+.search-bar {
+    max-width: 750px; /* Tamaño ideal según la imagen */
+    margin: 0 auto 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 24px 30px 24px 70px; /* Aumentado para que sea más alto */
+    border-radius: 60px; /* Bordes muy redondeados */
+    border: 1px solid #e0e0e0;
+    outline: none;
+    font-size: 1.25rem; /* Texto más grande y legible */
+    color: #333;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); /* Sombra difuminada */
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #4481eb;
+    box-shadow: 0 12px 35px rgba(68, 129, 235, 0.15);
+}
+
+.search-bar i {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4481eb; /* Azul corporativo */
+    font-size: 1.5rem; /* Icono más grande */
+    pointer-events: none;
+}
+
+/* AJUSTE PARA EL TEXTO SUPERIOR */
+.help-description {
+    text-align: center;
+    color: #777;
+    margin: 0 auto 45px;
+    font-size: 1.1rem;
+    max-width: 850px;
+    line-height: 1.6;
+}
