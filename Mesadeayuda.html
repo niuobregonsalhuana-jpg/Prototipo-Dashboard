@@ -3,8 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Caja Los Andes</title>
+    <title>Mesa de Ayuda - Caja Los Andes</title>
     <link rel="stylesheet" href="css/Mesadeayuda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .accordion-item {
+            margin-bottom: 14px;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 18px 25px;
+            background: white;
+            border: none;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #f9fafc;
+            padding: 0 25px;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding: 20px 25px;
+        }
+
+        .accordion-header i.fa-chevron-down {
+            transition: transform 0.4s;
+        }
+
+        .accordion-item.active .accordion-header i.fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .card-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card-item:hover {
+            border-color: #4481eb;
+            background: #f9fbff;
+        }
+
+        .card-left { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            font-weight: 500; 
+        }
+
+        .red { color: #e74c3c; }
+        .blue { color: #3498db; }
+        .gold { color: #f1c40f; }
+        .brown { color: #8d6e63; }
+
+        .btn-call {
+            background: #1e3a8a;
+            color: white;
+            padding: 18px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            width: 380px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .check-square {
+            width: 80px;
+            height: 80px;
+            background: #27ae60;
+            color: white;
+            font-size: 40px;
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <div class="root-container">
@@ -13,52 +149,157 @@
                 <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img">
             </div>
             <ul class="sidebar-menu">
-                <li class="menu-item"><a href="#">Inicio</a></li>
+                <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
                 <li class="menu-item"><a href="capacitaciones.html">Capacitaciones</a></li>
                 <li class="menu-item"><a href="videos.html">Videos</a></li>
                 <li class="menu-item"><a href="herramientas.html">Herramientas</a></li>
-                <li class="menu-item"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
+                <li class="menu-item active"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
             </ul>
         </nav>
 
         <main class="main-content">
-    <nav class="top-nav">
-        <ul class="nav-links">
-            <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
-            <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
-            <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
-        </ul>
+            <nav class="top-nav">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
+                    <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
+                </ul>
 
-        <div class="header-profile" id="user-profile-block">
-            <div class="profile-img-container">
-                <span id="user-initials">NO</span>
-            </div>
-            <div class="profile-text">
-                <span class="profile-handle" id="user-handle">@obregonsalhuananiurka</span>
-                <span class="profile-name" id="user-display-name">Niurka Obregon</span>
-            </div>
-            <i class="arrow-down">▼</i>
-
-            <div class="profile-dropdown" id="profile-dropdown">
-                <div class="dropdown-header">
-                    <p id="dropdown-full-name">Niurka Obregon</p>
-                    <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+                <div class="header-profile" id="user-profile-block">
+                    <div class="profile-img-container">
+                        <span id="user-initials">NO</span>
+                    </div>
+                    <div class="profile-text">
+                        <span class="profile-handle" id="user-handle">@obregonsalhuananiurka</span>
+                        <span class="profile-name" id="user-display-name">Niurka Obregon</span>
+                    </div>
+                    <i class="arrow-down">▼</i>
                 </div>
-                <hr>
-                <button id="logout-btn" class="logout-link">
-                    CERRAR SESIÓN
-                </button>
-            </div>
-        </div>
-    </nav>
+            </nav>
 
-    <div class="content-body">
-        <h2 class="category-label">Mesa de Ayuda</h2>
-        <p style="color: #666; margin-bottom: 20px;">Bienvenido a tu centro de soporte.</p>
-        
-        <div class="tools-grid">
+            <div class="content-body">
+                <h2 class="category-label">Mesa de Ayuda</h2>
+                <p style="color: #666; margin-bottom: 40px;">Bienvenido a tu centro de soporte.</p>
+
+                <div style="max-width:1100px; margin:0 auto; padding:20px;">
+
+                    <p style="text-align:center; color:#777; margin-bottom:50px; font-size:1.05rem;">
+                        Sería una sección dentro de la plataforma donde se encontrarán preguntas frecuentes, accesos a activación de correo, etc.
+                    </p>
+
+                    <div class="search-bar" style="max-width:650px; margin:0 auto 60px; position:relative;">
+                        <input type="text" id="searchInput" placeholder="¿En qué te podemos ayudar hoy?">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <div class="grid">
+                        <div>
+                            <h2 class="section-title"><i class="fas fa-question-circle red"></i> Preguntas Frecuentes</h2>
+
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <div class="card-left"><i class="fas fa-briefcase brown"></i> Esenciales del negocio</div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p><strong>¿Cómo activo mi clave de Corebank por primera vez?</strong></p>
+                                    <p>Ingresa con tu usuario temporal. El sistema te pedirá crear una clave de 8 caracteres (números + letras). Confírmala y listo.</p>
+                                    <p><strong>¿Cómo veo mis saldos y movimientos?</strong></p>
+                                    <p>Desde el Dashboard principal → sección “Mis Cuentas”. Puedes filtrar por fecha o descargar el estado de cuenta en PDF.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <div class="card-left"><i class="fas fa-user blue"></i> Esenciales del usuario</div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p><strong>Olvidé mi usuario, ¿cómo lo recupero?</strong></p>
+                                    <p>En la pantalla de login haz clic en “¿Olvidaste tu usuario?” e ingresa tu número de DNI o correo registrado.</p>
+                                    <p><strong>¿Cómo cambio mi correo electrónico?</strong></p>
+                                    <p>Ve a Autogestión → “Actualizar mis datos” → verifica tu identidad con código OTP y actualiza el correo.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <div class="card-left"><i class="fas fa-sitemap gold"></i> Esenciales de la organización</div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p><strong>¿Cómo autorizo a un nuevo usuario en mi empresa?</strong></p>
+                                    <p>El administrador principal debe ir a “Gestión de Usuarios” → Agregar colaborador → ingresar DNI y asignar permisos.</p>
+                                    <p><strong>¿Qué hago si un empleado ya no trabaja con nosotros?</strong></p>
+                                    <p>El administrador debe desactivar o eliminar el usuario desde la misma sección para revocar el acceso inmediatamente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="section-title"><i class="fas fa-cog" style="color:#34495e"></i> Autogestión</h2>
+                            
+                            <div class="card-item" onclick="abrirModal('Reiniciar clave de Corebank')">
+                                <div class="card-left"><i class="fas fa-key gold"></i> Reiniciar mi clave de Corebank</div>
+                                <i class="fas fa-arrow-right blue"></i>
+                            </div>
+                            
+                            <div class="card-item" onclick="abrirModal('Recuperar correo electrónico')">
+                                <div class="card-left"><i class="fas fa-envelope red"></i> Recuperar mi correo electrónico</div>
+                                <i class="fas fa-arrow-right blue"></i>
+                            </div>
+                            
+                            <div class="card-item" onclick="abrirModal('Simuladores de Créditos')">
+                                <div class="card-left"><i class="fas fa-calculator blue"></i> Simuladores de Créditos</div>
+                                <i class="fas fa-arrow-right blue"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-call" onclick="abrirModal('Llamada a Mesa de Ayuda')">
+                        <i class="fas fa-phone-alt"></i> Llamar a Mesa de Ayuda
+                    </a>
+                </div>
             </div>
+        </main>
     </div>
-</main>
 
-<script type="module" src="js/Mesadeayuda.js"></script>
+    <div class="modal-bg" id="miModal">
+        <div class="modal-box">
+            <div class="check-square"><i class="fas fa-check"></i></div>
+            <h2>¡Solicitud iniciada!</h2>
+            <p id="modal-text">Estamos procesando tu solicitud de forma inmediata.</p>
+            <button class="btn-close" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        });
+
+        function abrirModal(tipo) {
+            const modal = document.getElementById('miModal');
+            const text = document.getElementById('modal-text');
+            if (tipo.includes('Llamada')) {
+                text.innerHTML = 'Conectando con un agente...<br><small>Simulación activa</small>';
+            } else {
+                text.innerHTML = `Estamos procesando: <strong>${tipo}</strong>`;
+            }
+            modal.style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('miModal').style.display = 'none';
+        }
+
+        window.addEventListener('click', function(e) {
+            if (e.target.id === 'miModal') cerrarModal();
+        });
+    </script>
+</body>
+</html>
