@@ -481,13 +481,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00aeef; 
+    background: #00c1ff; 
     border-radius: 10px;
     border: 2px solid #f1f1f1; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #008cc0; 
+    background: #00c1ff; 
 }
 
 .video-overlay {

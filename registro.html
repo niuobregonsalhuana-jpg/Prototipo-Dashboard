@@ -21,9 +21,9 @@
       </div>
       <div class="checkout-card">
         <div class="info-side">
-          <h2 class="title-duo">Cómo funciona</h2>
+          <h2 class="title-duo" id="steps-title">Cómo funciona</h2>
 
-          <div class="step-list">
+          <div class="step-list" id="steps-container">
             <div class="step-row">
               <div class="badge-duo">1</div>
               <div class="text-duo">
@@ -65,62 +65,51 @@
         </div>
 
         <div class="form-side">
-          <h2 class="title-duo">¡Regístrate ahora!</h2>
-          <p class="subtitle-duo">Únete a la nueva generación de asesores.</p>
+  <h2 class="title-duo" id="auth-title">¡Regístrate ahora!</h2>
+  <p class="subtitle-duo" id="auth-subtitle">Únete a la nueva generación de asesores.</p>
 
-          <form id="registrationForm" class="duo-form">
-            <div class="input-group-duo">
-              <label>NOMBRE COMPLETO</label>
-              <input
-                type="text"
-                id="nombre"
-                placeholder="Ej. Juan Pérez"
-                required
-              />
-            </div>
+  <form id="registrationForm" class="duo-form">
+    <div class="input-group-duo" id="group-nombre">
+      <label>NOMBRE COMPLETO</label>
+      <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required />
+    </div>
 
-            <div class="input-group-duo">
-              <label>CORREO INSTITUCIONAL</label>
-              <input
-                type="email"
-                id="correo"
-                placeholder="usuario@cajalosandes.pe"
-                required
-              />
-            </div>
+    <div class="input-group-duo">
+      <label>CORREO INSTITUCIONAL</label>
+      <input type="email" id="correo" placeholder="usuario@cajalosandes.pe" required />
+    </div>
 
-            <div class="row g-3">
-              <div class="col-7">
-                <div class="input-group-duo">
-                  <label>AGENCIA / SEDE</label>
-                  <select id="sede" required>
-                    <option value="">Selecciona...</option>
-                    <option>Sede Central</option>
-                    <option>Sede Norte</option>
-                    <option>Sede Sur</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-5">
-                <div class="input-group-duo">
-                  <label>DNI</label>
-                  <input
-                    type="text"
-                    id="dni"
-                    placeholder="8 dígitos"
-                    maxlength="8"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="form-footer">
-              <button type="submit" class="btn-duo-primary">INGRESAR</button>
-            </div>
-          </form>
+    <div class="row g-3">
+      <div class="col-7" id="group-sede">
+        <div class="input-group-duo">
+          <label>AGENCIA / SEDE</label>
+          <select id="sede" required>
+            <option value="">Selecciona...</option>
+            <option>Sede Central</option>
+            <option>Sede Norte</option>
+            <option>Sede Sur</option>
+          </select>
         </div>
       </div>
+      <div class="col-5" id="group-dni">
+        <div class="input-group-duo">
+          <label>DNI</label>
+          <input type="text" id="dni" placeholder="8 dígitos" maxlength="8" required />
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: right; ">
+        <a href="#" id="btn-toggle-auth" style="color: #00aeef; font-weight: bold; text-decoration: none; font-size: 15px;">
+            ¿Ya tienes una cuenta?
+        </a>
+    </div>
+
+    <div class="form-footer">
+      <button type="submit" id="btn-submit-auth" class="btn-duo-primary">INGRESAR</button>
+    </div>
+  </form>
+</div>
     </div>
     <script type="module" src="js/registro.js"></script>
   </body>
