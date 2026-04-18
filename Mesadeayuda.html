@@ -4,302 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesa de Ayuda - Caja Los Andes</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/Mesadeayuda.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 1.6rem;
-            margin-bottom: 25px;
-            color: #2c3e50;
-        }
-
-        .accordion-item {
-            margin-bottom: 14px;
-            border: 1px solid #eee;
-            border-radius: 16px;
-            overflow: hidden;
-            background: white;
-        }
-
-        .accordion-header {
-            width: 100%;
-            padding: 18px 25px;
-            background: white;
-            border: none;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.05rem;
-            cursor: pointer;
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            background: #f9fafc;
-            padding: 0 25px;
-        }
-
-        .accordion-item.active .accordion-content {
-            max-height: 500px;
-            padding: 20px 25px;
-        }
-
-        .accordion-header i.fa-chevron-down {
-            transition: transform 0.4s;
-        }
-
-        .accordion-item.active .accordion-header i.fa-chevron-down {
-            transform: rotate(180deg);
-        }
-
-        .card-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 25px;
-            border: 1px solid #eee;
-            border-radius: 15px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .card-item:hover {
-            border-color: #4481eb;
-            background: #f9fbff;
-        }
-
-        .card-left { 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            font-weight: 500; 
-        }
-
-        .red { color: #e74c3c; }
-        .blue { color: #3498db; }
-        .gold { color: #f1c40f; }
-        .brown { color: #8d6e63; }
-
-        .btn-call {
-            background: #1e3a8a;
-            color: white;
-            padding: 18px;
-            border-radius: 50px;
-            text-align: center;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 30px;
-            width: 100%;
-        }
-
-        .modal-bg {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-box {
-            background: white;
-            padding: 40px;
-            border-radius: 25px;
-            text-align: center;
-            width: 380px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        }
-
-        .check-square {
-            width: 80px;
-            height: 80px;
-            background: #27ae60;
-            color: white;
-            font-size: 40px;
-            border-radius: 16px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
-<body>
+   <body>
     <div class="root-container">
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="assets/logo_web.png"
+            alt="Caja Los Andes"
+            class="sidebar-logo-img"
+          />
+        </div>
+        <ul class="sidebar-menu">
+          <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
+          <li class="menu-item">
+            <a href="capacitaciones.html">Capacitaciones</a>
+          </li>
+          <li class="menu-item"><a href="videos.html">Videos</a></li>
+          <li class="menu-item">
+            <a href="herramientas.html">Herramientas</a>
+          </li>
+          <li class="menu-item"><a href="#">Mesa de ayuda</a></li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <nav class="top-nav">
+          <ul class="nav-links">
+            <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
+            <li class="nav-item">
+              <a href="capacitaciones.html">MIS CAPACITACIONES</a>
+            </li>
+            <li class="nav-item active">
+              <a href="beneficios.html">BENEFICIOS</a>
+            </li>
+          </ul>
+
+          <div class="header-profile" id="user-profile-block">
+            <div class="profile-img-container" id="user-photo-container"></div>
+
+            <div class="profile-text">
+              <span class="profile-handle" id="user-handle">@usuario</span>
+              <span class="profile-name" id="user-display-name"
+                >Cargando...</span
+              >
             </div>
-            <ul class="sidebar-menu">
-                <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
-                <li class="menu-item"><a href="capacitaciones.html">Capacitaciones</a></li>
-                <li class="menu-item"><a href="videos.html">Videos</a></li>
-                <li class="menu-item"><a href="herramientas.html">Herramientas</a></li>
-                <li class="menu-item active"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
-            </ul>
+            <i class="arrow-down">▼</i>
+
+            <div class="profile-dropdown" id="profile-dropdown">
+              <div class="dropdown-header">
+                <p id="dropdown-full-name">Cargando...</p>
+                <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+              </div>
+              <hr />
+              <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
+            </div>
+          </div>
         </nav>
-
-        <main class="main-content">
-            <nav class="top-nav">
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
-                    <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
-                    <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
-                </ul>
-
-                <div class="header-profile" id="user-profile-block">
-                    <div class="profile-img-container">
-                        <span id="user-initials">NO</span>
-                    </div>
-                    <div class="profile-text">
-                        <span class="profile-handle" id="user-handle">@obregonsalhuananiurka</span>
-                        <span class="profile-name" id="user-display-name">Niurka Obregon</span>
-                    </div>
-                    <i class="arrow-down">▼</i>
+        <div class="header-container">
+          <h1 class="main-title">Mesa de ayuda</h1>
+          <p class="section-subtitle">
+            Resuelve tus dudas utilizando herramientas de autogestion disponibles.
+          </p>
+        </div>
+        <div class="ma-two-columns-wrapper">
+    
+    <section class="ma-content-card">
+        <h2 class="card-category-title">Preguntas frecuentes</h2>
+        
+        <div class="faq-accordion-group">
+            
+            <details class="faq-item-clean">
+                <summary>¿Qué hago si mi clave de Corebank ha expirado o está bloqueada? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Utiliza el botón <strong>"Reiniciar mi clave de Corebank"</strong> en la columna de Autogestión. Recibirás un código de verificación en tu correo registrado para generar una nueva credencial de forma inmediata.
                 </div>
-            </nav>
+            </details>
 
-            <div class="content-body">
-                <h2 class="category-label">Mesa de Ayuda</h2>
-                <p style="color: #666; margin-bottom: 40px;">Bienvenido a tu centro de soporte.</p>
-
-                <div style="max-width:1100px; margin:0 auto; padding:40px;">
-
-                    <p style="text-align:center; color:#777; margin-bottom:50px; font-size:1.05rem;">
-                        Sería una sección dentro de la plataforma donde se encontrarán preguntas frecuentes, accesos a activación de correo, etc.
-                    </p>
-
-                    <div class="search-bar" style="max-width:650px; margin:0 auto 60px; position:relative;">
-                        <input type="text" id="searchInput" placeholder="¿En qué te podemos ayudar hoy?">
-                        <i class="fas fa-search"></i>
-                    </div>
-
-                    <div class="grid">
-                        <div>
-                            <h2 class="section-title"><i class="fas fa-question-circle red"></i> Preguntas Frecuentes</h2>
-
-                            <div class="accordion-item">
-                                <button class="accordion-header">
-                                    <div class="card-left"><i class="fas fa-briefcase brown"></i> Esenciales del negocio</div>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="accordion-content">
-                                    <p><strong>¿Cómo activo mi clave de Corebank por primera vez?</strong></p>
-                                    <p>Ingresa con tu usuario temporal. El sistema te pedirá crear una clave de 8 caracteres (números + letras). Confírmala y listo.</p>
-                                    <p><strong>¿Cómo veo mis saldos y movimientos?</strong></p>
-                                    <p>Desde el Dashboard principal → sección “Mis Cuentas”. Puedes filtrar por fecha o descargar el estado de cuenta en PDF.</p>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <button class="accordion-header">
-                                    <div class="card-left"><i class="fas fa-user blue"></i> Esenciales del usuario</div>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="accordion-content">
-                                    <p><strong>Olvidé mi usuario, ¿cómo lo recupero?</strong></p>
-                                    <p>En la pantalla de login haz clic en “¿Olvidaste tu usuario?” e ingresa tu número de DNI o correo registrado.</p>
-                                    <p><strong>¿Cómo cambio mi correo electrónico?</strong></p>
-                                    <p>Ve a Autogestión → “Actualizar mis datos” → verifica tu identidad con código OTP y actualiza el correo.</p>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <button class="accordion-header">
-                                    <div class="card-left"><i class="fas fa-sitemap gold"></i> Esenciales de la organización</div>
-                                    <i class="fas fa-chevron-down"></i>
-                                </button>
-                                <div class="accordion-content">
-                                    <p><strong>¿Cómo autorizo a un nuevo usuario en mi empresa?</strong></p>
-                                    <p>El administrador principal debe ir a “Gestión de Usuarios” → Agregar colaborador → ingresar DNI y asignar permisos.</p>
-                                    <p><strong>¿Qué hago si un empleado ya no trabaja con nosotros?</strong></p>
-                                    <p>El administrador debe desactivar o eliminar el usuario desde la misma sección para revocar el acceso inmediatamente.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2 class="section-title"><i class="fas fa-cog" style="color:#34495e"></i> Autogestión</h2>
-                            
-                            <div class="card-item" onclick="abrirModal('Reiniciar clave de Corebank')">
-                                <div class="card-left"><i class="fas fa-key gold"></i> Reiniciar mi clave de Corebank</div>
-                                <i class="fas fa-arrow-right blue"></i>
-                            </div>
-                            
-                            <div class="card-item" onclick="abrirModal('Recuperar correo electrónico')">
-                                <div class="card-left"><i class="fas fa-envelope red"></i> Recuperar mi correo electrónico</div>
-                                <i class="fas fa-arrow-right blue"></i>
-                            </div>
-                            
-                            <div class="card-item" onclick="abrirModal('Simuladores de Créditos')">
-                                <div class="card-left"><i class="fas fa-calculator blue"></i> Simuladores de Créditos</div>
-                                <i class="fas fa-arrow-right blue"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#" class="btn-call" onclick="abrirModal('Llamada a Mesa de Ayuda')">
-                        <i class="fas fa-phone-alt"></i> Llamar a Mesa de Ayuda
-                    </a>
+            <details class="faq-item-clean">
+                <summary>Mi equipo presenta fallas de conexión o lentitud, ¿cómo lo reporto? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Haz clic en <strong>"Reportar falla de equipo"</strong>. Deberás indicar el número de serie de tu laptop y una breve descripción del problema para que el equipo de sistemas inicie un diagnóstico remoto.
                 </div>
+            </details>
+
+            <details class="faq-item-clean">
+                <summary>¿Cómo puedo simular un crédito si el módulo no carga correctamente? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Accede directamente desde el botón <strong>"Simuladores de Créditos"</strong> en la sección lateral. Si el error persiste, limpia el historial de tu navegador para refrescar las tasas vigentes.
+                </div>
+            </details>
+
+            <details class="faq-item-clean">
+                <summary>¿Cómo cambio mi correo electrónico o número de contacto? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Selecciona la opción <strong>"Recuperar mi correo electrónico"</strong> o envía una solicitud formal a través de "Soporte por Correo". Un asesor actualizará tu perfil en un máximo de 24 horas hábiles.
+                </div>
+            </details>
+
+            <details class="faq-item-clean">
+                <summary>¿Qué hago si no puedo visualizar los archivos o guías de apoyo? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Verifica que tu sesión no haya expirado. Si el problema continúa, abre un <strong>"Ticket de Soporte"</strong> adjuntando una captura de pantalla del error para verificar tus permisos.
+                </div>
+            </details>
+
+            <details class="faq-item-clean">
+                <summary>Tengo una urgencia con un desembolso y el sistema no responde, ¿a quién acudo? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    Utiliza el botón de <strong>"Llamar a Mesa de Ayuda"</strong> ubicado en la parte inferior. Este canal es exclusivo para incidencias críticas que impidan la operación en tiempo real.
+                </div>
+            </details>
+
+            <details class="faq-item-clean">
+                <summary>Completé mi curso pero sigue apareciendo como "Pendiente", ¿qué hago? <span class="chevron"></span></summary>
+                <div class="faq-inner-text">
+                    El sistema tarda hasta 30 minutos en sincronizar. Si no se actualiza, envía un reporte mediante <strong>"Soporte por Correo"</strong> indicando el nombre del curso para validación manual.
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <section class="ma-content-card">
+        <h2 class="card-category-title">Autogestión</h2>
+        <div class="actions-group">
+            <button class="btn-action-outline">Reiniciar mi clave de Corebank</button>
+            <button class="btn-action-outline">Recuperar mi correo electrónico</button>
+            <button class="btn-action-outline">Simuladores de Créditos</button>
+            <button class="btn-action-outline">Reportar falla de equipo</button>
+            <button class="btn-action-outline">Ingresar un ticket</button>
+            
+            <div class="contact-footer">
+                <p>¿Es una emergencia crítica?</p>
+                <button class="btn-primary-blue">Llamar a Mesa de Ayuda</button>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <div class="modal-bg" id="miModal">
-        <div class="modal-box">
-            <div class="check-square"><i class="fas fa-check"></i></div>
-            <h2>¡Solicitud iniciada!</h2>
-            <p id="modal-text">Estamos procesando tu solicitud de forma inmediata.</p>
-            <button class="btn-close" onclick="cerrarModal()">Cerrar</button>
+    <div id="modal-solicitud" class="flaticon-modal-overlay">
+    <div class="flaticon-modal-content">
+        <div class="modal-icon-header">
+            <img src="tu-icono-flaticon.png" alt="Icono" class="modal-main-icon">
+        </div>
+
+        <h2 class="modal-title" id="modal-dinamico-titulo">¡Solicitud iniciada!</h2>
+        <p class="modal-subtitle" id="modal-dinamico-texto">Estamos procesando tu requerimiento de autogestión.</p>
+
+        <div class="modal-button-group">
+            <button onclick="closeModal('modal-solicitud')" class="btn-primary-action">Entendido</button>
+            <button onclick="closeModal('modal-solicitud')" class="btn-secondary-action">Cerrar</button>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.accordion-header').forEach(header => {
-                header.addEventListener('click', function() {
-                    this.parentElement.classList.toggle('active');
-                });
-            });
-        });
+</div>
 
-        function abrirModal(tipo) {
-            const modal = document.getElementById('miModal');
-            const text = document.getElementById('modal-text');
-            if (tipo.includes('Llamada')) {
-                text.innerHTML = 'Conectando con un agente...<br><small>Simulación activa</small>';
-            } else {
-                text.innerHTML = `Estamos procesando: <strong>${tipo}</strong>`;
-            }
-            modal.style.display = 'flex';
-        }
-
-        function cerrarModal() {
-            document.getElementById('miModal').style.display = 'none';
-        }
-
-        window.addEventListener('click', function(e) {
-            if (e.target.id === 'miModal') cerrarModal();
-        });
-    </script>
+    <script src="js/Mesadeayuda.js"></script>
 </body>
 </html>

@@ -383,3 +383,152 @@
     object-fit: cover;
     display: block;
 }
+
+/* --- DISEÑO DEL MODAL  --- */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 45, 87, 0.7); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); 
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 24px; 
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: modalIn 0.3s ease-out; 
+}
+
+@keyframes modalIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.modal-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #002d57;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.modal-content strong {
+    color: #00c1ff; 
+}
+
+.btn-primary {
+    background-color: #ff007c; 
+    color: white;
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #d40066;
+}
+
+.btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d40066;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aeef; 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #008cc0; 
+}
+
+.video-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-window {
+    width: 80%;
+    max-width: 900px;
+    background: #000;
+    position: relative;
+    border: 6px solid #ffffff;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.close-video {
+    position: absolute;
+    top: -48px;
+    right: -5px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}

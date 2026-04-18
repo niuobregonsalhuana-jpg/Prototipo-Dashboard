@@ -68,3 +68,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function verPDF(ruta) {
+    console.log("Intentando abrir:", ruta); 
+    
+    const modal = document.getElementById('videoModal');
+    const contenedor = document.querySelector('.iframe-wrapper');
+
+    if (modal && contenedor) {
+   
+        contenedor.innerHTML = `<embed src="${ruta}" type="application/pdf" width="100%" height="100%" />`;
+        modal.style.display = 'flex';
+    } else {
+        alert("Error técnico: Falta el div 'videoModal' o 'iframe-wrapper' en el HTML.");
+    }
+}
+
+function cerrarVideo() {
+    const modal = document.getElementById('videoModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.querySelector('.iframe-wrapper').innerHTML = ''; 
+    }
+}
+
+function cerrarVideo() {
+    const modalPDF = document.getElementById('videoModal');
+    const celebration = document.getElementById('celebration-screen');
+    const contenedor = document.querySelector('.iframe-wrapper');
+
+    if (modalPDF) {
+        modalPDF.style.display = 'none'; 
+        if (contenedor) contenedor.innerHTML = ''; 
+        
+        
+        if (celebration) {
+            celebration.style.display = 'flex';
+            registrarProgresoSilencioso(1, 5); 
+        }
+    }
+}
+
+function cerrarCelebracion() {
+    document.getElementById('celebration-screen').style.display = 'none';
+}
+
+function verOrganigrama() {
+    semanaActual = 5;
+    tareaActual = 5;
+    verPDF('documentos/MOF.pdf'); 
+}

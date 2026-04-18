@@ -121,7 +121,7 @@
 }
 
 .section-subtitle {
-    font-size: 15px;
+    font-size: 16px;
     color: #666;
     line-height: 1.6;
     max-width: 800px;
@@ -325,3 +325,23 @@
 /* Comunidad */
 .filter-btn.active.color-comunidad { color: #fed001; }
 .filter-btn.active.color-comunidad::after { background-color: #fed001; }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aeef; 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #008cc0; 
+}

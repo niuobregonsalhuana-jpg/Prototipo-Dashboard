@@ -233,3 +233,42 @@ window.registrarSentimiento = function(texto, indice) {
 };
 
 document.addEventListener('DOMContentLoaded', actualizarBienestar);
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    setTimeout(verificarGranFinal, 1000); 
+
+function verificarGranFinal() {
+
+    const progreso = JSON.parse(localStorage.getItem('progresoSemanas')) || {};
+    let totalTareasCompletadas = 0;
+
+    for (let i = 1; i <= 5; i++) {
+        if (progreso[i] && progreso[i].tareas) {
+            totalTareasCompletadas += progreso[i].tareas.length;
+        }
+    }
+
+    const acabaDeTerminar = localStorage.getItem('acabaDeTerminarTodo');
+    const yaVioElFinal = localStorage.getItem('finalMostradoPermanente');
+
+    console.log("Tareas:", totalTareasCompletadas, "Señal:", acabaDeTerminar);
+
+    if (totalTareasCompletadas >= 25 && acabaDeTerminar === 'true' && !yaVioElFinal) {
+        const finalModal = document.getElementById('final-modal');
+        if (finalModal) {
+            finalModal.style.display = 'flex';
+
+            if (typeof lanzarConfeti === 'function') lanzarConfeti();
+
+            document.getElementById('btn-revisar').onclick = () => {
+                finalModal.style.display = 'none';
+
+                localStorage.removeItem('acabaDeTerminarTodo'); 
+                localStorage.setItem('finalMostradoPermanente', 'true'); 
+            };
+        }
+    }
+
+    }
+});
