@@ -272,3 +272,98 @@ function verificarGranFinal() {
 
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const chatBubble = document.getElementById('chat-bubble');
+    const chatWindow = document.getElementById('chat-window');
+    const closeChat = document.getElementById('close-chat');
+    const sendBtn = document.getElementById('send-chat');
+    const chatInput = document.getElementById('chat-input');
+    const chatContent = document.getElementById('chat-content');
+    
+
+
+    if (chatBubble && chatWindow) {
+        chatBubble.addEventListener('click', () => {
+
+            if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+                chatWindow.style.display = 'flex';
+
+                const badge = document.querySelector('.notification-badge');
+                if (badge) badge.style.display = 'none';
+            } else {
+                chatWindow.style.display = 'none';
+            }
+        });
+    }
+
+    if (closeChat) {
+        closeChat.addEventListener('click', () => {
+            chatWindow.style.display = 'none';
+        });
+    }
+
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message === "") return;
+
+        appendMessage(message, 'user');
+        chatInput.value = "";
+
+        setTimeout(() => {
+            let response = "¡Qué buena pregunta! Déjame consultar eso en el manual de Caja Los Andes.";
+            
+           
+            const text = message.toLowerCase();
+            if (text.includes("metas") || text.includes("progreso")) {
+                response = "¡Vas por buen camino! Puedes ver tu avance de la Semana 1 en el panel de 'Progreso del Curso'.";
+            } 
+            else if (text.includes("soporte") || text.includes("ayuda")) {
+                response = "Si tienes problemas, puedes contactar a Mesa de Ayuda en el menú lateral o escribir a soporte@cajalosandes.cl.";
+            } 
+            else if (text.includes("estrés") || text.includes("bienestar") || text.includes("consejos")) {
+                response = "El bienestar es clave. 🧘‍♂️ Te recomiendo tomar pausas activas y usar nuestra sección de '¿Cómo te sientes hoy?' para registrar tu ánimo.";
+            } 
+            else if (text.includes("eventos") || text.includes("equipo")) {
+                response = "¡Hay novedades! 🚀 Tenemos un Meetup de Innovación este viernes. Revisa la pestaña de 'Beneficios' para más detalles.";
+            
+            } 
+            else {
+                response = "Interesante pregunta. No tengo una respuesta exacta, pero puedo ayudarte con tus metas, soporte técnico o consejos de bienestar. ¡Tu puedes!";
+            }
+
+            appendMessage(response, 'bot');
+        }, 1000);
+    }
+
+
+    function appendMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('msg', sender); 
+        messageDiv.innerText = text;
+        chatContent.appendChild(messageDiv);
+        
+   
+        chatContent.scrollTop = chatContent.scrollHeight;
+    }
+
+  
+    if (sendBtn) {
+        sendBtn.addEventListener('click', sendMessage);
+    }
+    
+    if (chatInput) {
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    }
+});
+
+
+function handleChip(text) {
+    const chatInput = document.getElementById('chat-input');
+    chatInput.value = text;
+
+    document.getElementById('send-chat').click();
+}

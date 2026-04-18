@@ -181,5 +181,40 @@
         <button id="btn-revisar" class="btn-primary">REVISAR LO APRENDIDO</button>
     </div>
 </div>
+
+     <div id="chat-bubble" class="chat-bubble">
+    <img src="assets/Gemini_Generated_Image_23yw8y23yw8y23yw-fotor-bg-remover-202604180125.png" alt="Abrir Chat"> 
+    <div class="notification-badge">1</div>
+</div>
+    <div id="chat-window" class="modern-chat-container" style="display: none;">
+    <div class="chat-header">
+        <div class="header-info">
+            <div>
+                <p class="bot-name">Asistente Virtual</p>
+                <p class="bot-subtitle">En línea ahora</p>
+            </div>
+        </div>
+        <button id="close-chat" class="close-btn">&times;</button>
+    </div>
+
+    <div id="chat-content" class="chat-messages">
+        <div class="msg bot">¡Hola! 👋 ¿Cómo puedo ayudarte hoy con tus capacitaciones?</div>
+    </div>
+
+    <div class="chat-chips">
+        <button onclick="handleChip('¿Cómo veo mis metas?')">¿Cómo veo mis metas?</button>
+        <button onclick="handleChip('Soporte técnico')">Soporte técnico</button>
+        <button onclick="handleChip('Consejos para el estrés')">Consejos para el estrés</button>
+    </div>
+
+    <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+        <button id="send-chat" class="send-btn">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M2.01 21L23 12L2.01 3L2 10l15 2l-15 2z"/>
+            </svg>
+        </button>
+    </div>
+</div>
 </body>
 </html>
