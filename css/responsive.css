@@ -1,8 +1,3 @@
-/* ============================================================
-   ARCHIVO: responsive.css
-   DESCRIPCIÓN: Adaptabilidad para móviles y tablets
-   ============================================================ */
-
 
 
 /* TABLETS Y MÓVILES (Pantallas menores a 992px) */
@@ -725,7 +720,6 @@
     /* 7. Ajuste de navegación superior específica */
     .header-container .main-title {
         font-size: 30px !important;
-        text-align: left;
     }
     
     .header-container .section-subtitle {
@@ -973,5 +967,24 @@
     
 }
 
+.nav-links, .topnav-links {
+   
+    font-family: 'Inter', sans-serif !important;
+}
+
+.nav-item a, .topnav-links a, .nav-links a {
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 800 !important; 
+    letter-spacing: 0.5px !important;
+    color: #afafaf !important; 
+    
+    transition: color 0.3s ease;
+    text-transform: uppercase !important;
+}
 
 
+.nav-item.active a, .topnav-links a.active, .nav-links a.active {
+    color: #00acee !important;
+    font-weight: 900 !important;
+}

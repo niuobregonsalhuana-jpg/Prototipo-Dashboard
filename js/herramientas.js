@@ -85,26 +85,32 @@ function verPDF(ruta) {
 }
 
 function cerrarVideo() {
-    const modal = document.getElementById('videoModal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.querySelector('.iframe-wrapper').innerHTML = ''; 
-    }
-}
-
-function cerrarVideo() {
     const modalPDF = document.getElementById('videoModal');
-    const celebration = document.getElementById('celebration-screen');
+    const customModal = document.getElementById('custom-modal'); 
     const contenedor = document.querySelector('.iframe-wrapper');
+    const modalMessage = document.getElementById('modal-message');
 
     if (modalPDF) {
         modalPDF.style.display = 'none'; 
         if (contenedor) contenedor.innerHTML = ''; 
         
-        
-        if (celebration) {
-            celebration.style.display = 'flex';
-            registrarProgresoSilencioso(1, 5); 
+
+        if (customModal) {
+            if (modalMessage) {
+                modalMessage.innerText = "Has revisado el documento correctamente. ¡Sigue así!";
+            }
+            customModal.style.display = 'flex';
+            
+
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            if (typeof registrarProgresoSilencioso === "function") {
+                registrarProgresoSilencioso(1, 5); 
+            }
         }
     }
 }
@@ -118,3 +124,35 @@ function verOrganigrama() {
     tareaActual = 5;
     verPDF('documentos/MOF.pdf'); 
 }
+
+document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'close-modal') {
+        const customModal = document.getElementById('custom-modal');
+
+        if (customModal) {
+            customModal.style.display = 'none';
+        }
+        
+        console.log("Modal cerrado. El usuario permanece en Herramientas.");
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'close-modal') {
+        const customModal = document.getElementById('custom-modal');
+
+        let progreso = JSON.parse(localStorage.getItem('progresoSemanas')) || {};
+
+        if (progreso[5] && !progreso[5].tareas.includes('tarea_final')) {
+            progreso[5].tareas.push('tarea_final');
+
+            localStorage.setItem('acabaDeTerminarTodo', 'true');
+        }
+
+        localStorage.setItem('progresoSemanas', JSON.stringify(progreso));
+
+        if (customModal) customModal.style.display = 'none';
+        
+        console.log("¡Tarea 5 registrada en el sistema global!");
+    }
+});

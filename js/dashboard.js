@@ -313,24 +313,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             let response = "¡Qué buena pregunta! Déjame consultar eso en el manual de Caja Los Andes.";
-            
-           
             const text = message.toLowerCase();
-            if (text.includes("metas") || text.includes("progreso")) {
-                response = "¡Vas por buen camino! Puedes ver tu avance de la Semana 1 en el panel de 'Progreso del Curso'.";
+
+            // 1. Lógica de finalización 
+            if (text.includes("ya termine") || text.includes("acabe mis cursos") || text.includes("completé la capacitación")) {
+                response = "¡Felicidades por completar tu camino de aprendizaje! 🏆 Ahora que dominas los contenidos de esta semana, puedes repasar los módulos para reforzar conceptos o invitar a otros asesores a iniciar su capacitación para fortalecer nuestro equipo. ¡Tu crecimiento es el motor de Caja Los Andes! Sigue brillando. ✨";
             } 
+            // 2. Metas y Progreso
+            else if (text.includes("metas") || text.includes("progreso")) {
+                response = "¡Vas por buen camino! Puedes ver tu avance en el panel de 'Progreso del Curso'.";
+            } 
+            // 3. Soporte y Ayuda
             else if (text.includes("soporte") || text.includes("ayuda")) {
                 response = "Si tienes problemas, puedes contactar a Mesa de Ayuda en el menú lateral o escribir a soporte@cajalosandes.cl.";
             } 
+            // 4. Bienestar
             else if (text.includes("estrés") || text.includes("bienestar") || text.includes("consejos")) {
                 response = "El bienestar es clave. 🧘‍♂️ Te recomiendo tomar pausas activas y usar nuestra sección de '¿Cómo te sientes hoy?' para registrar tu ánimo.";
             } 
+            // 5. Eventos y Equipo
             else if (text.includes("eventos") || text.includes("equipo")) {
                 response = "¡Hay novedades! 🚀 Tenemos un Meetup de Innovación este viernes. Revisa la pestaña de 'Beneficios' para más detalles.";
-            
             } 
+            // 6. Respuesta por defecto
             else {
-                response = "Interesante pregunta. No tengo una respuesta exacta, pero puedo ayudarte con tus metas, soporte técnico o consejos de bienestar. ¡Tu puedes!";
+                response = "Interesante pregunta. No tengo una respuesta exacta, pero puedo ayudarte con tus metas, soporte técnico o consejos de bienestar. ¡Tú puedes!";
             }
 
             appendMessage(response, 'bot');
