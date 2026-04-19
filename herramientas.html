@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Caja Los Andes</title>
     <link rel="stylesheet" href="css/herramientas.css">
+        <link rel="stylesheet" href="css/responsive.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/png" href="/assets/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.png">
     
 </head>
 <body>
@@ -23,7 +29,7 @@
         </nav>
 
         <main class="main-content">
-    <nav class="top-nav">
+<nav class="top-nav">
     <ul class="nav-links">
         <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
         <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
@@ -31,7 +37,8 @@
     </ul>
 
     <div class="header-profile" id="user-profile-block">
-        <div class="profile-img-container" id="user-photo-container"></div>
+        <div class="profile-img-container" id="user-photo-container">
+        </div>
         
         <div class="profile-text">
             <span class="profile-handle" id="user-handle">@usuario</span>
@@ -40,13 +47,15 @@
         <i class="arrow-down">▼</i>
 
         <div class="profile-dropdown" id="profile-dropdown">
-            <div class="dropdown-header">
-                <p id="dropdown-full-name">Cargando...</p>
-                <p id="dropdown-email" class="small-text">usuario@correo.com</p>
-            </div>
-            <hr>
-            <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
-        </div>
+    <div class="dropdown-header">
+        <p id="dropdown-full-name">Cargando...</p>
+        <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+    </div>
+    <hr>
+    <button id="logout-btn" class="logout-link">
+        CERRAR SESIÓN
+    </button>
+</div>
     </div>
 </nav>
 
@@ -148,5 +157,31 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="js/herramientas.js"></script>
   <script src="js/videos.js"></script>
- 
+  <nav class="mobile-tab-bar">
+    <a href="dashboard.html" class="tab-item">
+        <i class='bx bxs-home-alt-2'></i>
+        <span>Inicio</span>
+    </a>
+    
+    <a href="capacitaciones.html" class="tab-item">
+        <i class='bx bxs-graduation'></i>
+        <span>Capacitaciones</span>
+    </a>
+
+    <a href="herramientas.html" class="tab-item active">
+        <i class='bx bxs-star'></i>
+        <span>Herramientas</span>
+    </a>
+
+    <a href="videos.html" class="tab-item">
+        <i class='bx bxs-video'></i>
+        <span>Videos</span>
+    </a>
+
+    <a href="Mesadeayuda.html" class="tab-item">
+        <i class='bx bxs-help-circle'></i>
+        <span>Ayuda</span>
+    </a>
+</nav>
+ <script src="js/herramientas.js"></script>
 </body>

@@ -1,6 +1,8 @@
 function toggleTasks(cardId) {
     const card = document.getElementById(cardId);
     const btn = card.querySelector('.btn-enter');
+     const nombreGuardado = localStorage.getItem('nombreUsuario');
+    const correoGuardado = localStorage.getItem('correoUsuario');
     
     card.classList.toggle('expanded');
     

@@ -1,411 +1,431 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capacitaciones - Caja Los Andes</title>
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/capacitaciones.css" />
-  </head>
-  <body>
-    <div class="root-container">
-      <nav class="sidebar">
-        <div class="sidebar-header">
-          <img
-            src="assets/logo_web.png"
-            alt="Caja Los Andes"
-            class="sidebar-logo-img"
-          />
-        </div>
-        <ul class="sidebar-menu">
-          <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
-          <li class="menu-item">
-            <a
-              href="capacitaciones.html"
-              style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capacitaciones - Caja Los Andes</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/capacitaciones.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/png" href="/assets/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.png">
+</head>
+
+<body>
+  <div class="root-container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img" />
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
+        <li class="menu-item">
+          <a href="capacitaciones.html" style="
                 background-color: rgba(255, 255, 255, 0.15);
                 border-left: 6px solid #ffffff;
                 padding-left: 29px;
-              "
-              >Capacitaciones</a
-            >
+              ">Capacitaciones</a>
+        </li>
+        <li class="menu-item"><a href="videos.html">Videos</a></li>
+        <li class="menu-item">
+          <a href="herramientas.html">Herramientas</a>
+        </li>
+        <li class="menu-item"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <nav class="top-nav">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
+          <li class="nav-item active">
+            <a href="capacitaciones.html">MIS CAPACITACIONES</a>
           </li>
-          <li class="menu-item"><a href="videos.html">Videos</a></li>
-          <li class="menu-item">
-            <a href="herramientas.html">Herramientas</a>
-          </li>
-          <li class="menu-item"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
+          <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
         </ul>
+
+        <div class="header-profile" id="user-profile-block">
+          <div class="profile-img-container" id="user-photo-container"></div>
+
+          <div class="profile-text">
+            <span class="profile-handle" id="user-handle">@usuario</span>
+            <span class="profile-name" id="user-display-name">Cargando...</span>
+          </div>
+
+          <i class="arrow-down">▼</i>
+
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-header">
+              <p id="dropdown-full-name">Cargando...</p>
+              <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+            </div>
+            <hr />
+            <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
+          </div>
+        </div>
       </nav>
 
-      <main class="main-content">
-        <nav class="top-nav">
-          <ul class="nav-links">
-            <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
-            <li class="nav-item active">
-              <a href="capacitaciones.html">MIS CAPACITACIONES</a>
-            </li>
-            <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
-          </ul>
+      <div class="courses-section">
+        <h1 class="main-title">Mis Capacitaciones</h1>
+        <p class="section-subtitle">
+          Bienvenido a tu centro de formación. Aquí encontrarás los cursos
+          normativos y de especialización necesarios para potenciar tu rol en
+          Caja Los Andes. Completa los módulos activos para desbloquear nuevas
+          rutas de aprendizaje.
+        </p>
 
-          <div class="header-profile" id="user-profile-block">
-            <div class="profile-img-container" id="user-photo-container"></div>
+        <div class="courses-grid">
+          <div class="course-card" id="card-splaft" data-week="1">
+            <div class="course-type">SEMANA 1</div>
+            <h3>SPLAFT</h3>
+            <p>
+              Prevención de lavado de activos y financiamiento del terrorismo.
+            </p>
 
-            <div class="profile-text">
-              <span class="profile-handle" id="user-handle">@usuario</span>
-              <span class="profile-name" id="user-display-name"
-                >Cargando...</span
-              >
+            <div class="course-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%"></div>
+              </div>
+              <span>0% completado</span>
             </div>
 
-            <i class="arrow-down">▼</i>
+            <button class="btn-enter" onclick="toggleTasks('card-splaft')">
+              CONTINUAR
+            </button>
 
-            <div class="profile-dropdown" id="profile-dropdown">
-              <div class="dropdown-header">
-                <p id="dropdown-full-name">Cargando...</p>
-                <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+            <div class="tasks-container">
+              <div class="tasks-inner">
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Introducción al SPLAFT</h4>
+                    <p>Importancia de prevenir lavado activos.</p>
+                  </div>
+                  <a href="videos.html?s=1&t=1" class="task-link">↗</a>
+                </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Señales de Alerta</h4>
+                    <p>Detectar perfiles de riesgo inusuales.</p>
+                  </div>
+                  <a href="videos.html?s=1&t=2" class="task-link">↗</a>
+                </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Debida Diligencia (KYC)</h4>
+                    <p>Registro correcto de fondos origen.</p>
+                  </div>
+                  <a href="videos.html?s=1&t=3" class="task-link">↗</a>
+                </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Canales de Denuncia</h4>
+                    <p>Reportar operaciones sospechosas oficialmente.</p>
+                  </div>
+                  <a href="videos.html?s=1&t=4" class="task-link">↗</a>
+                </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Uso de Corebank</h4>
+                    <p>
+                      Registro y control de operaciones seguras en el sistema.
+                    </p>
+                  </div>
+                  <a href="herramientas.html" class="task-link" onclick="verVideo(1, 5)">↗</a>
+                </div>
               </div>
-              <hr />
-              <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
             </div>
           </div>
-        </nav>
 
-        <div class="courses-section">
-          <h1 class="main-title">Mis Capacitaciones</h1>
-          <p class="section-subtitle">
-            Bienvenido a tu centro de formación. Aquí encontrarás los cursos
-            normativos y de especialización necesarios para potenciar tu rol en
-            Caja Los Andes. Completa los módulos activos para desbloquear nuevas
-            rutas de aprendizaje.
-          </p>
+          <div class="course-card" id="card-riesgos" data-week="2">
+            <div class="course-type">SEMANA 2</div>
+            <h3>Gestión de Riesgos</h3>
+            <p>
+              Identificación, análisis y control de riesgos operativos y financieros.
+            </p>
+            <div class="lock-overlay">🔒 BLOQUEADO</div>
 
-          <div class="courses-grid">
-            <div class="course-card" id="card-splaft" data-week="1">
-              <div class="course-type">SEMANA 1</div>
-              <h3>SPLAFT</h3>
-              <p>
-                Prevención de lavado de activos y financiamiento del terrorismo.
-              </p>
-
-              <div class="course-progress">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 0%"></div>
-                </div>
-                <span>0% completado</span>
+            <div class="course-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%"></div>
               </div>
+              <span>0% completado</span>
+            </div>
 
-              <button class="btn-enter" onclick="toggleTasks('card-splaft')">
-                CONTINUAR
-              </button>
+            <button class="btn-enter" onclick="toggleTasks('card-riesgos')">
+              CONTINUAR
+            </button>
 
-              <div class="tasks-container">
-                <div class="tasks-inner">
-                  <div class="task-item">
-                    <div class="task-info">
-                      <h4>Introducción al SPLAFT</h4>
-                      <p>Importancia de prevenir lavado activos.</p>
-                    </div>
-                    <a href="videos.html?s=1&t=1" class="task-link">↗</a>
+            <div class="tasks-container">
+              <div class="tasks-inner">
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Conceptos de Riesgo</h4>
+                    <p>Probabilidad e impacto en finanzas.</p>
                   </div>
-                  <div class="task-item">
-                    <div class="task-info">
-                      <h4>Señales de Alerta</h4>
-                      <p>Detectar perfiles de riesgo inusuales.</p>
-                    </div>
-                    <a href="videos.html?s=1&t=2" class="task-link">↗</a>
+                  <a href="videos.html?s=2&t=1" class="task-link" onclick="verVideo(2, 1)">↗</a>
+                </div>
+
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Riesgo Operativo</h4>
+                    <p>Prevenir errores en procesos diarios.</p>
                   </div>
-                  <div class="task-item">
-                    <div class="task-info">
-                      <h4>Debida Diligencia (KYC)</h4>
-                      <p>Registro correcto de fondos origen.</p>
-                    </div>
-                    <a href="videos.html?s=1&t=3" class="task-link">↗</a>
+                  <a href="videos.html?s=2&t=2" class="task-link" onclick="verVideo(2, 2)">↗</a>
+                </div>
+
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Crédito y Mercado</h4>
+                    <p>Análisis de capacidad de pago.</p>
                   </div>
-                  <div class="task-item">
-                    <div class="task-info">
-                      <h4>Canales de Denuncia</h4>
-                      <p>Reportar operaciones sospechosas oficialmente.</p>
-                    </div>
-                    <a href="videos.html?s=1&t=4" class="task-link">↗</a>
+                  <a href="videos.html?s=2&t=3" class="task-link" onclick="verVideo(2, 3)">↗</a>
+                </div>
+
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Estrategias de Mitigación</h4>
+                    <p>Minimizar eventos críticos institucionales.</p>
                   </div>
-                  <div class="task-item">
-                    <div class="task-info">
-                      <h4>Uso de Corebank</h4>
-                      <p>
-                        Registro y control de operaciones seguras en el sistema.
-                      </p>
-                    </div>
-                    <a
-                      href="herramientas.html"
-                      class="task-link"
-                      onclick="verVideo(1, 5)"
-                      >↗</a
-                    >
+                  <a href="videos.html?s=2&t=4" class="task-link" onclick="verVideo(2, 4)">↗</a>
+                </div>
+
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Tablero Unificado</h4>
+                    <p>Gestión de metas y KPIs.</p>
                   </div>
+                  <a href="herramientas.html" class="task-link" onclick="verVideo(2, 5)">↗</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="course-card" id="card-riesgos" data-week="2">
-  <div class="course-type">SEMANA 2</div>
-  <h3>Gestión de Riesgos</h3>
-  <p>
-    Identificación, análisis y control de riesgos operativos y financieros.
-  </p>
-  <div class="lock-overlay">🔒 BLOQUEADO</div>
-  
-  <div class="course-progress">
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 0%"></div>
-    </div>
-    <span>0% completado</span>
-  </div>
+          <div class="course-card locked" id="card-seguridad" data-week="3">
+            <div class="course-type">SEMANA 3</div>
+            <h3>Seguridad de la Información</h3>
+            <p>
+              Protección de activos digitales y confidencialidad de datos de clientes.
+            </p>
 
-  <button class="btn-enter" onclick="toggleTasks('card-riesgos')">
-    CONTINUAR
-  </button>
+            <div class="lock-overlay">🔒 BLOQUEADO</div>
 
-  <div class="tasks-container">
-    <div class="tasks-inner">
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Conceptos de Riesgo</h4>
-          <p>Probabilidad e impacto en finanzas.</p>
-        </div>
-        <a href="videos.html?s=2&t=1" class="task-link" onclick="verVideo(2, 1)">↗</a>
-      </div>
-      
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Riesgo Operativo</h4>
-          <p>Prevenir errores en procesos diarios.</p>
-        </div>
-        <a href="videos.html?s=2&t=2" class="task-link" onclick="verVideo(2, 2)">↗</a>
-      </div>
+            <div class="course-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%"></div>
+              </div>
+              <span>0% completado</span>
+            </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Crédito y Mercado</h4>
-          <p>Análisis de capacidad de pago.</p>
-        </div>
-        <a href="videos.html?s=2&t=3" class="task-link" onclick="verVideo(2, 3)">↗</a>
-      </div>
+            <button class="btn-enter" onclick="toggleTasks('card-seguridad')">
+              CONTINUAR
+            </button>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Estrategias de Mitigación</h4>
-          <p>Minimizar eventos críticos institucionales.</p>
-        </div>
-        <a href="videos.html?s=2&t=4" class="task-link" onclick="verVideo(2, 4)">↗</a>
-      </div>
+            <div class="tasks-container">
+              <div class="tasks-inner">
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Protección de Datos</h4>
+                    <p>Confidencialidad de información sensible.</p>
+                  </div>
+                  <a href="videos.html?s=3&t=1" class="task-link" onclick="verVideo(3, 1)">↗</a>
+                </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Tablero Unificado</h4>
-          <p>Gestión de metas y KPIs.</p>
-        </div>
-        <a href="herramientas.html" class="task-link" onclick="verVideo(2, 5)">↗</a>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Ciberseguridad Básica</h4>
+                    <p>Prevención de ataques y malware.</p>
+                  </div>
+                  <a href="videos.html?s=3&t=2" class="task-link" onclick="verVideo(3, 2)">↗</a>
+                </div>
 
-            <div class="course-card locked" id="card-seguridad" data-week="3">
-  <div class="course-type">SEMANA 3</div>
-  <h3>Seguridad de la Información</h3>
-  <p>
-    Protección de activos digitales y confidencialidad de datos de clientes.
-  </p>
-  
-  <div class="lock-overlay">🔒 BLOQUEADO</div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Gestión de Contraseñas</h4>
+                    <p>Uso de credenciales seguras.</p>
+                  </div>
+                  <a href="videos.html?s=3&t=3" class="task-link" onclick="verVideo(3, 3)">↗</a>
+                </div>
 
-  <div class="course-progress">
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 0%"></div>
-    </div>
-    <span>0% completado</span>
-  </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Ingeniería Social</h4>
+                    <p>Detectar intentos de fraude digital.</p>
+                  </div>
+                  <a href="videos.html?s=3&t=4" class="task-link" onclick="verVideo(3, 4)">↗</a>
+                </div>
 
-  <button class="btn-enter" onclick="toggleTasks('card-seguridad')">
-    CONTINUAR
-  </button>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Manual de Funciones (MOF)</h4>
+                    <p>Consulta de responsabilidades oficiales.</p>
+                  </div>
+                  <a href="herramientas.html" class="task-link" onclick="verVideo(3, 5)">↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <div class="tasks-container">
-    <div class="tasks-inner">
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Protección de Datos</h4>
-          <p>Confidencialidad de información sensible.</p>
-        </div>
-        <a href="videos.html?s=3&t=1" class="task-link" onclick="verVideo(3, 1)">↗</a>
-      </div>
-      
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Ciberseguridad Básica</h4>
-          <p>Prevención de ataques y malware.</p>
-        </div>
-        <a href="videos.html?s=3&t=2" class="task-link" onclick="verVideo(3, 2)">↗</a>
-      </div>
+          <div class="course-card locked" id="card-continuidad" data-week="4">
+            <div class="course-type">SEMANA 4</div>
+            <h3>Continuidad de Negocio</h3>
+            <p>Planes de respuesta y resiliencia ante eventos críticos.</p>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Gestión de Contraseñas</h4>
-          <p>Uso de credenciales seguras.</p>
-        </div>
-        <a href="videos.html?s=3&t=3" class="task-link" onclick="verVideo(3, 3)">↗</a>
-      </div>
+            <div class="lock-overlay">🔒 BLOQUEADO</div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Ingeniería Social</h4>
-          <p>Detectar intentos de fraude digital.</p>
-        </div>
-        <a href="videos.html?s=3&t=4" class="task-link" onclick="verVideo(3, 4)">↗</a>
-      </div>
+            <div class="course-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%"></div>
+              </div>
+              <span>0% completado</span>
+            </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Manual de Funciones (MOF)</h4>
-          <p>Consulta de responsabilidades oficiales.</p>
-        </div>
-        <a href="herramientas.html" class="task-link" onclick="verVideo(3, 5)">↗</a>
-      </div>
-    </div>
-  </div>
-</div>
+            <button class="btn-enter" onclick="toggleTasks('card-continuidad')">
+              CONTINUAR
+            </button>
 
-            <div class="course-card locked" id="card-continuidad" data-week="4">
-  <div class="course-type">SEMANA 4</div>
-  <h3>Continuidad de Negocio</h3>
-  <p>Planes de respuesta y resiliencia ante eventos críticos.</p>
-  
-  <div class="lock-overlay">🔒 BLOQUEADO</div>
+            <div class="tasks-container">
+              <div class="tasks-inner">
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Planes de Respuesta</h4>
+                    <p>Resiliencia ante eventos críticos.</p>
+                  </div>
+                  <a href="videos.html?s=4&t=1" class="task-link" onclick="verVideo(4, 1)">↗</a>
+                </div>
 
-  <div class="course-progress">
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 0%"></div>
-    </div>
-    <span>0% completado</span>
-  </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Recuperación Operativa</h4>
+                    <p>Restaurar servicios tras incidentes.</p>
+                  </div>
+                  <a href="videos.html?s=4&t=2" class="task-link" onclick="verVideo(4, 2)">↗</a>
+                </div>
 
-  <button class="btn-enter" onclick="toggleTasks('card-continuidad')">
-    CONTINUAR
-  </button>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Gestión de Crisis</h4>
+                    <p>Protocolos de comunicación y apoyo.</p>
+                  </div>
+                  <a href="videos.html?s=4&t=3" class="task-link" onclick="verVideo(4, 3)">↗</a>
+                </div>
 
-  <div class="tasks-container">
-    <div class="tasks-inner">
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Planes de Respuesta</h4>
-          <p>Resiliencia ante eventos críticos.</p>
-        </div>
-        <a href="videos.html?s=4&t=1" class="task-link" onclick="verVideo(4, 1)">↗</a>
-      </div>
-      
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Recuperación Operativa</h4>
-          <p>Restaurar servicios tras incidentes.</p>
-        </div>
-        <a href="videos.html?s=4&t=2" class="task-link" onclick="verVideo(4, 2)">↗</a>
-      </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Análisis de Impacto (BIA)</h4>
+                    <p>Identificación de procesos críticos.</p>
+                  </div>
+                  <a href="videos.html?s=4&t=4" class="task-link" onclick="verVideo(4, 4)">↗</a>
+                </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Gestión de Crisis</h4>
-          <p>Protocolos de comunicación y apoyo.</p>
-        </div>
-        <a href="videos.html?s=4&t=3" class="task-link" onclick="verVideo(4, 3)">↗</a>
-      </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Políticas de Crédito</h4>
+                    <p>Reglamento para evaluación de riesgo.</p>
+                  </div>
+                  <a href="herramientas.html" class="task-link" onclick="verVideo(4, 5)">↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Análisis de Impacto (BIA)</h4>
-          <p>Identificación de procesos críticos.</p>
-        </div>
-        <a href="videos.html?s=4&t=4" class="task-link" onclick="verVideo(4, 4)">↗</a>
-      </div>
+          <div class="course-card locked" id="card-datos" data-week="5">
+            <div class="course-type">SEMANA 5</div>
+            <h3>Protección de Datos Personales</h3>
+            <p>Cumplimiento legal sobre el tratamiento y privacidad.</p>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Políticas de Crédito</h4>
-          <p>Reglamento para evaluación de riesgo.</p>
-        </div>
-        <a href="herramientas.html" class="task-link" onclick="verVideo(4, 5)">↗</a>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="lock-overlay">🔒 BLOQUEADO</div>
 
-            <div class="course-card locked" id="card-datos" data-week="5">
-  <div class="course-type">SEMANA 5</div>
-  <h3>Protección de Datos Personales</h3>
-  <p>Cumplimiento legal sobre el tratamiento y privacidad.</p>
-  
-  <div class="lock-overlay">🔒 BLOQUEADO</div>
+            <div class="course-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 0%"></div>
+              </div>
+              <span>0% completado</span>
+            </div>
 
-  <div class="course-progress">
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" style="width: 0%"></div>
-    </div>
-    <span>0% completado</span>
-  </div>
+            <button class="btn-enter" onclick="toggleTasks('card-datos')">
+              CONTINUAR
+            </button>
 
-  <button class="btn-enter" onclick="toggleTasks('card-datos')">
-    CONTINUAR
-  </button>
+            <div class="tasks-container">
+              <div class="tasks-inner">
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Ley de Privacidad</h4>
+                    <p>Marco legal sobre datos personales.</p>
+                  </div>
+                  <a href="videos.html?s=5&t=1" class="task-link" onclick="verVideo(5, 1)">↗</a>
+                </div>
 
-  <div class="tasks-container">
-    <div class="tasks-inner">
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Ley de Privacidad</h4>
-          <p>Marco legal sobre datos personales.</p>
-        </div>
-        <a href="videos.html?s=5&t=1" class="task-link" onclick="verVideo(5, 1)">↗</a>
-      </div>
-      
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Derechos ARCO</h4>
-          <p>Acceso, rectificación y cancelación.</p>
-        </div>
-        <a href="videos.html?s=5&t=2" class="task-link" onclick="verVideo(5, 2)">↗</a>
-      </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Derechos ARCO</h4>
+                    <p>Acceso, rectificación y cancelación.</p>
+                  </div>
+                  <a href="videos.html?s=5&t=2" class="task-link" onclick="verVideo(5, 2)">↗</a>
+                </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Consentimiento Informado</h4>
-          <p>Autorización para tratamiento de datos.</p>
-        </div>
-        <a href="videos.html?s=5&t=3" class="task-link" onclick="verVideo(5, 3)">↗</a>
-      </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Consentimiento Informado</h4>
+                    <p>Autorización para tratamiento de datos.</p>
+                  </div>
+                  <a href="videos.html?s=5&t=3" class="task-link" onclick="verVideo(5, 3)">↗</a>
+                </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Transferencia Segura</h4>
-          <p>Protocolos para compartir información.</p>
-        </div>
-        <a href="videos.html?s=5&t=4" class="task-link" onclick="verVideo(5, 4)">↗</a>
-      </div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Transferencia Segura</h4>
+                    <p>Protocolos para compartir información.</p>
+                  </div>
+                  <a href="videos.html?s=5&t=4" class="task-link" onclick="verVideo(5, 4)">↗</a>
+                </div>
 
-      <div class="task-item">
-        <div class="task-info">
-          <h4>Organigrama Institucional</h4>
-          <p>Estructura y canales de comunicación.</p>
-        </div>
-        <a href="herramientas.html" class="task-link" onclick="verVideo(5, 5)">↗</a>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="task-item">
+                  <div class="task-info">
+                    <h4>Organigrama Institucional</h4>
+                    <p>Estructura y canales de comunicación.</p>
+                  </div>
+                  <a href="herramientas.html" class="task-link" onclick="verVideo(5, 5)">↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <script src="js/dashboard.js"></script>
           <script src="js/capacitaciones.js"></script>
         </div>
-      </main>
-    </div>
-  </body>
+    </main>
+  </div>
+ <nav class="mobile-tab-bar">
+    <a href="dashboard.html" class="tab-item">
+        <i class='bx bxs-home-alt-2'></i>
+        <span>Inicio</span>
+    </a>
+    
+    <a href="capacitaciones.html" class="tab-item">
+        <i class='bx bxs-graduation'></i>
+        <span>Cursos</span>
+    </a>
+
+    <a href="herramientas.html" class="tab-item active">
+        <i class='bx bxs-star'></i>
+        <span>Herramientas</span>
+    </a>
+
+    <a href="videos.html" class="tab-item">
+        <i class='bx bxs-video'></i>
+        <span>Videos</span>
+    </a>
+
+    <a href="Mesadeayuda.html" class="tab-item">
+        <i class='bx bxs-help-circle'></i>
+        <span>Ayuda</span>
+    </a>
+</nav>
+</body>
+
 </html>

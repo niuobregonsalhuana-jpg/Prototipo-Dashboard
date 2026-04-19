@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const nombreGuardado = localStorage.getItem('nombreUsuario');
+  const nombreGuardado = localStorage.getItem('nombreUsuario');
     const correoGuardado = localStorage.getItem('correoUsuario');
 
     if (nombreGuardado) {

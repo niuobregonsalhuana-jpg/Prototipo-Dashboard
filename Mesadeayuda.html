@@ -1,167 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesa de Ayuda - Caja Los Andes</title>
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/Mesadeayuda.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesa de Ayuda - Caja Los Andes</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/Mesadeayuda.css">
+  <link rel="stylesheet" href="css/responsive.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/png" href="/assets/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.png">
 </head>
-   <body>
-    <div class="root-container">
-      <nav class="sidebar">
-        <div class="sidebar-header">
-          <img
-            src="assets/logo_web.png"
-            alt="Caja Los Andes"
-            class="sidebar-logo-img"
-          />
+
+<body>
+  <div class="root-container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/logo_web.png" alt="Caja Los Andes" class="sidebar-logo-img" />
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
+        <li class="menu-item">
+          <a href="capacitaciones.html">Capacitaciones</a>
+        </li>
+        <li class="menu-item"><a href="videos.html">Videos</a></li>
+        <li class="menu-item">
+          <a href="herramientas.html">Herramientas</a>
+        </li>
+        <li class="menu-item"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+  <nav class="top-nav">
+    <ul class="nav-links">
+        <li class="nav-item "><a href="dashboard.html">DASHBOARD</a></li>
+        <li class="nav-item"><a href="capacitaciones.html">MIS CAPACITACIONES</a></li>
+        <li class="nav-item"><a href="beneficios.html">BENEFICIOS</a></li>
+    </ul>
+
+    <div class="header-profile" id="user-profile-block">
+        <div class="profile-img-container" id="user-photo-container">
         </div>
-        <ul class="sidebar-menu">
-          <li class="menu-item"><a href="dashboard.html">Inicio</a></li>
-          <li class="menu-item">
-            <a href="capacitaciones.html">Capacitaciones</a>
-          </li>
-          <li class="menu-item"><a href="videos.html">Videos</a></li>
-          <li class="menu-item">
-            <a href="herramientas.html">Herramientas</a>
-          </li>
-          <li class="menu-item"><a href="Mesadeayuda.html">Mesa de ayuda</a></li>
-        </ul>
-      </nav>
-
-      <main class="main-content">
-        <nav class="top-nav">
-          <ul class="nav-links">
-            <li class="nav-item"><a href="dashboard.html">DASHBOARD</a></li>
-            <li class="nav-item">
-              <a href="capacitaciones.html">MIS CAPACITACIONES</a>
-            </li>
-            <li class="nav-item active">
-              <a href="beneficios.html">BENEFICIOS</a>
-            </li>
-          </ul>
-
-          <div class="header-profile" id="user-profile-block">
-            <div class="profile-img-container" id="user-photo-container"></div>
-
-            <div class="profile-text">
-              <span class="profile-handle" id="user-handle">@usuario</span>
-              <span class="profile-name" id="user-display-name"
-                >Cargando...</span
-              >
-            </div>
-            <i class="arrow-down">▼</i>
-
-            <div class="profile-dropdown" id="profile-dropdown">
-              <div class="dropdown-header">
-                <p id="dropdown-full-name">Cargando...</p>
-                <p id="dropdown-email" class="small-text">usuario@correo.com</p>
-              </div>
-              <hr />
-              <button id="logout-btn" class="logout-link">CERRAR SESIÓN</button>
-            </div>
-          </div>
-        </nav>
-        <div class="header-container">
-          <h1 class="main-title">Mesa de ayuda</h1>
-          <p class="section-subtitle">
-            Resuelve tus dudas utilizando herramientas de autogestion disponibles.
-          </p>
-        </div>
-        <div class="ma-two-columns-wrapper">
-    
-    <section class="ma-content-card">
-        <h2 class="card-category-title">Preguntas frecuentes</h2>
         
-        <div class="faq-accordion-group">
-            
-            <details class="faq-item-clean">
-                <summary>¿Qué hago si mi clave de Corebank ha expirado o está bloqueada? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Utiliza el botón <strong>"Reiniciar mi clave de Corebank"</strong> en la columna de Autogestión. Recibirás un código de verificación en tu correo registrado para generar una nueva credencial de forma inmediata.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>Mi equipo presenta fallas de conexión o lentitud, ¿cómo lo reporto? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Haz clic en <strong>"Reportar falla de equipo"</strong>. Deberás indicar el número de serie de tu laptop y una breve descripción del problema para que el equipo de sistemas inicie un diagnóstico remoto.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>¿Cómo puedo simular un crédito si el módulo no carga correctamente? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Accede directamente desde el botón <strong>"Simuladores de Créditos"</strong> en la sección lateral. Si el error persiste, limpia el historial de tu navegador para refrescar las tasas vigentes.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>¿Cómo cambio mi correo electrónico o número de contacto? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Selecciona la opción <strong>"Recuperar mi correo electrónico"</strong> o envía una solicitud formal a través de "Soporte por Correo". Un asesor actualizará tu perfil en un máximo de 24 horas hábiles.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>¿Qué hago si no puedo visualizar los archivos o guías de apoyo? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Verifica que tu sesión no haya expirado. Si el problema continúa, abre un <strong>"Ticket de Soporte"</strong> adjuntando una captura de pantalla del error para verificar tus permisos.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>Tengo una urgencia con un desembolso y el sistema no responde, ¿a quién acudo? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    Utiliza el botón de <strong>"Llamar a Mesa de Ayuda"</strong> ubicado en la parte inferior. Este canal es exclusivo para incidencias críticas que impidan la operación en tiempo real.
-                </div>
-            </details>
-
-            <details class="faq-item-clean">
-                <summary>Completé mi curso pero sigue apareciendo como "Pendiente", ¿qué hago? <span class="chevron"></span></summary>
-                <div class="faq-inner-text">
-                    El sistema tarda hasta 30 minutos en sincronizar. Si no se actualiza, envía un reporte mediante <strong>"Soporte por Correo"</strong> indicando el nombre del curso para validación manual.
-                </div>
-            </details>
-
+        <div class="profile-text">
+            <span class="profile-handle" id="user-handle">@usuario</span>
+            <span class="profile-name" id="user-display-name">Cargando...</span>
         </div>
-    </section>
+        <i class="arrow-down">▼</i>
 
-    <section class="ma-content-card">
-        <h2 class="card-category-title">Autogestión</h2>
-        <div class="actions-group">
+        <div class="profile-dropdown" id="profile-dropdown">
+    <div class="dropdown-header">
+        <p id="dropdown-full-name">Cargando...</p>
+        <p id="dropdown-email" class="small-text">usuario@correo.com</p>
+    </div>
+    <hr>
+    <button id="logout-btn" class="logout-link">
+        CERRAR SESIÓN
+    </button>
+</div>
+    </div>
+</nav>
+      <div class="header-container">
+        <h1 class="main-title">Mesa de ayuda</h1>
+        <p class="section-subtitle">
+          Resuelve tus dudas utilizando herramientas de autogestion disponibles.
+        </p>
+      </div>
+      <div class="ma-two-columns-wrapper">
+
+        <section class="ma-content-card">
+          <h2 class="card-category-title">Preguntas frecuentes</h2>
+
+          <div class="faq-accordion-group">
+
+            <details class="faq-item-clean">
+              <summary>¿Qué hago si mi clave de Corebank ha expirado o está bloqueada? <span class="chevron"></span>
+              </summary>
+              <div class="faq-inner-text">
+                Utiliza el botón <strong>"Reiniciar mi clave de Corebank"</strong> en la columna de Autogestión.
+                Recibirás un código de verificación en tu correo registrado para generar una nueva credencial de forma
+                inmediata.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>Mi equipo presenta fallas de conexión o lentitud, ¿cómo lo reporto? <span class="chevron"></span>
+              </summary>
+              <div class="faq-inner-text">
+                Haz clic en <strong>"Reportar falla de equipo"</strong>. Deberás indicar el número de serie de tu laptop
+                y una breve descripción del problema para que el equipo de sistemas inicie un diagnóstico remoto.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>¿Cómo puedo simular un crédito si el módulo no carga correctamente? <span class="chevron"></span>
+              </summary>
+              <div class="faq-inner-text">
+                Accede directamente desde el botón <strong>"Simuladores de Créditos"</strong> en la sección lateral. Si
+                el error persiste, limpia el historial de tu navegador para refrescar las tasas vigentes.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>¿Cómo cambio mi correo electrónico o número de contacto? <span class="chevron"></span></summary>
+              <div class="faq-inner-text">
+                Selecciona la opción <strong>"Recuperar mi correo electrónico"</strong> o envía una solicitud formal a
+                través de "Soporte por Correo". Un asesor actualizará tu perfil en un máximo de 24 horas hábiles.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>¿Qué hago si no puedo visualizar los archivos o guías de apoyo? <span class="chevron"></span>
+              </summary>
+              <div class="faq-inner-text">
+                Verifica que tu sesión no haya expirado. Si el problema continúa, abre un <strong>"Ticket de
+                  Soporte"</strong> adjuntando una captura de pantalla del error para verificar tus permisos.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>Tengo una urgencia con un desembolso y el sistema no responde, ¿a quién acudo? <span
+                  class="chevron"></span></summary>
+              <div class="faq-inner-text">
+                Utiliza el botón de <strong>"Llamar a Mesa de Ayuda"</strong> ubicado en la parte inferior. Este canal
+                es exclusivo para incidencias críticas que impidan la operación en tiempo real.
+              </div>
+            </details>
+
+            <details class="faq-item-clean">
+              <summary>Completé mi curso pero sigue apareciendo como "Pendiente", ¿qué hago? <span
+                  class="chevron"></span></summary>
+              <div class="faq-inner-text">
+                El sistema tarda hasta 30 minutos en sincronizar. Si no se actualiza, envía un reporte mediante
+                <strong>"Soporte por Correo"</strong> indicando el nombre del curso para validación manual.
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <section class="ma-content-card">
+          <h2 class="card-category-title">Autogestión</h2>
+          <div class="actions-group">
             <button class="btn-action-outline">Reiniciar mi clave de Corebank</button>
             <button class="btn-action-outline">Recuperar mi correo electrónico</button>
             <button class="btn-action-outline">Simuladores de Créditos</button>
             <button class="btn-action-outline">Reportar falla de equipo</button>
             <button class="btn-action-outline">Ingresar un ticket</button>
-            
+
             <div class="contact-footer">
-                <p>¿Es una emergencia crítica?</p>
-                <button class="btn-primary-blue">Llamar a Mesa de Ayuda</button>
+              <p>¿Es una emergencia crítica?</p>
+              <button class="btn-primary-blue">Llamar a Mesa de Ayuda</button>
             </div>
+          </div>
+        </section>
+
+        <div id="modal-solicitud" class="flaticon-modal-overlay">
+          <div class="flaticon-modal-content">
+            <div class="modal-icon-header">
+              <img src="tu-icono-flaticon.png" alt="Icono" class="modal-main-icon">
+            </div>
+
+            <h2 class="modal-title" id="modal-dinamico-titulo">¡Solicitud iniciada!</h2>
+            <p class="modal-subtitle" id="modal-dinamico-texto">Estamos procesando tu requerimiento de autogestión.</p>
+
+            <div class="modal-button-group">
+              <button onclick="closeModal('modal-solicitud')" class="btn-primary-action">Entendido</button>
+              <button onclick="closeModal('modal-solicitud')" class="btn-secondary-action">Cerrar</button>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <div id="modal-solicitud" class="flaticon-modal-overlay">
-    <div class="flaticon-modal-content">
-        <div class="modal-icon-header">
-            <img src="tu-icono-flaticon.png" alt="Icono" class="modal-main-icon">
-        </div>
+      </div>
 
-        <h2 class="modal-title" id="modal-dinamico-titulo">¡Solicitud iniciada!</h2>
-        <p class="modal-subtitle" id="modal-dinamico-texto">Estamos procesando tu requerimiento de autogestión.</p>
+      <script src="js/Mesadeayuda.js"></script>
+   <nav class="mobile-tab-bar">
+    <a href="dashboard.html" class="tab-item">
+        <i class='bx bxs-home-alt-2'></i>
+        <span>Inicio</span>
+    </a>
+    
+    <a href="capacitaciones.html" class="tab-item">
+        <i class='bx bxs-graduation'></i>
+        <span>Capacitaciones</span>
+    </a>
 
-        <div class="modal-button-group">
-            <button onclick="closeModal('modal-solicitud')" class="btn-primary-action">Entendido</button>
-            <button onclick="closeModal('modal-solicitud')" class="btn-secondary-action">Cerrar</button>
-        </div>
-    </div>
-</div>
+    <a href="herramientas.html" class="tab-item active">
+        <i class='bx bxs-star'></i>
+        <span>Herramientas</span>
+    </a>
 
-</div>
+    <a href="videos.html" class="tab-item">
+        <i class='bx bxs-video'></i>
+        <span>Videos</span>
+    </a>
 
-    <script src="js/Mesadeayuda.js"></script>
+    <a href="Mesadeayuda.html" class="tab-item">
+        <i class='bx bxs-help-circle'></i>
+        <span>Ayuda</span>
+    </a>
+</nav>
 </body>
+
 </html>

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
 
 :root {
-  --andes-cyan: #00c1ff;
-  --andes-navy: #002d57;
-  --andes-fuchsia: #ff007c;
-  --andes-yellow: #fed001;
-  --andes-white: #ffffff;
+    --andes-cyan: #00c1ff;
+    --andes-navy: #002d57;
+    --andes-fuchsia: #ff007c;
+    --andes-yellow: #fed001;
+    --andes-white: #ffffff;
 }
 
 /* --- SIDEBAR --- */
@@ -94,30 +94,32 @@
     color: var(--andes-cyan);
 }
 
+
+
 /* --- ESTILOS DE BENEFICIOS --- */
 .header-container {
-    margin-bottom: 15px !important; 
+    margin-bottom: 15px !important;
     padding-bottom: 0px !important;
     border-bottom: none !important;
 }
 
 .header-container h1 {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .header-container p {
-    line-height: 1.8 !important; 
+    line-height: 1.8 !important;
     margin-top: 15px !important;
     margin-bottom: 25px !important;
-    color: #777; 
+    color: #777;
 }
 
 .main-title {
     color: var(--andes-navy);
-    font-size: 40px;           
+    font-size: 40px;
     font-weight: 800;
     margin-bottom: 18px;
-    line-height: 1.1;     
+    line-height: 1.1;
 }
 
 .section-subtitle {
@@ -147,7 +149,7 @@
     border: 2px solid #e5e5e5;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 4px 0 #e5e5e5; 
+    box-shadow: 0 4px 0 #e5e5e5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -157,7 +159,7 @@
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-category {
@@ -212,29 +214,74 @@
 
 /* === COLORES CORPORATIVOS POR CATEGORÍA === */
 /* Salud (Rosa) */
-.cat-salud .card-category { color: #ff1a75; }
-.cat-salud .btn-action { background-color: #fff0f5; color: #ff1a75; }
-.cat-salud .btn-action:hover { background-color: #ff1a75; color: #ffffff; }
+.cat-salud .card-category {
+    color: #ff1a75;
+}
+
+.cat-salud .btn-action {
+    background-color: #fff0f5;
+    color: #ff1a75;
+}
+
+.cat-salud .btn-action:hover {
+    background-color: #ff1a75;
+    color: #ffffff;
+}
 
 /* Educación (Cian) */
-.cat-educacion .card-category { color: #00ccff; }
-.cat-educacion .btn-action:hover { background-color: #00ccff; color: #ffffff; }
+.cat-educacion .card-category {
+    color: #00ccff;
+}
+
+.cat-educacion .btn-action:hover {
+    background-color: #00ccff;
+    color: #ffffff;
+}
 
 /* Finanzas (Navy) */
-.cat-finanzas .card-category { color: #002d5d; }
-.cat-finanzas .btn-action { background-color: #e1eaf3; color: #002d5d; }
-.cat-finanzas .btn-action:hover { background-color: #002d5d; color: #ffffff; }
+.cat-finanzas .card-category {
+    color: #002d5d;
+}
+
+.cat-finanzas .btn-action {
+    background-color: #e1eaf3;
+    color: #002d5d;
+}
+
+.cat-finanzas .btn-action:hover {
+    background-color: #002d5d;
+    color: #ffffff;
+}
 
 /* Calidad de Vida (Verde) */
-.cat-vida .card-category { color: #00a800; }
-.cat-vida .btn-action { background-color: #e6f9e6; color: #00a800; }
-.cat-vida .btn-action:hover { background-color: #00a800; color: #ffffff; }
+.cat-vida .card-category {
+    color: #00a800;
+}
+
+.cat-vida .btn-action {
+    background-color: #e6f9e6;
+    color: #00a800;
+}
+
+.cat-vida .btn-action:hover {
+    background-color: #00a800;
+    color: #ffffff;
+}
 
 /* Comunidad (Amarillo) */
-.cat-comunidad .card-category { color: #fed001; }
-.cat-comunidad .btn-action { background-color: #fff9e6; color: #b89600; }
+.cat-comunidad .card-category {
+    color: #fed001;
+}
 
-.cat-comunidad .btn-action:hover { background-color: #fed001; color: #ffffff; }
+.cat-comunidad .btn-action {
+    background-color: #fff9e6;
+    color: #b89600;
+}
+
+.cat-comunidad .btn-action:hover {
+    background-color: #fed001;
+    color: #ffffff;
+}
 
 .cat-salud {
     border-top: 8px solid #ff1a75;
@@ -263,13 +310,13 @@
 
 .filter-container {
     margin: 20px 0 40px 0;
-    border-bottom: 1px solid #e0e0e0; 
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .filter-tabs {
     display: flex;
     gap: 8px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -303,45 +350,73 @@
     height: 3px;
     background-color: #00ccff;
     border-radius: 3px 3px 0 0;
-}    
+}
 
 /* 2. Colores específicos 
 /* Salud */
-.filter-btn.active.color-salud { color: #ff1a75; }
-.filter-btn.active.color-salud::after { background-color: #ff1a75; }
+.filter-btn.active.color-salud {
+    color: #ff1a75;
+}
+
+.filter-btn.active.color-salud::after {
+    background-color: #ff1a75;
+}
 
 /* Educación */
-.filter-btn.active.color-educacion { color: #00ccff; }
-.filter-btn.active.color-educacion::after { background-color: #00ccff; }
+.filter-btn.active.color-educacion {
+    color: #00ccff;
+}
+
+.filter-btn.active.color-educacion::after {
+    background-color: #00ccff;
+}
 
 /* Finanzas */
-.filter-btn.active.color-finanzas { color: #002d5d; }
-.filter-btn.active.color-finanzas::after { background-color: #002d5d; }
+.filter-btn.active.color-finanzas {
+    color: #002d5d;
+}
+
+.filter-btn.active.color-finanzas::after {
+    background-color: #002d5d;
+}
 
 /* Calidad de Vida */
-.filter-btn.active.color-vida { color: #00a800; }
-.filter-btn.active.color-vida::after { background-color: #00a800; }
+.filter-btn.active.color-vida {
+    color: #00a800;
+}
+
+.filter-btn.active.color-vida::after {
+    background-color: #00a800;
+}
 
 /* Comunidad */
-.filter-btn.active.color-comunidad { color: #fed001; }
-.filter-btn.active.color-comunidad::after { background-color: #fed001; }
+.filter-btn.active.color-comunidad {
+    color: #fed001;
+}
+
+.filter-btn.active.color-comunidad::after {
+    background-color: #fed001;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
-    height: 10px; 
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00aeef; 
+    background: #00aeef;
     border-radius: 10px;
-    border: 2px solid #f1f1f1; 
+    border: 2px solid #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #008cc0; 
+    background: #008cc0;
+}
+.header-profile.active {
+    background: #e1f5fe;
 }
