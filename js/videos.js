@@ -197,6 +197,9 @@ function registrarProgreso(semana, tarea) {
                 btnCerrar.style.fontWeight = "800";
                 btnCerrar.onclick = () => { 
                     modalExito.style.display = 'none'; 
+                    if (typeof actualizarBarrasProgreso === 'function') {
+        actualizarBarrasProgreso(); 
+    }
                 };
             }
         }

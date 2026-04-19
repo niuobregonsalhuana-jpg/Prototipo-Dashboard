@@ -137,22 +137,26 @@ document.addEventListener('click', (e) => {
     }
 });
 
-document.addEventListener('click', (e) => {
-    if (e.target && e.target.id === 'close-modal') {
-        const customModal = document.getElementById('custom-modal');
+function verPDF(ruta, semana, tarea) {
+    const modalVideo = document.getElementById('videoModal');
+    const contenedor = document.querySelector('.iframe-wrapper');
+    const btnCerrarPDF = document.querySelector('#videoModal button'); // El botón de "✖ CERRAR"
 
-        let progreso = JSON.parse(localStorage.getItem('progresoSemanas')) || {};
+    if (modalVideo && contenedor) {
+        // 1. Ponemos el PDF en el modal
+        contenedor.innerHTML = `<embed src="${ruta}#view=FitH" type="application/pdf" width="100%" height="100%" />`;
+        modalVideo.style.display = 'flex';
 
-        if (progreso[5] && !progreso[5].tareas.includes('tarea_final')) {
-            progreso[5].tareas.push('tarea_final');
+        // 2. Reprogramamos el botón cerrar para que, al salir, registre el progreso
+        btnCerrarPDF.onclick = function() {
+            // Cerramos el modal del PDF
+            modalVideo.style.display = 'none';
+            contenedor.innerHTML = ""; 
 
-            localStorage.setItem('acabaDeTerminarTodo', 'true');
-        }
-
-        localStorage.setItem('progresoSemanas', JSON.stringify(progreso));
-
-        if (customModal) customModal.style.display = 'none';
-        
-        console.log("¡Tarea 5 registrada en el sistema global!");
+            // 3. RECIÉN AQUÍ llamamos al éxito (Pop-up + Confeti)
+            if (typeof registrarProgreso === 'function') {
+                registrarProgreso(semana, tarea);
+            }
+        };
     }
-});
+}
